@@ -1,0 +1,26 @@
+// Identifica e atualiza hit e via
+	//always @ (cache, address, wren, data) begin
+		// Será hit se a tag em uma das vias para o index do endereco corresponder e se o bit de controle for valido
+		//hit <= (cache[address[1:0]][10:8] == address[4:2] && cache[0][address[1:0]][13]) || (cache[1][address[1:0]][10:8] == address[4:2] && cache[1][address[1:0]][13]);
+
+		// Usa a via 1 se for hit e a tag na via 1 para o index do endereco corresponder e este for valido,
+		// ou se for miss e o LRU da via 0 for o mais recente
+		//way <= (hit && cache[1][address[1:0]][10:8] == address[4:2] && cache[1][address[1:0]][13]) || (~hit && cache[0][address[1:0]][11]);
+	//end
+
+
+
+// Controle do estado de processamento da cache, sendo:
+	// 0 => Inicio
+	// 1 => Processamento Interno da Cache OK
+	// 2 => Write Back
+	// 3 => Leitura da RAM
+	// 4 => Estado de Espera
+	// 5 => Atualizacao da Cache
+
+// Cria a cache totalmente associativa, 4 enderecos na cache ao todo e 17 bits para cada endereco, sendo estes:
+	// [7:0]   => Dados armazenados
+	// [12:8]  => Tag do endereco
+	// [14:13] => Bit de controle LRU (3 = mais antigo, 0 = mais recente)
+	// [15:15] => Bit de controle Dirty
+	// [16:16] => Bit de controle Valid

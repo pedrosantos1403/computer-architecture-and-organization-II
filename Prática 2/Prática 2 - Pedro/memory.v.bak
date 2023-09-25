@@ -1,0 +1,28 @@
+module memory(addr, data, wr_en, clock, q);
+	
+	/*
+	Endereço: bit 15: 0 para acesso a ROM (IMem) e 1 para acesso a RAM (DMem)
+	*/
+	
+	
+	input [15:0] addr, data;
+	input wr_en, clock;
+	output reg[15:0] q;
+	
+	reg wr_ram;
+	wire [15:0] q_ram, q_rom;
+	
+	
+	//Escrita
+	assign wr_ram = wr_en & addr[15];
+	
+	//Leitura
+	assign q = addr[15] ? q_ram : q_rom;
+	
+	
+	
+	
+	ram_lpm RAM(addr[14:8],clock,data,wr_ram,q_ram);
+	rom_lpm ROM(addr[14:8],clock,q_rom);
+
+endmodule

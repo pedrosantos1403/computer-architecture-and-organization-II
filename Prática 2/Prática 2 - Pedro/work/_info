@@ -1,0 +1,216 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1
+vALUn
+Z1 !s100 HiEkKdnlAHG?A<VdK;9K?3
+Z2 I9S<SL@?Dajo4ebYnIBi<Z1
+Z3 Vn5f6IzQO7<H9NFVeDL8U`3
+Z4 dC:\Users\rodri\Documents\CEFET\LabAoc2\pratica_2
+Z5 w1638466042
+Z6 8C:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/ALUn.v
+Z7 FC:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/ALUn.v
+L0 1
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -reportprogress|300|-work|work|C:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/ALUn.v|
+Z10 o-work work -O0
+Z11 n@a@l@un
+Z12 !s108 1639405479.787000
+Z13 !s107 C:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/ALUn.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vdec3to8
+Z14 !s100 1@O8EL=aEX;D5U^3<Ok3H1
+Z15 I7N=@@Nnz[Vm84D6z?_:HI2
+Z16 V3MQ7SOW6nNK?k^ze_@^7O1
+R4
+Z17 w1638284818
+Z18 8C:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/dec3to8.v
+Z19 FC:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/dec3to8.v
+L0 1
+R8
+r1
+31
+Z20 !s90 -reportprogress|300|-work|work|C:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/dec3to8.v|
+R10
+Z21 !s108 1639405480.720000
+Z22 !s107 C:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/dec3to8.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vmemory
+Z23 Id74Da:[:c[L@R34Hi>ZP:3
+Z24 VH6c0TLmjfU14@2L=QgV;60
+R4
+Z25 w1639448501
+Z26 8C:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/memory.v
+Z27 FC:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/memory.v
+L0 1
+R8
+r1
+31
+Z28 !s90 -reportprogress|300|-work|work|C:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/memory.v|
+R10
+Z29 !s100 mV5cA1aHFQ66]<g?RgWDF3
+Z30 !s108 1639449228.759000
+Z31 !s107 C:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/memory.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vMux10to1
+Z32 !s100 AKHgH09DcBaDoC:SR]@OY0
+Z33 I@cO2PPMJd]JROj0?zgSQo1
+Z34 VQ>B7BTe@h<7]6OPWj5^]Y3
+R4
+R17
+Z35 8C:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/Mux10to1.v
+Z36 FC:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/Mux10to1.v
+L0 1
+R8
+r1
+31
+Z37 !s90 -reportprogress|300|-work|work|C:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/Mux10to1.v|
+R10
+Z38 n@mux10to1
+Z39 !s108 1639449200.204000
+Z40 !s107 C:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/Mux10to1.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vpratica_2
+!i10b 1
+!s100 MD3On_[]YJC[[j=]il8BM2
+IBK=_E`3ZZOGmAHXFA32[B1
+Z41 V217:a84<3K2f`49DD1eV41
+R4
+w1639533901
+8C:\Users\rodri\Documents\CEFET\LabAoc2\pratica_2\pratica_2.v
+FC:\Users\rodri\Documents\CEFET\LabAoc2\pratica_2\pratica_2.v
+L0 1
+R8
+r1
+!s85 0
+31
+!s108 1639534000.137000
+!s107 C:\Users\rodri\Documents\CEFET\LabAoc2\pratica_2\pratica_2.v|
+!s90 -reportprogress|300|-work|work|C:\Users\rodri\Documents\CEFET\LabAoc2\pratica_2\pratica_2.v|
+!s101 -O0
+R10
+vprocessador
+Z42 !s100 ;b<T=<XaoU7IL;j_fP?mz0
+Z43 IY6IYM6FMP1HE<9VAokFAX2
+Z44 VoW?=V45oPML0WEoU7kLP@2
+R4
+Z45 w1639448530
+Z46 8C:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/processador.v
+Z47 FC:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/processador.v
+L0 3
+R8
+r1
+31
+Z48 !s90 -reportprogress|300|-work|work|C:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/processador.v|
+R10
+!i10b 1
+!s85 0
+Z49 !s108 1639449229.403000
+Z50 !s107 C:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/processador.v|
+!s101 -O0
+vram_lpm
+Z51 !s100 :EzWG=^ZgP13e5BDME^nk1
+Z52 IA6[KT0N0n`LlHb<oY<kW81
+Z53 VMX4fn7_[VSlNI>SJj@^M41
+R4
+Z54 w1638632863
+Z55 8C:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/ram_lpm.v
+Z56 FC:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/ram_lpm.v
+L0 39
+R8
+r1
+31
+Z57 !s90 -reportprogress|300|-work|work|C:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/ram_lpm.v|
+R10
+Z58 !s108 1639405484.954000
+Z59 !s107 C:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/ram_lpm.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vregn
+Z60 IGl^dFQHO373gj7<<BCji@3
+Z61 VUc6I3VM5DDQ[zOJ4a2HfK0
+R4
+Z62 w1639446793
+Z63 8C:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/regn.v
+Z64 FC:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/regn.v
+L0 1
+R8
+r1
+31
+Z65 !s90 -reportprogress|300|-work|work|C:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/regn.v|
+R10
+Z66 !s100 4H9kcKfem`]Dmhzn5YhHA0
+Z67 !s108 1639446891.114000
+Z68 !s107 C:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/regn.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vregn_pc
+Z69 InM>GXTISeN`P^3c@^GF3J1
+Z70 VOff@_C0iI^j>A6=^fZVMf1
+R4
+Z71 w1639448598
+Z72 8C:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/regn_pc.v
+Z73 FC:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/regn_pc.v
+L0 1
+R8
+r1
+31
+Z74 !s90 -reportprogress|300|-work|work|C:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/regn_pc.v|
+R10
+Z75 !s100 akKP`QZ;0;D=?@f7nEe^e2
+Z76 !s108 1639449228.492000
+Z77 !s107 C:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/regn_pc.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vrom_lpm
+Z78 !s100 SNPBZWRN`i[<H<8_ia45V1
+Z79 Ih07V^QNYc63`0<7[`IdZN2
+Z80 VPHOL@Gfo3FNX7Mg2IWl>m3
+R4
+Z81 w1638633095
+Z82 8C:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/rom_lpm.v
+Z83 FC:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/rom_lpm.v
+L0 39
+R8
+r1
+31
+Z84 !s90 -reportprogress|300|-work|work|C:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/rom_lpm.v|
+R10
+Z85 !s108 1639405484.534000
+Z86 !s107 C:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/rom_lpm.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vupcount
+Z87 !s100 UJ;CiMS>ANzoR0PBSS^;d3
+Z88 IfPzR`m98;hAm@@cP9m^402
+Z89 VX[W<EUdkXVBgHU6XHm?<Z1
+R4
+Z90 w1639411973
+Z91 8C:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/upcount.v
+Z92 FC:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/upcount.v
+L0 1
+R8
+r1
+31
+Z93 !s90 -reportprogress|300|-work|work|C:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/upcount.v|
+R10
+Z94 !s108 1639405482.153000
+Z95 !s107 C:/Users/rodri/Documents/CEFET/LabAoc2/pratica_2/upcount.v|
+!i10b 1
+!s85 0
+!s101 -O0

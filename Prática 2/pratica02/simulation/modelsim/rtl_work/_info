@@ -1,0 +1,317 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\pedro\OneDrive\Documentos\CEFETMG\2023.2\Laboratório AOC II\Práticas\Prática 2\pratica02\simulation\modelsim
+vALU
+!i10b 1
+!s100 1L9gQ_0^L_:l6OaIG=21U2
+I>4gCJi6c819fJX?f=0QMK0
+V]:2oPG?_kcg7W014cIIB`0
+Z1 dC:\Users\pedro\OneDrive\Documentos\CEFETMG\2023.2\Laboratório AOC II\Práticas\Prática 2\pratica02\simulation\modelsim
+Z2 w1695677717
+Z3 8C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas/Prática 2/pratica02/pratica2.v
+Z4 FC:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas/Prática 2/pratica02/pratica2.v
+L0 355
+Z5 OV;L;10.1d;51
+r1
+!s85 0
+31
+Z6 !s108 1695677809.531000
+Z7 !s107 C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas/Prática 2/pratica02/pratica2.v|
+Z8 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas/Prática 2/pratica02|C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas/Prática 2/pratica02/pratica2.v|
+!s101 -O0
+Z9 o-vlog01compat -work work -O0
+Z10 !s92 -vlog01compat -work work {+incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas/Prática 2/pratica02} -O0
+n@a@l@u
+vControlUnit
+!i10b 1
+!s100 OkF2:aZhG95zTbYf<Ool;1
+Il_<inHXnb_D;=X>ZH_Qz?1
+VdTnK_C=UDadX>5ZEV[fmR0
+R1
+R2
+R3
+R4
+L0 136
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+R9
+R10
+n@control@unit
+vCounter
+!i10b 1
+!s100 n0Fl^Rl1TLdUE4RT;ziT21
+IS=616YH?:HHfXMW<co^9]1
+VF_Z6n9do1?fii0W`nXZN[3
+R1
+R2
+R3
+R4
+L0 376
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+R9
+R10
+n@counter
+vmem_ram
+I]dECc3]e[a[4=b=8;Z?9P2
+VACU`7hfjP5miBA109h1;[2
+R1
+w1695232532
+8C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas/Prática 2/pratica02/mem_ram.v
+FC:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas/Prática 2/pratica02/mem_ram.v
+L0 39
+R5
+r1
+31
+R9
+!i10b 1
+!s100 KR<kOl[Z1bE1_7bAg9z>B2
+!s85 0
+!s108 1695677809.468000
+!s107 C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas/Prática 2/pratica02/mem_ram.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas/Prática 2/pratica02|C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas/Prática 2/pratica02/mem_ram.v|
+!s101 -O0
+R10
+vpratica2
+!i10b 1
+!s100 _QS=JUDWTGf1kcgejn1F91
+I@;Q3ZfTLVcNQcKAcM0l<k2
+V1dX<J5V34fP23>8916TfE1
+R1
+R2
+R3
+R4
+L0 3
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+R9
+R10
+vproc
+!i10b 1
+!s100 oML=@c<gW`G9nAA<@NHN50
+Ioi[zCS9lK2_]Z=:5Zh=@]3
+V9OHDZWfk=0Oj4Kb@G>Bid3
+R1
+R2
+R3
+R4
+L0 42
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+R9
+R10
+vReg0
+!i10b 1
+!s100 Yl3EN7Ga=7JzYJaB`3^0L1
+IT8LRY=jn4K?lSfWfnL=`d0
+Vg^?d;<en8GMznZfQXG7hV2
+R1
+R2
+R3
+R4
+L0 453
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+R9
+R10
+n@reg0
+vReg1
+!i10b 1
+!s100 XYJGJak=46gfG[6Dki9Kz2
+ICRHRb6RZjRdd6[BflYna@0
+Vh3XFaoJY@BQ?FVTQX<`M02
+R1
+R2
+R3
+R4
+L0 473
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+R9
+R10
+n@reg1
+vReg2
+!i10b 1
+!s100 en>HUP^kH]bB?89k:Q1cb1
+I1k2lX8cIG7R]kC>G;M?I51
+Vi41EKMHS3g<A;kQd3Zf8`3
+R1
+R2
+R3
+R4
+L0 493
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+R9
+R10
+n@reg2
+vRegIR
+!i10b 1
+!s100 k9TP3aAcQ<`ZZ9E>zjh=?0
+IhRnJ<=AOchW::7P057CoG3
+V>Ih?aa;G`DjIm2mO_Aga`2
+R1
+R2
+R3
+R4
+L0 512
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+R9
+R10
+n@reg@i@r
+vRegN
+!i10b 1
+!s100 @ODP`gTd^@k6VU0gUdMT<3
+Ie<SaoUC2XS99agDOb=gzc3
+VRbcI2A`fVn5nRQZR92Z6;0
+R1
+R2
+R3
+R4
+L0 433
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+R9
+R10
+n@reg@n
+vRegN_addr
+!i10b 1
+!s100 =1gFeT07jmz2JXc]QJBUZ1
+I;0BMn?T1<QMV6nX9ULQN>2
+VFkV`>iS66A`<;RX[MMOXF1
+R1
+R2
+R3
+R4
+L0 537
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+R9
+R10
+n@reg@n_addr
+vRegN_pc
+!i10b 1
+!s100 OWIFjO4K_G]zZF<zILD:I3
+IXCd=Ng>Jk;BenMNz7FYXX0
+V1<:9a9>>@Bo06Y6Jb:QBV1
+R1
+R2
+R3
+R4
+L0 398
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+R9
+R10
+n@reg@n_pc
+vRegN_W
+!i10b 1
+!s100 mAD^gkj6ngJ5:HQi`6SA71
+ImS52oXg:Ke<ZOblRG;jz;0
+VIWhi@@Q`NPS>KlA>5GViO2
+R1
+R2
+R3
+R4
+L0 577
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+R9
+R10
+n@reg@n_@w
+vRegUpcode
+!i10b 1
+!s100 TAo6^VLMnneC[ZQNkIOjQ0
+I6[1956I7[O1cNP<L=T23:0
+V?A>_Ak4zU5gXXb4mfa^n10
+R1
+R2
+R3
+R4
+L0 333
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+R9
+R10
+n@reg@upcode

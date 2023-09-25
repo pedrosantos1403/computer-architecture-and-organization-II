@@ -1,0 +1,7 @@
+module ALUn(M,A,B,Result);
+ parameter n = 16;
+ input [n-1:0] A,B;
+ input M;
+ output [n-1:0] Result;
+ 
+endmodule

@@ -1,0 +1,72 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do memoria_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório\ AOC\ II/Prática\ 1/Prática\ 1\ -\ Parte\ 1\ -\ Entrega/pratica01 {C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Prática 1/Prática 1 - Parte 1 - Entrega/pratica01/memoria.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module memoria
+# 
+# Top level modules:
+# 	memoria
+# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório\ AOC\ II/Prática\ 1/Prática\ 1\ -\ Parte\ 1\ -\ Entrega/pratica01 {C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Prática 1/Prática 1 - Parte 1 - Entrega/pratica01/ramlpm.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ramlpm
+# 
+# Top level modules:
+# 	ramlpm
+# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório\ AOC\ II/Prática\ 1/Prática\ 1\ -\ Parte\ 1\ -\ Entrega/pratica01 {C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Prática 1/Prática 1 - Parte 1 - Entrega/pratica01/disp7seg.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module disp7seg
+# 
+# Top level modules:
+# 	disp7seg
+# 
+vsim +altera -L altera_mf_ver -do memoria_run_msim_rtl_verilog.do -l msim_transcript -gui work.ramlpm
+# vsim +altera -L altera_mf_ver -do memoria_run_msim_rtl_verilog.do -l msim_transcript -gui work.ramlpm 
+# Loading work.ramlpm
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# do memoria_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório\ AOC\ II/Prática\ 1/Prática\ 1\ -\ Parte\ 1\ -\ Entrega/pratica01 {C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Prática 1/Prática 1 - Parte 1 - Entrega/pratica01/memoria.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module memoria
+# 
+# Top level modules:
+# 	memoria
+# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório\ AOC\ II/Prática\ 1/Prática\ 1\ -\ Parte\ 1\ -\ Entrega/pratica01 {C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Prática 1/Prática 1 - Parte 1 - Entrega/pratica01/ramlpm.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ramlpm
+# 
+# Top level modules:
+# 	ramlpm
+# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório\ AOC\ II/Prática\ 1/Prática\ 1\ -\ Parte\ 1\ -\ Entrega/pratica01 {C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Prática 1/Prática 1 - Parte 1 - Entrega/pratica01/disp7seg.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module disp7seg
+# 
+# Top level modules:
+# 	disp7seg
+# 
+wave create -driver freeze -pattern clock -initialvalue 0 -period 50ps -dutycycle 50 -starttime 0ps -endtime 1000ps sim:/ramlpm/clock
+wave create -driver freeze -pattern constant -value 00000 -range 4 0 -starttime 0ps -endtime 1000ps sim:/ramlpm/address
+add wave -position insertpoint  \
+sim:/ramlpm/q
+wave edit change_value -start 0ps -end 100ps -value 00001 Edit:/ramlpm/address
+wave edit change_value -start 101ps -end 200ps -value 00010 Edit:/ramlpm/address
+run
+run

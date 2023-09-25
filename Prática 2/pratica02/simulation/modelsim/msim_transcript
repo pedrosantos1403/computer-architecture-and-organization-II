@@ -1,0 +1,141 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do pratica2_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório\ AOC\ II/Práticas/Prática\ 2/pratica02 {C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas/Prática 2/pratica02/mem_ram.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mem_ram
+# 
+# Top level modules:
+# 	mem_ram
+# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório\ AOC\ II/Práticas/Prática\ 2/pratica02 {C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas/Prática 2/pratica02/pratica2.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module pratica2
+# -- Compiling module proc
+# -- Compiling module ControlUnit
+# -- Compiling module RegUpcode
+# -- Compiling module ALU
+# -- Compiling module Counter
+# -- Compiling module RegN_pc
+# -- Compiling module RegN
+# -- Compiling module Reg0
+# -- Compiling module Reg1
+# -- Compiling module Reg2
+# -- Compiling module RegIR
+# -- Compiling module RegN_addr
+# -- Compiling module RegN_W
+# 
+# Top level modules:
+# 	pratica2
+# 
+vsim +altera -L altera_mf_ver -do pratica2_run_msim_rtl_verilog.do -l msim_transcript -gui work.pratica2
+# vsim +altera -L altera_mf_ver -do pratica2_run_msim_rtl_verilog.do -l msim_transcript -gui work.pratica2 
+# Loading work.pratica2
+# Loading work.proc
+# Loading work.Counter
+# Loading work.RegUpcode
+# Loading work.ControlUnit
+# Loading work.ALU
+# Loading work.RegN
+# Loading work.Reg1
+# Loading work.RegIR
+# Loading work.Reg0
+# Loading work.Reg2
+# Loading work.RegN_pc
+# Loading work.RegN_addr
+# Loading work.RegN_W
+# Loading work.mem_ram
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas/Prática 2/pratica02/pratica2.v(86): [PCDPC] - Port size (8 or 8) does not match connection size (16) for port 'RNin'. The port definition is at: C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas/Prática 2/pratica02/pratica2.v(144).
+# 
+#         Region: /pratica2/processador/CU
+# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas/Prática 2/pratica02/pratica2.v(94): [PCDPC] - Port size (1 or 1) does not match connection size (11) for port 'Rin'. The port definition is at: C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas/Prática 2/pratica02/pratica2.v(515).
+# 
+#         Region: /pratica2/processador/IR_reg
+# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas/Prática 2/pratica02/pratica2.v(104): [PCDPC] - Port size (1 or 1) does not match connection size (16) for port 'Bus'. The port definition is at: C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas/Prática 2/pratica02/pratica2.v(399).
+# 
+#         Region: /pratica2/processador/R7
+# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas/Prática 2/pratica02/pratica2.v(107): [PCDPC] - Port size (1 or 1) does not match connection size (16) for port 'pc_output'. The port definition is at: C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas/Prática 2/pratica02/pratica2.v(538).
+# 
+#         Region: /pratica2/processador/reg_addr
+# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas/Prática 2/pratica02/pratica2.v(29): [PCDPC] - Port size (5 or 5) does not match connection size (16) for port 'address'. The port definition is at: C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas/Prática 2/pratica02/mem_ram.v(40).
+# 
+#         Region: /pratica2/mem_data
+# do pratica2_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório\ AOC\ II/Práticas/Prática\ 2/pratica02 {C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas/Prática 2/pratica02/mem_ram.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mem_ram
+# 
+# Top level modules:
+# 	mem_ram
+# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório\ AOC\ II/Práticas/Prática\ 2/pratica02 {C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas/Prática 2/pratica02/pratica2.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module pratica2
+# -- Compiling module proc
+# -- Compiling module ControlUnit
+# -- Compiling module RegUpcode
+# -- Compiling module ALU
+# -- Compiling module Counter
+# -- Compiling module RegN_pc
+# -- Compiling module RegN
+# -- Compiling module Reg0
+# -- Compiling module Reg1
+# -- Compiling module Reg2
+# -- Compiling module RegIR
+# -- Compiling module RegN_addr
+# -- Compiling module RegN_W
+# 
+# Top level modules:
+# 	pratica2
+# 
+wave create -driver freeze -pattern clock -initialvalue 0 -period 50ps -dutycycle 50 -starttime 0ps -endtime 1000ps sim:/pratica2/PClock
+add wave -position insertpoint  \
+sim:/pratica2/PC
+add wave -position insertpoint  \
+sim:/pratica2/Addr
+add wave -position insertpoint  \
+sim:/pratica2/processador/Counter
+add wave -position insertpoint  \
+sim:/pratica2/processador/DIN
+add wave -position insertpoint  \
+sim:/pratica2/Reg0
+add wave -position insertpoint  \
+sim:/pratica2/Reg1
+add wave -position insertpoint  \
+sim:/pratica2/Reg2
+add wave -position insertpoint  \
+sim:/pratica2/processador/BusWires
+add wave -position insertpoint  \
+sim:/pratica2/processador/RNin
+add wave -position insertpoint  \
+sim:/pratica2/processador/RNout
+add wave -position insertpoint  \
+sim:/pratica2/processador/XXX
+add wave -position insertpoint  \
+sim:/pratica2/processador/YYY
+add wave -position insertpoint  \
+sim:/pratica2/processador/is_Load
+run
+run
+run
+run
+run
+run
+run

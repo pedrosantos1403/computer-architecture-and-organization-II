@@ -1,0 +1,14 @@
+module regn(R, Rin, Clock, Q,rstn);
+ parameter n = 16;
+ input [n-1:0] R;
+ input Rin, Clock,rstn;
+ output [n-1:0] Q;
+ reg [n-1:0] Q;
+ 
+ always @(posedge Clock or negedge rstn)
+ if (!rstn)
+  Q <= 0;
+ else if (Rin)
+  Q <= R;
+ 
+endmodule

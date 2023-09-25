@@ -1,0 +1,65 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Aluno\Downloads\pratica01\simulation\modelsim
+vdisp7seg
+!i10b 1
+!s100 624`o>IJJ;Yg4e2gV6Q`41
+IY9BLg5oh2PX5^Zok4[gD_1
+V6i]mE7=9Q;dKd2:n]0g2W1
+Z1 dC:\Users\Aluno\Downloads\pratica01\simulation\modelsim
+w1691946508
+8C:/Users/Aluno/Downloads/pratica01/disp7seg.v
+FC:/Users/Aluno/Downloads/pratica01/disp7seg.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1692375926.985000
+!s107 C:/Users/Aluno/Downloads/pratica01/disp7seg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Aluno/Downloads/pratica01|C:/Users/Aluno/Downloads/pratica01/disp7seg.v|
+!s101 -O0
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+C:/Users/Aluno/Downloads/pratica01 -O0
+vmemoria
+Im]hQhmdWnMaz?hbc8<4eO2
+Vb:=H>c6gB`m5B?4]DEPLM3
+R1
+w1692373296
+8C:/Users/Aluno/Downloads/pratica01/memoria.v
+FC:/Users/Aluno/Downloads/pratica01/memoria.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 i;OA3DSf6eDH>^7eg8kFl2
+!s85 0
+!s108 1692375926.755000
+!s107 C:/Users/Aluno/Downloads/pratica01/memoria.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Aluno/Downloads/pratica01|C:/Users/Aluno/Downloads/pratica01/memoria.v|
+!s101 -O0
+vramlpm
+ICec8ZO731C]QS]WLo^RnL1
+VR:=61PRUnAZWihg=S@JO<2
+R1
+w1691941102
+8C:/Users/Aluno/Downloads/pratica01/ramlpm.v
+FC:/Users/Aluno/Downloads/pratica01/ramlpm.v
+L0 39
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 7Zoh>O[cJc^e24]?fQ1Uk2
+!s85 0
+!s108 1692375926.894000
+!s107 C:/Users/Aluno/Downloads/pratica01/ramlpm.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Aluno/Downloads/pratica01|C:/Users/Aluno/Downloads/pratica01/ramlpm.v|
+!s101 -O0

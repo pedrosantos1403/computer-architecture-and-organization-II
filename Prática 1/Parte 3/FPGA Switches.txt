@@ -1,0 +1,8 @@
+            (clock,  address,   wren,   data,    q, RAM, qRAM, hit, state)
+Cache cache (KEY[0], SW[15:11], SW[17], SW[7:0], q, RAM, qRAM, hit, state);
+
+Inicialização da Cache
+10111010000000110
+10111011000000010
+00111100100000110
+10111010100000100

@@ -1,0 +1,10 @@
+module memoria (address, clk,	data, wren, out);
+
+input [7:0] data;
+input [4:0] address;
+input wren, clk;
+output [7:0] out;
+
+ramlpm ramlpm(address, clk,	data, wren, out);
+
+endmodule

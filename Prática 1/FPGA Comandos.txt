@@ -1,0 +1,15 @@
+SW17 -> Clock 
+LEDG[4] -> Clock 1
+LEDG[5] -> Clock 0
+
+SW16 -> Wren
+LEDG[0] -> Wren 1
+LEDR[0] -> Wren 0
+
+SW[13:6] -> Dado
+
+SW[4:0] -> Emdereço na memória
+
+HEX0 -> Conteúdo na memória
+HEX4 -> Endereço na memória
+HEX6 -> Dado inserido
