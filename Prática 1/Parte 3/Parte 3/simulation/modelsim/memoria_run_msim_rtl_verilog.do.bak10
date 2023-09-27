@@ -1,0 +1,12 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Ãrea\ de\ Trabalho/PrÃ¡tica\ 1\ -\ Parte\ 3\ -\ PedroSantos/PrÃ¡tica\ 1\ -\ Parte\ 3\ -\ PedroSantos {C:/Users/pedro/OneDrive/Área de Trabalho/Prática 1 - Parte 3 - PedroSantos/Prática 1 - Parte 3 - PedroSantos/Cache.v}
+vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Ãrea\ de\ Trabalho/PrÃ¡tica\ 1\ -\ Parte\ 3\ -\ PedroSantos/PrÃ¡tica\ 1\ -\ Parte\ 3\ -\ PedroSantos {C:/Users/pedro/OneDrive/Área de Trabalho/Prática 1 - Parte 3 - PedroSantos/Prática 1 - Parte 3 - PedroSantos/ramlpm.v}
+vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Ãrea\ de\ Trabalho/PrÃ¡tica\ 1\ -\ Parte\ 3\ -\ PedroSantos/PrÃ¡tica\ 1\ -\ Parte\ 3\ -\ PedroSantos {C:/Users/pedro/OneDrive/Área de Trabalho/Prática 1 - Parte 3 - PedroSantos/Prática 1 - Parte 3 - PedroSantos/disp7seg.v}
+vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Ãrea\ de\ Trabalho/PrÃ¡tica\ 1\ -\ Parte\ 3\ -\ PedroSantos/PrÃ¡tica\ 1\ -\ Parte\ 3\ -\ PedroSantos {C:/Users/pedro/OneDrive/Área de Trabalho/Prática 1 - Parte 3 - PedroSantos/Prática 1 - Parte 3 - PedroSantos/memoria.v}
+

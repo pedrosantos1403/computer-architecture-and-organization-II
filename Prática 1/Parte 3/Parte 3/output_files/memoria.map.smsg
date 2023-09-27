@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at Cache.v(80): always construct contains both blocking and non-blocking assignments
+Info (10281): Verilog HDL Declaration information at memoria.v(40): object "RAM" differs only in case from object "ram" in the same scope

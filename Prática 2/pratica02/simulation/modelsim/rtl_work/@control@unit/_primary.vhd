@@ -20,6 +20,7 @@ entity ControlUnit is
         Addr_in         : out    vl_logic;
         Dout_in         : out    vl_logic;
         Incr_pc         : out    vl_logic;
-        is_Load         : out    vl_logic
+        is_Load         : out    vl_logic;
+        is_mvi          : out    vl_logic
     );
 end ControlUnit;

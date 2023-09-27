@@ -1,5 +1,5 @@
 EDA Netlist Writer report for pratica2
-Mon Sep 25 18:35:47 2023
+Wed Sep 27 19:41:49 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Mon Sep 25 18:35:47 2023 ;
+; EDA Netlist Writer Status ; Successful - Wed Sep 27 19:41:49 2023 ;
 ; Revision Name             ; pratica2                              ;
 ; Top-level Entity Name     ; pratica2                              ;
 ; Family                    ; Cyclone II                            ;
@@ -66,16 +66,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                                                                ;
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                                                           ;
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas/Prática 2/pratica02/simulation/modelsim/pratica2.vo         ;
-; C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas/Prática 2/pratica02/simulation/modelsim/pratica2_fast.vo    ;
-; C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas/Prática 2/pratica02/simulation/modelsim/pratica2_v.sdo      ;
-; C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas/Prática 2/pratica02/simulation/modelsim/pratica2_v_fast.sdo ;
-+-------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                                                     ;
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                                                                ;
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/simulation/modelsim/pratica2.vo         ;
+; C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/simulation/modelsim/pratica2_fast.vo    ;
+; C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/simulation/modelsim/pratica2_v.sdo      ;
+; C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/simulation/modelsim/pratica2_v_fast.sdo ;
++------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -84,12 +84,12 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Sep 25 18:35:47 2023
+    Info: Processing started: Wed Sep 27 19:41:49 2023
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off pratica2 -c pratica2
-Info (204026): Generated files "pratica2.vo", "pratica2_fast.vo", "pratica2_v.sdo" and "pratica2_v_fast.sdo" in directory "C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas/Prática 2/pratica02/simulation/modelsim/" for EDA simulation tool
+Info (204026): Generated files "pratica2.vo", "pratica2_fast.vo", "pratica2_v.sdo" and "pratica2_v_fast.sdo" in directory "C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4538 megabytes
-    Info: Processing ended: Mon Sep 25 18:35:47 2023
+    Info: Peak virtual memory: 4532 megabytes
+    Info: Processing ended: Wed Sep 27 19:41:49 2023
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 

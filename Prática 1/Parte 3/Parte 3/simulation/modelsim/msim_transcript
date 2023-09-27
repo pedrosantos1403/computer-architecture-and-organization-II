@@ -1,0 +1,55 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do memoria_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Área\ de\ Trabalho/Prática\ 1\ -\ Parte\ 3\ -\ PedroSantosLab/Prática\ 1\ -\ Parte\ 3\ -\ PedroSantos {C:/Users/pedro/OneDrive/Área de Trabalho/Prática 1 - Parte 3 - PedroSantosLab/Prática 1 - Parte 3 - PedroSantos/Cache.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Cache
+# 
+# Top level modules:
+# 	Cache
+# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Área\ de\ Trabalho/Prática\ 1\ -\ Parte\ 3\ -\ PedroSantosLab/Prática\ 1\ -\ Parte\ 3\ -\ PedroSantos {C:/Users/pedro/OneDrive/Área de Trabalho/Prática 1 - Parte 3 - PedroSantosLab/Prática 1 - Parte 3 - PedroSantos/ramlpm.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ramlpm
+# 
+# Top level modules:
+# 	ramlpm
+# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Área\ de\ Trabalho/Prática\ 1\ -\ Parte\ 3\ -\ PedroSantosLab/Prática\ 1\ -\ Parte\ 3\ -\ PedroSantos {C:/Users/pedro/OneDrive/Área de Trabalho/Prática 1 - Parte 3 - PedroSantosLab/Prática 1 - Parte 3 - PedroSantos/disp7seg.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module disp7seg
+# 
+# Top level modules:
+# 	disp7seg
+# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Área\ de\ Trabalho/Prática\ 1\ -\ Parte\ 3\ -\ PedroSantosLab/Prática\ 1\ -\ Parte\ 3\ -\ PedroSantos {C:/Users/pedro/OneDrive/Área de Trabalho/Prática 1 - Parte 3 - PedroSantosLab/Prática 1 - Parte 3 - PedroSantos/memoria.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module memoria
+# 
+# Top level modules:
+# 	memoria
+# 
+vsim work.Cache
+# vsim work.Cache 
+# Loading work.Cache
+wave create -driver freeze -pattern clock -initialvalue 0 -period 20ps -dutycycle 50 -starttime 0ps -endtime 1000ps sim:/Cache/clock
+wave create -driver freeze -pattern constant -value 0 -range 4 0 -starttime 0ps -endtime 1000ps sim:/Cache/address
+add wave -position insertpoint  \
+sim:/Cache/hit
+add wave -position insertpoint  \
+sim:/Cache/q
+add wave -position insertpoint  \
+sim:/Cache/RAM
+add wave -position insertpoint  \
+sim:/Cache/qRAM
+add wave -position insertpoint  \
+sim:/Cache/cache
+wave edit change_value -start 0ps -end 200ps -value 11111 Edit:/Cache/address
+run
+run

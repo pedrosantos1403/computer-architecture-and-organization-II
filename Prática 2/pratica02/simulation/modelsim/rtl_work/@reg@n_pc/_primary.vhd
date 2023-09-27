@@ -7,6 +7,6 @@ entity RegN_pc is
         Clock           : in     vl_logic;
         incr            : in     vl_logic;
         Clear           : in     vl_logic;
-        Counter         : out    vl_logic_vector(15 downto 0)
+        PC_output       : out    vl_logic_vector(15 downto 0)
     );
 end RegN_pc;

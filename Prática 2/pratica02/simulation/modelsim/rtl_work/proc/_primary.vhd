@@ -17,6 +17,9 @@ entity proc is
         Dout_output     : out    vl_logic_vector(15 downto 0);
         W               : out    vl_logic;
         BusWires        : out    vl_logic_vector(15 downto 0);
-        Done            : out    vl_logic
+        Done            : out    vl_logic;
+        IR_output       : out    vl_logic_vector(9 downto 0);
+        Counter         : out    vl_logic_vector(2 downto 0);
+        ALUop           : out    vl_logic_vector(2 downto 0)
     );
 end proc;

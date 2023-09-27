@@ -12,6 +12,10 @@ entity pratica2 is
         Reg4            : out    vl_logic_vector(15 downto 0);
         Reg5            : out    vl_logic_vector(15 downto 0);
         Reg6            : out    vl_logic_vector(15 downto 0);
-        PC              : out    vl_logic_vector(15 downto 0)
+        PC              : out    vl_logic_vector(15 downto 0);
+        Addr            : out    vl_logic_vector(15 downto 0);
+        ir              : out    vl_logic_vector(9 downto 0);
+        counter         : out    vl_logic_vector(2 downto 0);
+        aluOp           : out    vl_logic_vector(2 downto 0)
     );
 end pratica2;

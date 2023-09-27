@@ -1,0 +1,86 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\pedro\OneDrive\Área de Trabalho\Prática 1 - Parte 3 - PedroSantosLab\Prática 1 - Parte 3 - PedroSantos\simulation\modelsim
+vCache
+IzIU=bVd]0MW?ocXnO1RhS3
+VjVdEe6eB7HgXn0F2XY5[_0
+Z1 dC:\Users\pedro\OneDrive\Área de Trabalho\Prática 1 - Parte 3 - PedroSantosLab\Prática 1 - Parte 3 - PedroSantos\simulation\modelsim
+w1693182952
+8C:/Users/pedro/OneDrive/Área de Trabalho/Prática 1 - Parte 3 - PedroSantosLab/Prática 1 - Parte 3 - PedroSantos/Cache.v
+FC:/Users/pedro/OneDrive/Área de Trabalho/Prática 1 - Parte 3 - PedroSantosLab/Prática 1 - Parte 3 - PedroSantos/Cache.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+n@cache
+Z4 !s92 -vlog01compat -work work {+incdir+C:/Users/pedro/OneDrive/Área de Trabalho/Prática 1 - Parte 3 - PedroSantosLab/Prática 1 - Parte 3 - PedroSantos} -O0
+!i10b 1
+!s100 20mfPEbiHaRl7i?:5>8GX2
+!s85 0
+!s108 1693190159.670000
+!s107 C:/Users/pedro/OneDrive/Área de Trabalho/Prática 1 - Parte 3 - PedroSantosLab/Prática 1 - Parte 3 - PedroSantos/Cache.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/pedro/OneDrive/Área de Trabalho/Prática 1 - Parte 3 - PedroSantosLab/Prática 1 - Parte 3 - PedroSantos|C:/Users/pedro/OneDrive/Área de Trabalho/Prática 1 - Parte 3 - PedroSantosLab/Prática 1 - Parte 3 - PedroSantos/Cache.v|
+!s101 -O0
+vdisp7seg
+IIM@?kAb_9W7]7dWiA9Cdi2
+V6i]mE7=9Q;dKd2:n]0g2W1
+R1
+w1693005542
+8C:/Users/pedro/OneDrive/Área de Trabalho/Prática 1 - Parte 3 - PedroSantosLab/Prática 1 - Parte 3 - PedroSantos/disp7seg.v
+FC:/Users/pedro/OneDrive/Área de Trabalho/Prática 1 - Parte 3 - PedroSantosLab/Prática 1 - Parte 3 - PedroSantos/disp7seg.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 oCB>a0^k30JkNzAFk0HWU3
+!s85 0
+!s108 1693190159.777000
+!s107 C:/Users/pedro/OneDrive/Área de Trabalho/Prática 1 - Parte 3 - PedroSantosLab/Prática 1 - Parte 3 - PedroSantos/disp7seg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/pedro/OneDrive/Área de Trabalho/Prática 1 - Parte 3 - PedroSantosLab/Prática 1 - Parte 3 - PedroSantos|C:/Users/pedro/OneDrive/Área de Trabalho/Prática 1 - Parte 3 - PedroSantosLab/Prática 1 - Parte 3 - PedroSantos/disp7seg.v|
+!s101 -O0
+vmemoria
+!i10b 1
+!s100 YY`fEmD1deoY3Fh6dH6QO1
+I]1g<2AO]EiRLEfe^Ph^^G3
+VJiGKC79@0Dcd<CHPE>Z]i2
+R1
+w1693005543
+8C:/Users/pedro/OneDrive/Área de Trabalho/Prática 1 - Parte 3 - PedroSantosLab/Prática 1 - Parte 3 - PedroSantos/memoria.v
+FC:/Users/pedro/OneDrive/Área de Trabalho/Prática 1 - Parte 3 - PedroSantosLab/Prática 1 - Parte 3 - PedroSantos/memoria.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1693190159.836000
+!s107 C:/Users/pedro/OneDrive/Área de Trabalho/Prática 1 - Parte 3 - PedroSantosLab/Prática 1 - Parte 3 - PedroSantos/memoria.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/pedro/OneDrive/Área de Trabalho/Prática 1 - Parte 3 - PedroSantosLab/Prática 1 - Parte 3 - PedroSantos|C:/Users/pedro/OneDrive/Área de Trabalho/Prática 1 - Parte 3 - PedroSantosLab/Prática 1 - Parte 3 - PedroSantos/memoria.v|
+!s101 -O0
+R3
+R4
+vramlpm
+IdXk<FhHl5bjOYa=L?ASD23
+VR:=61PRUnAZWihg=S@JO<2
+R1
+w1693188276
+8C:/Users/pedro/OneDrive/Área de Trabalho/Prática 1 - Parte 3 - PedroSantosLab/Prática 1 - Parte 3 - PedroSantos/ramlpm.v
+FC:/Users/pedro/OneDrive/Área de Trabalho/Prática 1 - Parte 3 - PedroSantosLab/Prática 1 - Parte 3 - PedroSantos/ramlpm.v
+L0 39
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 nej<?OfTc2PkZGTC_?HBW0
+!s85 0
+!s108 1693190159.725000
+!s107 C:/Users/pedro/OneDrive/Área de Trabalho/Prática 1 - Parte 3 - PedroSantosLab/Prática 1 - Parte 3 - PedroSantos/ramlpm.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/pedro/OneDrive/Área de Trabalho/Prática 1 - Parte 3 - PedroSantosLab/Prática 1 - Parte 3 - PedroSantos|C:/Users/pedro/OneDrive/Área de Trabalho/Prática 1 - Parte 3 - PedroSantosLab/Prática 1 - Parte 3 - PedroSantos/ramlpm.v|
+!s101 -O0
