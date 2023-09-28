@@ -3,96 +3,96 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'proc:processador|ControlUnit:CU|ALUOp[0]'
-Slack : -11.492
-TNS   : -172.087
+Slack : -12.654
+TNS   : -181.458
 
-Type  : Slow Model Setup 'PClock'
-Slack : -8.054
-TNS   : -1493.904
+Type  : Slow Model Setup 'KEY[0]'
+Slack : -7.601
+TNS   : -1342.618
 
 Type  : Slow Model Setup 'proc:processador|Counter:C|Counter[0]'
-Slack : -7.905
-TNS   : -113.438
+Slack : -6.100
+TNS   : -95.449
 
 Type  : Slow Model Setup 'mem_ram:mem_data|altsyncram:altsyncram_component|altsyncram_35e1:auto_generated|q_a[0]'
-Slack : -6.040
-TNS   : -76.837
+Slack : -5.259
+TNS   : -74.368
 
 Type  : Slow Model Hold 'mem_ram:mem_data|altsyncram:altsyncram_component|altsyncram_35e1:auto_generated|q_a[0]'
-Slack : -6.417
-TNS   : -96.074
+Slack : -6.012
+TNS   : -86.585
 
 Type  : Slow Model Hold 'proc:processador|Counter:C|Counter[0]'
-Slack : -5.363
-TNS   : -80.120
+Slack : -5.519
+TNS   : -79.429
 
-Type  : Slow Model Hold 'PClock'
-Slack : -2.539
-TNS   : -7.103
+Type  : Slow Model Hold 'KEY[0]'
+Slack : -2.510
+TNS   : -16.976
 
 Type  : Slow Model Hold 'proc:processador|ControlUnit:CU|ALUOp[0]'
-Slack : -2.086
-TNS   : -17.317
+Slack : -1.749
+TNS   : -17.088
 
 Type  : Slow Model Minimum Pulse Width 'proc:processador|Counter:C|Counter[0]'
-Slack : -2.792
-TNS   : -424.496
+Slack : -2.007
+TNS   : -324.354
+
+Type  : Slow Model Minimum Pulse Width 'KEY[0]'
+Slack : -2.000
+TNS   : -447.380
 
 Type  : Slow Model Minimum Pulse Width 'mem_ram:mem_data|altsyncram:altsyncram_component|altsyncram_35e1:auto_generated|q_a[0]'
-Slack : -2.215
-TNS   : -341.342
-
-Type  : Slow Model Minimum Pulse Width 'PClock'
-Slack : -2.000
-TNS   : -463.380
+Slack : -1.566
+TNS   : -214.306
 
 Type  : Slow Model Minimum Pulse Width 'proc:processador|ControlUnit:CU|ALUOp[0]'
 Slack : 0.500
 TNS   : 0.000
 
 Type  : Fast Model Setup 'proc:processador|ControlUnit:CU|ALUOp[0]'
-Slack : -4.768
-TNS   : -69.828
+Slack : -5.253
+TNS   : -75.009
+
+Type  : Fast Model Setup 'KEY[0]'
+Slack : -2.916
+TNS   : -499.532
 
 Type  : Fast Model Setup 'proc:processador|Counter:C|Counter[0]'
-Slack : -3.199
-TNS   : -44.397
-
-Type  : Fast Model Setup 'PClock'
-Slack : -3.178
-TNS   : -570.526
+Slack : -2.383
+TNS   : -36.648
 
 Type  : Fast Model Setup 'mem_ram:mem_data|altsyncram:altsyncram_component|altsyncram_35e1:auto_generated|q_a[0]'
-Slack : -2.287
-TNS   : -27.396
+Slack : -1.997
+TNS   : -27.625
 
 Type  : Fast Model Hold 'mem_ram:mem_data|altsyncram:altsyncram_component|altsyncram_35e1:auto_generated|q_a[0]'
-Slack : -3.239
-TNS   : -48.496
+Slack : -3.040
+TNS   : -43.878
 
 Type  : Fast Model Hold 'proc:processador|Counter:C|Counter[0]'
-Slack : -2.776
-TNS   : -41.475
+Slack : -2.827
+TNS   : -40.788
 
-Type  : Fast Model Hold 'PClock'
-Slack : -1.580
-TNS   : -17.930
+Type  : Fast Model Hold 'KEY[0]'
+Slack : -1.553
+TNS   : -39.232
 
 Type  : Fast Model Hold 'proc:processador|ControlUnit:CU|ALUOp[0]'
-Slack : -1.294
-TNS   : -14.072
+Slack : -1.140
+TNS   : -13.675
 
-Type  : Fast Model Minimum Pulse Width 'PClock'
+Type  : Fast Model Minimum Pulse Width 'KEY[0]'
 Slack : -2.000
-TNS   : -463.380
+TNS   : -447.380
 
 Type  : Fast Model Minimum Pulse Width 'proc:processador|Counter:C|Counter[0]'
-Slack : -0.978
-TNS   : -136.164
+Slack : -0.638
+TNS   : -88.112
 
 Type  : Fast Model Minimum Pulse Width 'mem_ram:mem_data|altsyncram:altsyncram_component|altsyncram_35e1:auto_generated|q_a[0]'
-Slack : -0.665
-TNS   : -92.068
+Slack : -0.459
+TNS   : -47.578
 
 Type  : Fast Model Minimum Pulse Width 'proc:processador|ControlUnit:CU|ALUOp[0]'
 Slack : 0.500

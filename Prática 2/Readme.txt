@@ -18,6 +18,8 @@ Testes:
 5 - Testar instruções em sequência na placa
 6 - Testar roteiro de apresentação na placa
 7 - Testar Sinal de Reset e checar se o PC é reiniciado corretamente (OK!)
+8 - Testar Loop
+9 - Incluir DE2 no projeto
 
 
 
@@ -40,4 +42,13 @@ Relatório:
 2 - Decisões específicas de implementação de cada módulo
 3 - Prints mostrando o funcionamento de todas as instruções separadamente (Mostrando todo o caminho de dados)
 4 - Prints mostrando o funcionamente contínuo do processador
+5 - Adicionar prints do Loop 
+
+Valores Hexadecimais:
+
+PC, ADDR -> 10 (A), 11 (B), 12 (C), 13 (D)
+
+Testes Placa:
+
+1 - 
 

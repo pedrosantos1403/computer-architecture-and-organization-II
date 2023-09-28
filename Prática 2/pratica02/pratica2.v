@@ -1,37 +1,81 @@
-module pratica2(
-	input PClock,
-	input ResetIn,
-	output [15:0] bus,
-	output [15:0] Reg0,
-	output [15:0] Reg1,
-	output [15:0] Reg2,
-	output [15:0] Reg3,
-	output [15:0] Reg4,
-	output [15:0] Reg5,
-	output [15:0] Reg6,
-	output [15:0] PC,
+module pratica2 (SW, KEY, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7, LEDG, LEDR);
 	
-	// Saídas adicionadas para serem mostradas na FPGA
-	output [15:0] Addr,
-	output [9:0] ir,
-	output [2:0] counter,
-	output [2:0] aluOp
-);
+input [17:0] SW;
 
-//wire [15:0] Addr;
+// KEY[0] -> Clock
+// KEY[1] -> Reset
+input [3:0] KEY;
 
-wire done;
+// HEX[3:0] -> BusWires
+// HEX[4] 	-> Counter
+// HEX[6] 	-> Addr
+// HEX[7] 	-> PC 
+output [0:6] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7;
+
+// LEDG[2:0] -> Reg X
+// LEDG[7:5] -> Reg Y
+output [8:0] LEDG;
+
+// LEDR[17:8] -> IR 
+// LEDR[4:2]  -> ALUop
+output [17:0] LEDR;
+
+// Sinais do Processador
 wire [15:0] DIN;
+wire [15:0] bus;
+wire [15:0] r0;
+wire [15:0] r1;
+wire [15:0] r2;
+wire [15:0] r3;
+wire [15:0] r4;
+wire [15:0] r5;
+wire [15:0] r6;
+wire [15:0] pc;
+wire [15:0] addr;
+wire [9:0] ir;
+wire [2:0] counter;
+wire [2:0] aluop;
 wire [15:0] DataInMem;
+wire done;
 wire W;
 
+// Clock
+assign clock = KEY[0];
+
+// Reset
+assign reset = SW[17];
+
+// Counter
+wire [7:0] contador;
+assign contador = counter;
+
 // Processador Multiciclo
-proc processador(PClock, DIN, ResetIn, Reg0, Reg1, Reg2, Reg3, Reg4, Reg5, Reg6, PC /*Reg7*/, Addr /*Addr_output*/, DataInMem /*Dout_output*/, W /*Wren*/, bus, done, ir /*IR_output*/, counter, aluop);
+proc processador(clock /*PClock*/, DIN, reset /*ResetIn*/, r0, r1, r2, r3, r4, r5, r6, pc /*Reg7*/, addr /*Addr_output*/, DataInMem /*Dout_output*/, W /*Wren*/, bus, done, ir /*IR_output*/, counter, aluop);
 
 //Memória RAM
 //Posição 0 a 9 => Dados
 //Posição 10 a 20 => Instruções
-mem_ram mem_data (Addr, PClock, DataInMem, W, DIN);
+mem_ram mem_data (addr, clock, DataInMem, W, DIN);
+
+// DISPLAYS
+disp7seg PC (pc, HEX7); //OK
+disp7seg Counter (contador, HEX4); //OK
+disp7seg Addr (addr, HEX6); //OK
+disp7seg R0 (r0, HEX3); // 9 -> OK
+disp7seg R1 (r1, HEX2); // 3 -> OK
+disp7seg R2 (r2, HEX1); // 1 -> OK
+disp7seg R3 (r3, HEX0); // 0 -> OK
+
+// LEDG
+assign LEDG[2:0] = r0;
+assign LEDG[7:5] = r1;
+
+// LEDR
+assign LEDR[4:2] = aluop;
+assign LEDR[17:8] = ir;
+
+// Inicializando HEX5 sem valor
+assign HEX5 = 7'b1111111;
 
 endmodule
 

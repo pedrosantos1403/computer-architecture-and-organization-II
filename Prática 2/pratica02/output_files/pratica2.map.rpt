@@ -1,5 +1,5 @@
 Analysis & Synthesis report for pratica2
-Thu Sep 28 09:59:31 2023
+Thu Sep 28 14:50:28 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -16,21 +16,37 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis IP Cores Summary
  10. User-Specified and Inferred Latches
- 11. General Register Statistics
- 12. Inverted Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Source assignments for mem_ram:mem_data|altsyncram:altsyncram_component|altsyncram_35e1:auto_generated
- 15. Parameter Settings for User Entity Instance: mem_ram:mem_data|altsyncram:altsyncram_component
- 16. altsyncram Parameter Settings by Entity Instance
- 17. Port Connectivity Checks: "mem_ram:mem_data"
- 18. Port Connectivity Checks: "proc:processador|RegN_addr:reg_addr"
- 19. Port Connectivity Checks: "proc:processador|RegN_pc:R7"
- 20. Port Connectivity Checks: "proc:processador|RegIR:IR_reg"
- 21. Port Connectivity Checks: "proc:processador|ControlUnit:CU"
- 22. Port Connectivity Checks: "proc:processador"
- 23. Elapsed Time Per Partition
- 24. Analysis & Synthesis Messages
- 25. Analysis & Synthesis Suppressed Messages
+ 11. Registers Removed During Synthesis
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for mem_ram:mem_data|altsyncram:altsyncram_component|altsyncram_35e1:auto_generated
+ 17. Parameter Settings for User Entity Instance: mem_ram:mem_data|altsyncram:altsyncram_component
+ 18. Parameter Settings for User Entity Instance: disp7seg:PC
+ 19. Parameter Settings for User Entity Instance: disp7seg:Counter
+ 20. Parameter Settings for User Entity Instance: disp7seg:Addr
+ 21. Parameter Settings for User Entity Instance: disp7seg:R0
+ 22. Parameter Settings for User Entity Instance: disp7seg:R1
+ 23. Parameter Settings for User Entity Instance: disp7seg:R2
+ 24. Parameter Settings for User Entity Instance: disp7seg:R3
+ 25. altsyncram Parameter Settings by Entity Instance
+ 26. Port Connectivity Checks: "disp7seg:R3"
+ 27. Port Connectivity Checks: "disp7seg:R2"
+ 28. Port Connectivity Checks: "disp7seg:R1"
+ 29. Port Connectivity Checks: "disp7seg:R0"
+ 30. Port Connectivity Checks: "disp7seg:Addr"
+ 31. Port Connectivity Checks: "disp7seg:Counter"
+ 32. Port Connectivity Checks: "disp7seg:PC"
+ 33. Port Connectivity Checks: "mem_ram:mem_data"
+ 34. Port Connectivity Checks: "proc:processador|RegN_addr:reg_addr"
+ 35. Port Connectivity Checks: "proc:processador|RegN_pc:R7"
+ 36. Port Connectivity Checks: "proc:processador|RegIR:IR_reg"
+ 37. Port Connectivity Checks: "proc:processador|ControlUnit:CU"
+ 38. Port Connectivity Checks: "proc:processador"
+ 39. Elapsed Time Per Partition
+ 40. Analysis & Synthesis Messages
+ 41. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -56,16 +72,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Sep 28 09:59:31 2023           ;
+; Analysis & Synthesis Status        ; Successful - Thu Sep 28 14:50:28 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; pratica2                                        ;
 ; Top-level Entity Name              ; pratica2                                        ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 703                                             ;
-;     Total combinational functions  ; 570                                             ;
-;     Dedicated logic registers      ; 222                                             ;
-; Total registers                    ; 222                                             ;
-; Total pins                         ; 178                                             ;
+; Total logic elements               ; 787                                             ;
+;     Total combinational functions  ; 654                                             ;
+;     Dedicated logic registers      ; 206                                             ;
+; Total registers                    ; 206                                             ;
+; Total pins                         ; 105                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 512                                             ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -175,8 +191,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                                                                                  ; Library ;
 +----------------------------------+-----------------+----------------------------------+-------------------------------------------------------------------------------------------------------------------------------+---------+
 ; mem_ram.v                        ; yes             ; User Wizard-Generated File       ; C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/mem_ram.v              ;         ;
-; pratica2.v                       ; yes             ; User Verilog HDL File            ; C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v             ;         ;
 ; mem_ram.mif                      ; yes             ; User Memory Initialization File  ; C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/mem_ram.mif            ;         ;
+; disp7seg.v                       ; yes             ; User Verilog HDL File            ; C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/disp7seg.v             ;         ;
+; pratica2.v                       ; yes             ; User Verilog HDL File            ; C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v             ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf                                                              ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                       ;         ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                                                                 ;         ;
@@ -195,29 +212,29 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------+
 ; Resource                                    ; Usage  ;
 +---------------------------------------------+--------+
-; Estimated Total logic elements              ; 703    ;
+; Estimated Total logic elements              ; 787    ;
 ;                                             ;        ;
-; Total combinational functions               ; 570    ;
+; Total combinational functions               ; 654    ;
 ; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 292    ;
-;     -- 3 input functions                    ; 178    ;
-;     -- <=2 input functions                  ; 100    ;
+;     -- 4 input functions                    ; 361    ;
+;     -- 3 input functions                    ; 172    ;
+;     -- <=2 input functions                  ; 121    ;
 ;                                             ;        ;
 ; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 509    ;
-;     -- arithmetic mode                      ; 61     ;
+;     -- normal mode                          ; 601    ;
+;     -- arithmetic mode                      ; 53     ;
 ;                                             ;        ;
-; Total registers                             ; 222    ;
-;     -- Dedicated logic registers            ; 222    ;
+; Total registers                             ; 206    ;
+;     -- Dedicated logic registers            ; 206    ;
 ;     -- I/O registers                        ; 0      ;
 ;                                             ;        ;
-; I/O pins                                    ; 178    ;
+; I/O pins                                    ; 105    ;
 ; Total memory bits                           ; 512    ;
 ; Embedded Multiplier 9-bit elements          ; 0      ;
-; Maximum fan-out node                        ; PClock ;
-; Maximum fan-out                             ; 238    ;
-; Total fan-out                               ; 2853   ;
-; Average fan-out                             ; 2.89   ;
+; Maximum fan-out node                        ; KEY[0] ;
+; Maximum fan-out                             ; 222    ;
+; Total fan-out                               ; 3000   ;
+; Average fan-out                             ; 3.06   ;
 +---------------------------------------------+--------+
 
 
@@ -226,14 +243,21 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                       ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------+--------------+
-; |pratica2                                 ; 570 (0)           ; 222 (0)      ; 512         ; 0            ; 0       ; 0         ; 178  ; 0            ; |pratica2                                                                                 ; work         ;
+; |pratica2                                 ; 654 (0)           ; 206 (0)      ; 512         ; 0            ; 0       ; 0         ; 105  ; 0            ; |pratica2                                                                                 ; work         ;
+;    |disp7seg:Addr|                        ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|disp7seg:Addr                                                                   ; work         ;
+;    |disp7seg:Counter|                     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|disp7seg:Counter                                                                ; work         ;
+;    |disp7seg:PC|                          ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|disp7seg:PC                                                                     ; work         ;
+;    |disp7seg:R0|                          ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|disp7seg:R0                                                                     ; work         ;
+;    |disp7seg:R1|                          ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|disp7seg:R1                                                                     ; work         ;
+;    |disp7seg:R2|                          ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|disp7seg:R2                                                                     ; work         ;
+;    |disp7seg:R3|                          ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|disp7seg:R3                                                                     ; work         ;
 ;    |mem_ram:mem_data|                     ; 0 (0)             ; 0 (0)        ; 512         ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|mem_ram:mem_data                                                                ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 512         ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|mem_ram:mem_data|altsyncram:altsyncram_component                                ; work         ;
 ;          |altsyncram_35e1:auto_generated| ; 0 (0)             ; 0 (0)        ; 512         ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|mem_ram:mem_data|altsyncram:altsyncram_component|altsyncram_35e1:auto_generated ; work         ;
-;    |proc:processador|                     ; 570 (150)         ; 222 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|proc:processador                                                                ; work         ;
+;    |proc:processador|                     ; 557 (149)         ; 206 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|proc:processador                                                                ; work         ;
 ;       |ALU:alu|                           ; 249 (249)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|proc:processador|ALU:alu                                                        ; work         ;
-;       |ControlUnit:CU|                    ; 84 (84)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|proc:processador|ControlUnit:CU                                                 ; work         ;
-;       |Counter:C|                         ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|proc:processador|Counter:C                                                      ; work         ;
+;       |ControlUnit:CU|                    ; 87 (87)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|proc:processador|ControlUnit:CU                                                 ; work         ;
+;       |Counter:C|                         ; 4 (4)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|proc:processador|Counter:C                                                      ; work         ;
 ;       |Reg0:R0|                           ; 2 (2)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|proc:processador|Reg0:R0                                                        ; work         ;
 ;       |Reg1:R1|                           ; 2 (2)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|proc:processador|Reg1:R1                                                        ; work         ;
 ;       |Reg2:R2|                           ; 1 (1)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|proc:processador|Reg2:R2                                                        ; work         ;
@@ -246,9 +270,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;       |RegN:R6|                           ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|proc:processador|RegN:R6                                                        ; work         ;
 ;       |RegN:reg_dout|                     ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|proc:processador|RegN:reg_dout                                                  ; work         ;
 ;       |RegN_W:reg_W|                      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|proc:processador|RegN_W:reg_W                                                   ; work         ;
-;       |RegN_addr:reg_addr|                ; 38 (38)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|proc:processador|RegN_addr:reg_addr                                             ; work         ;
-;       |RegN_pc:R7|                        ; 36 (36)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|proc:processador|RegN_pc:R7                                                     ; work         ;
-;       |RegUpcode:X|                       ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|proc:processador|RegUpcode:X                                                    ; work         ;
+;       |RegN_addr:reg_addr|                ; 22 (22)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|proc:processador|RegN_addr:reg_addr                                             ; work         ;
+;       |RegN_pc:R7|                        ; 34 (34)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|proc:processador|RegN_pc:R7                                                     ; work         ;
+;       |RegUpcode:X|                       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|proc:processador|RegUpcode:X                                                    ; work         ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -276,22 +300,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------+--------------------------------------+------------------------+
 ; Latch Name                                          ; Latch Enable Signal                  ; Free of Timing Hazards ;
 +-----------------------------------------------------+--------------------------------------+------------------------+
-; proc:processador|BusWires[0]                        ; proc:processador|WideNor0            ; yes                    ;
-; proc:processador|BusWires[1]                        ; proc:processador|WideNor0            ; yes                    ;
-; proc:processador|BusWires[2]                        ; proc:processador|WideNor0            ; yes                    ;
-; proc:processador|BusWires[3]                        ; proc:processador|WideNor0            ; yes                    ;
+; proc:processador|ControlUnit:CU|ALUOp[0]            ; proc:processador|ControlUnit:CU|Mux2 ; yes                    ;
+; proc:processador|ControlUnit:CU|ALUOp[1]            ; proc:processador|ControlUnit:CU|Mux2 ; yes                    ;
+; proc:processador|ControlUnit:CU|ALUOp[2]            ; proc:processador|ControlUnit:CU|Mux0 ; yes                    ;
 ; proc:processador|BusWires[4]                        ; proc:processador|WideNor0            ; yes                    ;
 ; proc:processador|BusWires[5]                        ; proc:processador|WideNor0            ; yes                    ;
 ; proc:processador|BusWires[6]                        ; proc:processador|WideNor0            ; yes                    ;
 ; proc:processador|BusWires[7]                        ; proc:processador|WideNor0            ; yes                    ;
-; proc:processador|BusWires[8]                        ; proc:processador|WideNor0            ; yes                    ;
-; proc:processador|BusWires[9]                        ; proc:processador|WideNor0            ; yes                    ;
-; proc:processador|BusWires[10]                       ; proc:processador|WideNor0            ; yes                    ;
-; proc:processador|BusWires[11]                       ; proc:processador|WideNor0            ; yes                    ;
-; proc:processador|BusWires[12]                       ; proc:processador|WideNor0            ; yes                    ;
-; proc:processador|BusWires[13]                       ; proc:processador|WideNor0            ; yes                    ;
-; proc:processador|BusWires[14]                       ; proc:processador|WideNor0            ; yes                    ;
-; proc:processador|BusWires[15]                       ; proc:processador|WideNor0            ; yes                    ;
+; proc:processador|BusWires[0]                        ; proc:processador|WideNor0            ; yes                    ;
+; proc:processador|BusWires[1]                        ; proc:processador|WideNor0            ; yes                    ;
+; proc:processador|BusWires[2]                        ; proc:processador|WideNor0            ; yes                    ;
+; proc:processador|BusWires[3]                        ; proc:processador|WideNor0            ; yes                    ;
 ; proc:processador|ALU:alu|ALU_output[4]              ; proc:processador|ALU:alu|Mux16       ; yes                    ;
 ; proc:processador|ALU:alu|ALU_output[3]              ; proc:processador|ALU:alu|Mux16       ; yes                    ;
 ; proc:processador|ALU:alu|ALU_output[2]              ; proc:processador|ALU:alu|Mux16       ; yes                    ;
@@ -308,12 +327,42 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; proc:processador|ALU:alu|ALU_output[13]             ; proc:processador|ALU:alu|Mux16       ; yes                    ;
 ; proc:processador|ALU:alu|ALU_output[14]             ; proc:processador|ALU:alu|Mux16       ; yes                    ;
 ; proc:processador|ALU:alu|ALU_output[15]             ; proc:processador|ALU:alu|Mux16       ; yes                    ;
-; proc:processador|ControlUnit:CU|ALUOp[2]            ; proc:processador|ControlUnit:CU|Mux0 ; yes                    ;
-; proc:processador|ControlUnit:CU|ALUOp[1]            ; proc:processador|ControlUnit:CU|Mux2 ; yes                    ;
-; proc:processador|ControlUnit:CU|ALUOp[0]            ; proc:processador|ControlUnit:CU|Mux2 ; yes                    ;
+; proc:processador|BusWires[8]                        ; proc:processador|WideNor0            ; yes                    ;
+; proc:processador|BusWires[9]                        ; proc:processador|WideNor0            ; yes                    ;
+; proc:processador|BusWires[10]                       ; proc:processador|WideNor0            ; yes                    ;
+; proc:processador|BusWires[11]                       ; proc:processador|WideNor0            ; yes                    ;
+; proc:processador|BusWires[12]                       ; proc:processador|WideNor0            ; yes                    ;
+; proc:processador|BusWires[13]                       ; proc:processador|WideNor0            ; yes                    ;
+; proc:processador|BusWires[14]                       ; proc:processador|WideNor0            ; yes                    ;
+; proc:processador|BusWires[15]                       ; proc:processador|WideNor0            ; yes                    ;
 ; Number of user-specified and inferred latches = 35  ;                                      ;                        ;
 +-----------------------------------------------------+--------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++--------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                       ;
++-----------------------------------------------------+--------------------+
+; Register name                                       ; Reason for Removal ;
++-----------------------------------------------------+--------------------+
+; proc:processador|RegN_addr:reg_addr|pc_value[8..15] ; Lost fanout        ;
+; Total Number of Removed Registers = 8               ;                    ;
++-----------------------------------------------------+--------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                               ;
++--------------------------------------------------+--------------------+---------------------------------------------------+
+; Register name                                    ; Reason for Removal ; Registers Removed due to This Register            ;
++--------------------------------------------------+--------------------+---------------------------------------------------+
+; proc:processador|RegN_addr:reg_addr|pc_value[15] ; Lost Fanouts       ; proc:processador|RegN_addr:reg_addr|pc_value[14], ;
+;                                                  ;                    ; proc:processador|RegN_addr:reg_addr|pc_value[13], ;
+;                                                  ;                    ; proc:processador|RegN_addr:reg_addr|pc_value[12], ;
+;                                                  ;                    ; proc:processador|RegN_addr:reg_addr|pc_value[11], ;
+;                                                  ;                    ; proc:processador|RegN_addr:reg_addr|pc_value[10], ;
+;                                                  ;                    ; proc:processador|RegN_addr:reg_addr|pc_value[9],  ;
+;                                                  ;                    ; proc:processador|RegN_addr:reg_addr|pc_value[8]   ;
++--------------------------------------------------+--------------------+---------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -321,12 +370,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 222   ;
+; Total registers                              ; 206   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 217   ;
+; Number of registers using Clock Enable       ; 201   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -336,15 +385,15 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-------------------------------------------------+---------+
 ; Inverted Register                               ; Fan out ;
 +-------------------------------------------------+---------+
-; proc:processador|Reg0:R0|R_output[0]            ; 2       ;
-; proc:processador|Reg0:R0|R_output[3]            ; 2       ;
-; proc:processador|Reg1:R1|R_output[0]            ; 2       ;
-; proc:processador|Reg1:R1|R_output[1]            ; 2       ;
-; proc:processador|Reg2:R2|R_output[0]            ; 2       ;
-; proc:processador|RegN_pc:R7|PC_output[1]        ; 3       ;
-; proc:processador|RegN_pc:R7|PC_output[3]        ; 3       ;
-; proc:processador|RegN_addr:reg_addr|R_output[1] ; 2       ;
-; proc:processador|RegN_addr:reg_addr|R_output[3] ; 2       ;
+; proc:processador|Reg2:R2|R_output[0]            ; 8       ;
+; proc:processador|Reg1:R1|R_output[0]            ; 9       ;
+; proc:processador|Reg1:R1|R_output[1]            ; 9       ;
+; proc:processador|Reg0:R0|R_output[0]            ; 9       ;
+; proc:processador|Reg0:R0|R_output[3]            ; 8       ;
+; proc:processador|RegN_addr:reg_addr|R_output[1] ; 8       ;
+; proc:processador|RegN_addr:reg_addr|R_output[3] ; 8       ;
+; proc:processador|RegN_pc:R7|PC_output[1]        ; 9       ;
+; proc:processador|RegN_pc:R7|PC_output[3]        ; 9       ;
 ; proc:processador|RegN_addr:reg_addr|pc_value[1] ; 1       ;
 ; proc:processador|RegN_addr:reg_addr|pc_value[3] ; 1       ;
 ; Total number of inverted registers = 11         ;         ;
@@ -356,20 +405,20 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
-; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |pratica2|proc:processador|RegN_addr:reg_addr|R_output[2] ;
-; 4:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |pratica2|proc:processador|RegN_pc:R7|PC_output[7]        ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |pratica2|proc:processador|RegN_addr:reg_addr|R_output[1] ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |pratica2|proc:processador|RegN_pc:R7|PC_output[1]        ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |pratica2|proc:processador|RegN_addr:reg_addr|R_output[5] ;
+; 4:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |pratica2|proc:processador|RegN_pc:R7|PC_output[11]       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |pratica2|proc:processador|RegN_addr:reg_addr|R_output[3] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |pratica2|proc:processador|RegN_pc:R7|PC_output[3]        ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |pratica2|proc:processador|ControlUnit:CU|Mux0            ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |pratica2|proc:processador|ControlUnit:CU|Mux0            ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; No         ; |pratica2|proc:processador|ControlUnit:CU|Mux9            ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |pratica2|proc:processador|ControlUnit:CU|Mux2            ;
+; 10:1               ; 8 bits    ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; No         ; |pratica2|proc:processador|ControlUnit:CU|Mux12           ;
+; 11:1               ; 4 bits    ; 28 LEs        ; 16 LEs               ; 12 LEs                 ; No         ; |pratica2|proc:processador|ALU:alu|Mux7                   ;
 ; 11:1               ; 4 bits    ; 28 LEs        ; 16 LEs               ; 12 LEs                 ; No         ; |pratica2|proc:processador|ALU:alu|Mux8                   ;
-; 11:1               ; 4 bits    ; 28 LEs        ; 16 LEs               ; 12 LEs                 ; No         ; |pratica2|proc:processador|ALU:alu|Mux4                   ;
-; 12:1               ; 8 bits    ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |pratica2|proc:processador|ControlUnit:CU|Mux19           ;
-; 12:1               ; 2 bits    ; 16 LEs        ; 10 LEs               ; 6 LEs                  ; No         ; |pratica2|proc:processador|ALU:alu|Mux12                  ;
+; 12:1               ; 8 bits    ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |pratica2|proc:processador|ControlUnit:CU|Mux24           ;
 ; 12:1               ; 2 bits    ; 16 LEs        ; 10 LEs               ; 6 LEs                  ; No         ; |pratica2|proc:processador|ALU:alu|Mux3                   ;
-; 13:1               ; 2 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |pratica2|proc:processador|ALU:alu|Mux14                  ;
-; 10:1               ; 16 bits   ; 96 LEs        ; 112 LEs              ; -16 LEs                ; No         ; |pratica2|proc:processador|Selector4                      ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 10 LEs               ; 6 LEs                  ; No         ; |pratica2|proc:processador|ALU:alu|Mux12                  ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |pratica2|proc:processador|ALU:alu|Mux15                  ;
+; 10:1               ; 16 bits   ; 96 LEs        ; 112 LEs              ; -16 LEs                ; No         ; |pratica2|proc:processador|Selector5                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
 
 
@@ -443,6 +492,76 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: disp7seg:PC ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; tamanho        ; 8     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: disp7seg:Counter ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; tamanho        ; 8     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: disp7seg:Addr ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; tamanho        ; 8     ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: disp7seg:R0 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; tamanho        ; 8     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: disp7seg:R1 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; tamanho        ; 8     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: disp7seg:R2 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; tamanho        ; 8     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: disp7seg:R3 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; tamanho        ; 8     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +----------------------------------------------------------------------------------------------+
 ; altsyncram Parameter Settings by Entity Instance                                             ;
 +-------------------------------------------+--------------------------------------------------+
@@ -461,6 +580,69 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- RAM_BLOCK_TYPE                     ; M4K                                              ;
 ;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                        ;
 +-------------------------------------------+--------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "disp7seg:R3"                                                                                                                                                                      ;
++-------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                           ;
++-------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; entry ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (8 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++-------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "disp7seg:R2"                                                                                                                                                                      ;
++-------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                           ;
++-------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; entry ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (8 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++-------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "disp7seg:R1"                                                                                                                                                                      ;
++-------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                           ;
++-------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; entry ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (8 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++-------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "disp7seg:R0"                                                                                                                                                                      ;
++-------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                           ;
++-------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; entry ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (8 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++-------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "disp7seg:Addr"                                                                                                                                                                    ;
++-------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                           ;
++-------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; entry ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (8 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++-------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------+
+; Port Connectivity Checks: "disp7seg:Counter"  ;
++-------------+-------+----------+--------------+
+; Port        ; Type  ; Severity ; Details      ;
++-------------+-------+----------+--------------+
+; entry[7..3] ; Input ; Info     ; Stuck at GND ;
++-------------+-------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "disp7seg:PC"                                                                                                                                                                      ;
++-------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                           ;
++-------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; entry ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (8 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++-------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -509,15 +691,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "proc:processador"                                                                                                         ;
-+-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                                                                  ;
-+-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
-; Done  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                      ;
-; ALUop ; Output ; Warning  ; Output or bidir port (3 bits) is wider than the port expression (1 bits) it drives; bit(s) "ALUop[2..1]" have no fanouts ;
-; ALUop ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                      ;
-+-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "proc:processador"                                                                                 ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port               ; Type   ; Severity ; Details                                                                             ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; R0_output[15..8]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; R1_output[15..8]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; R2_output[15..8]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; R3_output[15..8]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; R4_output          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; R5_output          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; R6_output          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; R7_output[15..8]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; Addr_output[15..8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; BusWires           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; Done               ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -535,12 +725,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Sep 28 09:59:28 2023
+    Info: Processing started: Thu Sep 28 14:50:25 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pratica2 -c pratica2
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file mem_ram.v
     Info (12023): Found entity 1: mem_ram
-Warning (10261): Verilog HDL Event Control warning at pratica2.v(352): Event Control contains a complex event expression
+Info (12021): Found 1 design units, including 1 entities, in source file disp7seg.v
+    Info (12023): Found entity 1: disp7seg
+Warning (10261): Verilog HDL Event Control warning at pratica2.v(397): Event Control contains a complex event expression
 Info (12021): Found 14 design units, including 14 entities, in source file pratica2.v
     Info (12023): Found entity 1: pratica2
     Info (12023): Found entity 2: proc
@@ -556,114 +748,116 @@ Info (12021): Found 14 design units, including 14 entities, in source file prati
     Info (12023): Found entity 12: RegIR
     Info (12023): Found entity 13: RegN_addr
     Info (12023): Found entity 14: RegN_W
-Info (12021): Found 1 design units, including 1 entities, in source file pratica2placa.v
-    Info (12023): Found entity 1: pratica2placa
-Info (12021): Found 1 design units, including 1 entities, in source file disp7seg.v
-    Info (12023): Found entity 1: disp7seg
-Warning (10236): Verilog HDL Implicit Net warning at pratica2.v(29): created implicit net for "aluop"
+Warning (10236): Verilog HDL Implicit Net warning at pratica2.v(43): created implicit net for "clock"
+Warning (10236): Verilog HDL Implicit Net warning at pratica2.v(46): created implicit net for "reset"
 Info (12127): Elaborating entity "pratica2" for the top level hierarchy
-Warning (10034): Output port "aluOp" at pratica2.v(19) has no driver
+Warning (10230): Verilog HDL assignment warning at pratica2.v(71): truncated value with size 16 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at pratica2.v(72): truncated value with size 16 to match size of target (3)
+Warning (10034): Output port "LEDG[8]" at pratica2.v(17) has no driver
+Warning (10034): Output port "LEDG[4..3]" at pratica2.v(17) has no driver
+Warning (10034): Output port "LEDR[7..5]" at pratica2.v(21) has no driver
+Warning (10034): Output port "LEDR[1..0]" at pratica2.v(21) has no driver
 Info (12128): Elaborating entity "proc" for hierarchy "proc:processador"
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(124): variable "DIN" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(125): variable "G_output" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(126): variable "R0_output" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(127): variable "R1_output" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(128): variable "R2_output" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(129): variable "R3_output" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(130): variable "R4_output" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(131): variable "R5_output" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(132): variable "R6_output" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(133): variable "R7_output" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10270): Verilog HDL Case Statement warning at pratica2.v(123): incomplete case statement has no default case item
-Info (10264): Verilog HDL Case Statement information at pratica2.v(123): all case item expressions in this case statement are onehot
-Warning (10240): Verilog HDL Always Construct warning at pratica2.v(120): inferring latch(es) for variable "BusWires", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "BusWires[0]" at pratica2.v(120)
-Info (10041): Inferred latch for "BusWires[1]" at pratica2.v(120)
-Info (10041): Inferred latch for "BusWires[2]" at pratica2.v(120)
-Info (10041): Inferred latch for "BusWires[3]" at pratica2.v(120)
-Info (10041): Inferred latch for "BusWires[4]" at pratica2.v(120)
-Info (10041): Inferred latch for "BusWires[5]" at pratica2.v(120)
-Info (10041): Inferred latch for "BusWires[6]" at pratica2.v(120)
-Info (10041): Inferred latch for "BusWires[7]" at pratica2.v(120)
-Info (10041): Inferred latch for "BusWires[8]" at pratica2.v(120)
-Info (10041): Inferred latch for "BusWires[9]" at pratica2.v(120)
-Info (10041): Inferred latch for "BusWires[10]" at pratica2.v(120)
-Info (10041): Inferred latch for "BusWires[11]" at pratica2.v(120)
-Info (10041): Inferred latch for "BusWires[12]" at pratica2.v(120)
-Info (10041): Inferred latch for "BusWires[13]" at pratica2.v(120)
-Info (10041): Inferred latch for "BusWires[14]" at pratica2.v(120)
-Info (10041): Inferred latch for "BusWires[15]" at pratica2.v(120)
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(169): variable "DIN" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(170): variable "G_output" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(171): variable "R0_output" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(172): variable "R1_output" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(173): variable "R2_output" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(174): variable "R3_output" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(175): variable "R4_output" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(176): variable "R5_output" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(177): variable "R6_output" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(178): variable "R7_output" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10270): Verilog HDL Case Statement warning at pratica2.v(168): incomplete case statement has no default case item
+Info (10264): Verilog HDL Case Statement information at pratica2.v(168): all case item expressions in this case statement are onehot
+Warning (10240): Verilog HDL Always Construct warning at pratica2.v(165): inferring latch(es) for variable "BusWires", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "BusWires[0]" at pratica2.v(165)
+Info (10041): Inferred latch for "BusWires[1]" at pratica2.v(165)
+Info (10041): Inferred latch for "BusWires[2]" at pratica2.v(165)
+Info (10041): Inferred latch for "BusWires[3]" at pratica2.v(165)
+Info (10041): Inferred latch for "BusWires[4]" at pratica2.v(165)
+Info (10041): Inferred latch for "BusWires[5]" at pratica2.v(165)
+Info (10041): Inferred latch for "BusWires[6]" at pratica2.v(165)
+Info (10041): Inferred latch for "BusWires[7]" at pratica2.v(165)
+Info (10041): Inferred latch for "BusWires[8]" at pratica2.v(165)
+Info (10041): Inferred latch for "BusWires[9]" at pratica2.v(165)
+Info (10041): Inferred latch for "BusWires[10]" at pratica2.v(165)
+Info (10041): Inferred latch for "BusWires[11]" at pratica2.v(165)
+Info (10041): Inferred latch for "BusWires[12]" at pratica2.v(165)
+Info (10041): Inferred latch for "BusWires[13]" at pratica2.v(165)
+Info (10041): Inferred latch for "BusWires[14]" at pratica2.v(165)
+Info (10041): Inferred latch for "BusWires[15]" at pratica2.v(165)
 Info (12128): Elaborating entity "Counter" for hierarchy "proc:processador|Counter:C"
 Info (12128): Elaborating entity "RegUpcode" for hierarchy "proc:processador|RegUpcode:X"
 Info (12128): Elaborating entity "ControlUnit" for hierarchy "proc:processador|ControlUnit:CU"
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(209): variable "ADD" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(209): variable "SUB" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(209): variable "OR" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(209): variable "SLT" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(213): variable "SLL" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(218): variable "SRL" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(223): variable "MV" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(227): variable "MVI" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(231): variable "MVNZ" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(232): variable "G_output" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(237): variable "SD" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(241): variable "LD" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10763): Verilog HDL warning at pratica2.v(208): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness
-Warning (10270): Verilog HDL Case Statement warning at pratica2.v(208): incomplete case statement has no default case item
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(252): variable "ADD" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(257): variable "SUB" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(262): variable "OR" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(267): variable "SLT" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(272): variable "SLL" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(272): variable "SRL" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(276): variable "MV" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(254): variable "ADD" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(254): variable "SUB" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(254): variable "OR" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(254): variable "SLT" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(258): variable "SLL" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(263): variable "SRL" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(268): variable "MV" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(272): variable "MVI" is read inside the Always Construct but isn't in the Always Construct's Event Control
 Warning (10235): Verilog HDL Always Construct warning at pratica2.v(276): variable "MVNZ" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(280): variable "SD" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10763): Verilog HDL warning at pratica2.v(251): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness
-Warning (10270): Verilog HDL Case Statement warning at pratica2.v(251): incomplete case statement has no default case item
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(291): variable "ADD" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(291): variable "SUB" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(291): variable "OR" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(291): variable "SLT" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(298): variable "SRL" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(298): variable "SLL" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10763): Verilog HDL warning at pratica2.v(290): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness
-Warning (10270): Verilog HDL Case Statement warning at pratica2.v(290): incomplete case statement has no default case item
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(311): variable "LD" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(317): variable "SD" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(322): variable "MVI" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10763): Verilog HDL warning at pratica2.v(310): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness
-Warning (10270): Verilog HDL Case Statement warning at pratica2.v(310): incomplete case statement has no default case item
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(332): variable "MVI" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10270): Verilog HDL Case Statement warning at pratica2.v(331): incomplete case statement has no default case item
-Warning (10240): Verilog HDL Always Construct warning at pratica2.v(171): inferring latch(es) for variable "ALUOp", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at pratica2.v(171): inferring latch(es) for variable "is_mvi", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at pratica2.v(171): inferring latch(es) for variable "is_Load", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "is_Load" at pratica2.v(171)
-Info (10041): Inferred latch for "is_mvi" at pratica2.v(171)
-Info (10041): Inferred latch for "ALUOp[0]" at pratica2.v(171)
-Info (10041): Inferred latch for "ALUOp[1]" at pratica2.v(171)
-Info (10041): Inferred latch for "ALUOp[2]" at pratica2.v(171)
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(277): variable "G_output" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(282): variable "SD" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(286): variable "LD" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10763): Verilog HDL warning at pratica2.v(253): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness
+Warning (10270): Verilog HDL Case Statement warning at pratica2.v(253): incomplete case statement has no default case item
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(297): variable "ADD" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(302): variable "SUB" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(307): variable "OR" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(312): variable "SLT" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(317): variable "SLL" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(317): variable "SRL" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(321): variable "MV" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(321): variable "MVNZ" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(325): variable "SD" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10763): Verilog HDL warning at pratica2.v(296): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness
+Warning (10270): Verilog HDL Case Statement warning at pratica2.v(296): incomplete case statement has no default case item
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(336): variable "ADD" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(336): variable "SUB" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(336): variable "OR" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(336): variable "SLT" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(343): variable "SRL" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(343): variable "SLL" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10763): Verilog HDL warning at pratica2.v(335): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness
+Warning (10270): Verilog HDL Case Statement warning at pratica2.v(335): incomplete case statement has no default case item
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(356): variable "LD" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(362): variable "SD" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(367): variable "MVI" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10763): Verilog HDL warning at pratica2.v(355): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness
+Warning (10270): Verilog HDL Case Statement warning at pratica2.v(355): incomplete case statement has no default case item
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(377): variable "MVI" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10270): Verilog HDL Case Statement warning at pratica2.v(376): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at pratica2.v(216): inferring latch(es) for variable "ALUOp", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at pratica2.v(216): inferring latch(es) for variable "is_mvi", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at pratica2.v(216): inferring latch(es) for variable "is_Load", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "is_Load" at pratica2.v(216)
+Info (10041): Inferred latch for "is_mvi" at pratica2.v(216)
+Info (10041): Inferred latch for "ALUOp[0]" at pratica2.v(216)
+Info (10041): Inferred latch for "ALUOp[1]" at pratica2.v(216)
+Info (10041): Inferred latch for "ALUOp[2]" at pratica2.v(216)
 Info (12128): Elaborating entity "ALU" for hierarchy "proc:processador|ALU:alu"
-Warning (10230): Verilog HDL assignment warning at pratica2.v(379): truncated value with size 32 to match size of target (16)
-Warning (10270): Verilog HDL Case Statement warning at pratica2.v(375): incomplete case statement has no default case item
-Warning (10240): Verilog HDL Always Construct warning at pratica2.v(374): inferring latch(es) for variable "ALU_output", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "ALU_output[0]" at pratica2.v(374)
-Info (10041): Inferred latch for "ALU_output[1]" at pratica2.v(374)
-Info (10041): Inferred latch for "ALU_output[2]" at pratica2.v(374)
-Info (10041): Inferred latch for "ALU_output[3]" at pratica2.v(374)
-Info (10041): Inferred latch for "ALU_output[4]" at pratica2.v(374)
-Info (10041): Inferred latch for "ALU_output[5]" at pratica2.v(374)
-Info (10041): Inferred latch for "ALU_output[6]" at pratica2.v(374)
-Info (10041): Inferred latch for "ALU_output[7]" at pratica2.v(374)
-Info (10041): Inferred latch for "ALU_output[8]" at pratica2.v(374)
-Info (10041): Inferred latch for "ALU_output[9]" at pratica2.v(374)
-Info (10041): Inferred latch for "ALU_output[10]" at pratica2.v(374)
-Info (10041): Inferred latch for "ALU_output[11]" at pratica2.v(374)
-Info (10041): Inferred latch for "ALU_output[12]" at pratica2.v(374)
-Info (10041): Inferred latch for "ALU_output[13]" at pratica2.v(374)
-Info (10041): Inferred latch for "ALU_output[14]" at pratica2.v(374)
-Info (10041): Inferred latch for "ALU_output[15]" at pratica2.v(374)
+Warning (10230): Verilog HDL assignment warning at pratica2.v(424): truncated value with size 32 to match size of target (16)
+Warning (10270): Verilog HDL Case Statement warning at pratica2.v(420): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at pratica2.v(419): inferring latch(es) for variable "ALU_output", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "ALU_output[0]" at pratica2.v(419)
+Info (10041): Inferred latch for "ALU_output[1]" at pratica2.v(419)
+Info (10041): Inferred latch for "ALU_output[2]" at pratica2.v(419)
+Info (10041): Inferred latch for "ALU_output[3]" at pratica2.v(419)
+Info (10041): Inferred latch for "ALU_output[4]" at pratica2.v(419)
+Info (10041): Inferred latch for "ALU_output[5]" at pratica2.v(419)
+Info (10041): Inferred latch for "ALU_output[6]" at pratica2.v(419)
+Info (10041): Inferred latch for "ALU_output[7]" at pratica2.v(419)
+Info (10041): Inferred latch for "ALU_output[8]" at pratica2.v(419)
+Info (10041): Inferred latch for "ALU_output[9]" at pratica2.v(419)
+Info (10041): Inferred latch for "ALU_output[10]" at pratica2.v(419)
+Info (10041): Inferred latch for "ALU_output[11]" at pratica2.v(419)
+Info (10041): Inferred latch for "ALU_output[12]" at pratica2.v(419)
+Info (10041): Inferred latch for "ALU_output[13]" at pratica2.v(419)
+Info (10041): Inferred latch for "ALU_output[14]" at pratica2.v(419)
+Info (10041): Inferred latch for "ALU_output[15]" at pratica2.v(419)
 Info (12128): Elaborating entity "RegN" for hierarchy "proc:processador|RegN:A_reg"
 Info (12128): Elaborating entity "RegIR" for hierarchy "proc:processador|RegIR:IR_reg"
 Info (12128): Elaborating entity "Reg0" for hierarchy "proc:processador|Reg0:R0"
@@ -694,15 +888,14 @@ Info (12133): Instantiated megafunction "mem_ram:mem_data|altsyncram:altsyncram_
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_35e1.tdf
     Info (12023): Found entity 1: altsyncram_35e1
 Info (12128): Elaborating entity "altsyncram_35e1" for hierarchy "mem_ram:mem_data|altsyncram:altsyncram_component|altsyncram_35e1:auto_generated"
-Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13012): Latch proc:processador|BusWires[0] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal mem_ram:mem_data|altsyncram:altsyncram_component|altsyncram_35e1:auto_generated|q_a[0]
-Warning (13012): Latch proc:processador|BusWires[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal mem_ram:mem_data|altsyncram:altsyncram_component|altsyncram_35e1:auto_generated|q_a[1]
-Warning (13012): Latch proc:processador|BusWires[2] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal mem_ram:mem_data|altsyncram:altsyncram_component|altsyncram_35e1:auto_generated|q_a[2]
-Warning (13012): Latch proc:processador|BusWires[3] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal mem_ram:mem_data|altsyncram:altsyncram_component|altsyncram_35e1:auto_generated|q_a[3]
+Info (12128): Elaborating entity "disp7seg" for hierarchy "disp7seg:PC"
+Warning (12241): 11 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13012): Latch proc:processador|ControlUnit:CU|ALUOp[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal proc:processador|Counter:C|Counter[2]
+Warning (13012): Latch proc:processador|ControlUnit:CU|ALUOp[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal proc:processador|Counter:C|Counter[2]
+Warning (13012): Latch proc:processador|ControlUnit:CU|ALUOp[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal proc:processador|Counter:C|Counter[0]
 Warning (13012): Latch proc:processador|BusWires[4] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal mem_ram:mem_data|altsyncram:altsyncram_component|altsyncram_35e1:auto_generated|q_a[4]
 Warning (13012): Latch proc:processador|BusWires[5] has unsafe behavior
@@ -711,22 +904,14 @@ Warning (13012): Latch proc:processador|BusWires[6] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal proc:processador|Counter:C|Counter[0]
 Warning (13012): Latch proc:processador|BusWires[7] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal proc:processador|Counter:C|Counter[0]
-Warning (13012): Latch proc:processador|BusWires[8] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal proc:processador|Counter:C|Counter[0]
-Warning (13012): Latch proc:processador|BusWires[9] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal proc:processador|Counter:C|Counter[0]
-Warning (13012): Latch proc:processador|BusWires[10] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal proc:processador|Counter:C|Counter[0]
-Warning (13012): Latch proc:processador|BusWires[11] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal proc:processador|Counter:C|Counter[0]
-Warning (13012): Latch proc:processador|BusWires[12] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal proc:processador|Counter:C|Counter[0]
-Warning (13012): Latch proc:processador|BusWires[13] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal proc:processador|Counter:C|Counter[0]
-Warning (13012): Latch proc:processador|BusWires[14] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal proc:processador|Counter:C|Counter[0]
-Warning (13012): Latch proc:processador|BusWires[15] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal proc:processador|Counter:C|Counter[0]
+Warning (13012): Latch proc:processador|BusWires[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mem_ram:mem_data|altsyncram:altsyncram_component|altsyncram_35e1:auto_generated|q_a[0]
+Warning (13012): Latch proc:processador|BusWires[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mem_ram:mem_data|altsyncram:altsyncram_component|altsyncram_35e1:auto_generated|q_a[1]
+Warning (13012): Latch proc:processador|BusWires[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mem_ram:mem_data|altsyncram:altsyncram_component|altsyncram_35e1:auto_generated|q_a[2]
+Warning (13012): Latch proc:processador|BusWires[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal mem_ram:mem_data|altsyncram:altsyncram_component|altsyncram_35e1:auto_generated|q_a[3]
 Warning (13012): Latch proc:processador|ALU:alu|ALU_output[4] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal proc:processador|ControlUnit:CU|ALUOp[0]
 Warning (13012): Latch proc:processador|ALU:alu|ALU_output[3] has unsafe behavior
@@ -759,27 +944,71 @@ Warning (13012): Latch proc:processador|ALU:alu|ALU_output[14] has unsafe behavi
     Warning (13013): Ports D and ENA on the latch are fed by the same signal proc:processador|ControlUnit:CU|ALUOp[2]
 Warning (13012): Latch proc:processador|ALU:alu|ALU_output[15] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal proc:processador|ControlUnit:CU|ALUOp[2]
-Warning (13012): Latch proc:processador|ControlUnit:CU|ALUOp[2] has unsafe behavior
+Warning (13012): Latch proc:processador|BusWires[8] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal proc:processador|Counter:C|Counter[0]
-Warning (13012): Latch proc:processador|ControlUnit:CU|ALUOp[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal proc:processador|Counter:C|Counter[2]
-Warning (13012): Latch proc:processador|ControlUnit:CU|ALUOp[0] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal proc:processador|Counter:C|Counter[2]
+Warning (13012): Latch proc:processador|BusWires[9] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal proc:processador|Counter:C|Counter[0]
+Warning (13012): Latch proc:processador|BusWires[10] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal proc:processador|Counter:C|Counter[0]
+Warning (13012): Latch proc:processador|BusWires[11] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal proc:processador|Counter:C|Counter[0]
+Warning (13012): Latch proc:processador|BusWires[12] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal proc:processador|Counter:C|Counter[0]
+Warning (13012): Latch proc:processador|BusWires[13] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal proc:processador|Counter:C|Counter[0]
+Warning (13012): Latch proc:processador|BusWires[14] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal proc:processador|Counter:C|Counter[0]
+Warning (13012): Latch proc:processador|BusWires[15] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal proc:processador|Counter:C|Counter[0]
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "aluOp[0]" is stuck at GND
-    Warning (13410): Pin "aluOp[1]" is stuck at GND
-    Warning (13410): Pin "aluOp[2]" is stuck at GND
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC
+    Warning (13410): Pin "HEX5[5]" is stuck at VCC
+    Warning (13410): Pin "HEX5[4]" is stuck at VCC
+    Warning (13410): Pin "HEX5[3]" is stuck at VCC
+    Warning (13410): Pin "HEX5[2]" is stuck at VCC
+    Warning (13410): Pin "HEX5[1]" is stuck at VCC
+    Warning (13410): Pin "HEX5[0]" is stuck at VCC
+    Warning (13410): Pin "LEDG[3]" is stuck at GND
+    Warning (13410): Pin "LEDG[4]" is stuck at GND
+    Warning (13410): Pin "LEDG[8]" is stuck at GND
+    Warning (13410): Pin "LEDR[0]" is stuck at GND
+    Warning (13410): Pin "LEDR[1]" is stuck at GND
+    Warning (13410): Pin "LEDR[5]" is stuck at GND
+    Warning (13410): Pin "LEDR[6]" is stuck at GND
+    Warning (13410): Pin "LEDR[7]" is stuck at GND
+Info (17049): 8 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/output_files/pratica2.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 944 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 176 output pins
-    Info (21061): Implemented 750 logic cells
+Warning (21074): Design contains 20 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[0]"
+    Warning (15610): No output dependent on input pin "SW[1]"
+    Warning (15610): No output dependent on input pin "SW[2]"
+    Warning (15610): No output dependent on input pin "SW[3]"
+    Warning (15610): No output dependent on input pin "SW[4]"
+    Warning (15610): No output dependent on input pin "SW[5]"
+    Warning (15610): No output dependent on input pin "SW[6]"
+    Warning (15610): No output dependent on input pin "SW[7]"
+    Warning (15610): No output dependent on input pin "SW[8]"
+    Warning (15610): No output dependent on input pin "SW[9]"
+    Warning (15610): No output dependent on input pin "SW[10]"
+    Warning (15610): No output dependent on input pin "SW[11]"
+    Warning (15610): No output dependent on input pin "SW[12]"
+    Warning (15610): No output dependent on input pin "SW[13]"
+    Warning (15610): No output dependent on input pin "SW[14]"
+    Warning (15610): No output dependent on input pin "SW[15]"
+    Warning (15610): No output dependent on input pin "SW[16]"
+    Warning (15610): No output dependent on input pin "KEY[1]"
+    Warning (15610): No output dependent on input pin "KEY[2]"
+    Warning (15610): No output dependent on input pin "KEY[3]"
+Info (21057): Implemented 947 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 22 input pins
+    Info (21059): Implemented 83 output pins
+    Info (21061): Implemented 826 logic cells
     Info (21064): Implemented 16 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 137 warnings
-    Info: Peak virtual memory: 4622 megabytes
-    Info: Processing ended: Thu Sep 28 09:59:31 2023
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 176 warnings
+    Info: Peak virtual memory: 4626 megabytes
+    Info: Processing ended: Thu Sep 28 14:50:28 2023
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:01
 

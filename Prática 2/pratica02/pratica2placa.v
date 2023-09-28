@@ -1,4 +1,4 @@
-module pratica2placa (SW, KEY, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7, LEDG, LEDR);
+module pratica2 (SW, KEY, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7, LEDG, LEDR);
 	
 
 input [17:0] SW;
@@ -11,7 +11,7 @@ input [3:0] KEY;
 // HEX[4] 	-> Counter
 // HEX[6] 	-> Addr
 // HEX[7] 	-> PC 
-output [6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7;
+output [0:6] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7;
 
 // LEDG[2:0] -> Reg X
 // LEDG[7:5] -> Reg Y

@@ -5,19 +5,19 @@ cModel Technology
 Z0 dC:\Users\pedro\OneDrive\Documentos\CEFETMG\2023.2\Laboratório AOC II\Práticas AOC2\Prática 2\pratica02\simulation\modelsim
 vALU
 !i10b 1
-!s100 ]<FGPEXhT70G>D3KO7hlM1
-I]n`eHl?aj]T:>RC9`R=DJ0
+!s100 I@mQjgTj^<7b5;2Hf3d6B3
+IEH]hE4jhLA3[USFjUaIcZ0
 V]:2oPG?_kcg7W014cIIB`0
 Z1 dC:\Users\pedro\OneDrive\Documentos\CEFETMG\2023.2\Laboratório AOC II\Práticas AOC2\Prática 2\pratica02\simulation\modelsim
-Z2 w1695905966
+Z2 w1695923408
 Z3 8C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v
 Z4 FC:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v
-L0 367
+L0 412
 Z5 OV;L;10.1d;51
 r1
 !s85 0
 31
-Z6 !s108 1695908465.124000
+Z6 !s108 1695923580.295000
 Z7 !s107 C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v|
 Z8 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02|C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v|
 !s101 -O0
@@ -26,14 +26,14 @@ Z10 !s92 -vlog01compat -work work {+incdir+C:/Users/pedro/OneDrive/Documentos/CE
 n@a@l@u
 vControlUnit
 !i10b 1
-!s100 ZIfdCnaX<JVIjLRj5`S2I2
-IPimh_YM>eTgcYLBo7?IEa0
+!s100 LLl2^@@]BX3endcLZegbD3
+IUcfC[P@:E:_ecn2OLAWl:0
 V:[ka_cnYQWWcT`ACe81gB3
 R1
 R2
 R3
 R4
-L0 139
+L0 184
 R5
 r1
 !s85 0
@@ -47,14 +47,14 @@ R10
 n@control@unit
 vCounter
 !i10b 1
-!s100 9G[WBg>hkT5fo5=JiH?]73
-I[3MFEkkUa2h70W;4_on^z1
+!s100 jjJeVLSYcHQ03=>noKDYA0
+I8f5RV`HaZ0P^ZDXcN4eB>3
 VF_Z6n9do1?fii0W`nXZN[3
 R1
 R2
 R3
 R4
-L0 387
+L0 432
 R5
 r1
 !s85 0
@@ -66,6 +66,26 @@ R8
 R9
 R10
 n@counter
+vdisp7seg
+I3`iTR4IL6<67^97Wc3W=00
+V6i]mE7=9Q;dKd2:n]0g2W1
+R1
+w1695737692
+8C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/disp7seg.v
+FC:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/disp7seg.v
+L0 1
+R5
+r1
+31
+R9
+R10
+!i10b 1
+!s100 87ML`B[=RU36W4PFcfk[V1
+!s85 0
+!s108 1695923580.215000
+!s107 C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/disp7seg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02|C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/disp7seg.v|
+!s101 -O0
 vmem_ram
 IfaChLI;IeT4Dl5OG_m=LT2
 VACU`7hfjP5miBA109h1;[2
@@ -78,19 +98,19 @@ R5
 r1
 31
 R9
+R10
 !i10b 1
 !s100 1kReU8OZTm;M_Lj11^BYo1
 !s85 0
-!s108 1695908465.045000
+!s108 1695923580.121000
 !s107 C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/mem_ram.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02|C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/mem_ram.v|
 !s101 -O0
-R10
 vpratica2
 !i10b 1
-!s100 7T]0TA[bEO>mjFG4UD6:32
-I6A4lF@C>m;?HSci7z:_F_1
-VASS]d_mZ2Na;CHGDzml4_2
+!s100 bDXgNi3:aQYPNoX0`hCKG0
+IMKQ^0d>c=cMXVK_P>a@]30
+V[6;4fD`ZD20eAcAnCAz8Z1
 R1
 R2
 R3
@@ -108,14 +128,14 @@ R9
 R10
 vproc
 !i10b 1
-!s100 bEWA_RhIC_ihH]eGN52An3
-IioJje0NE:BB9Zj548CSgj1
+!s100 4bIbBJTi12>G3;FU1IdXG2
+IUgW^Ub4eMAaO[?2Z=dd1P2
 Vj4<B@oGZn2KmjVPl9:8Hl1
 R1
 R2
 R3
 R4
-L0 38
+L0 83
 R5
 r1
 !s85 0
@@ -128,14 +148,14 @@ R9
 R10
 vReg0
 !i10b 1
-!s100 ]HD@_MW_]iO;<40fV@OGF2
-IH<Zh67UVi:=Y0HGeI6l5H0
+!s100 cJzaPWlM3Hbgkd0fEijG63
+IG<<@o=KT9Zhf;8b3CmQZ?3
 Vg^?d;<en8GMznZfQXG7hV2
 R1
 R2
 R3
 R4
-L0 466
+L0 511
 R5
 r1
 !s85 0
@@ -149,14 +169,14 @@ R10
 n@reg0
 vReg1
 !i10b 1
-!s100 7=AYd;=F?3`R6?P`?FcE?2
-IDkADdccdgA7P8zRRmDDWa0
+!s100 9k:lJ5ddF5Y]A^Doh<Foh1
+IaQQKK]k`_c;QKAf4:n^d^2
 Vh3XFaoJY@BQ?FVTQX<`M02
 R1
 R2
 R3
 R4
-L0 486
+L0 531
 R5
 r1
 !s85 0
@@ -170,14 +190,14 @@ R10
 n@reg1
 vReg2
 !i10b 1
-!s100 AWL0CFM=i:EkkbO=^0fGm2
-InZ]JFLcg>heLzJa?JVB0[0
+!s100 RGFI`8YojdDMSojJ6N[:<0
+IicWgX[;<;a7Rnb>H`h=Q50
 Vi41EKMHS3g<A;kQd3Zf8`3
 R1
 R2
 R3
 R4
-L0 506
+L0 551
 R5
 r1
 !s85 0
@@ -191,14 +211,14 @@ R10
 n@reg2
 vRegIR
 !i10b 1
-!s100 c;X??g7Hl486@_=XPX_e50
-I`4=GbSSoz4nzaeM4CFXHX3
+!s100 1ldSE?JKjjfgX7Do2OL8Y3
+I_GmJFNaZdoB>?KSD<`7gT0
 V>Ih?aa;G`DjIm2mO_Aga`2
 R1
 R2
 R3
 R4
-L0 524
+L0 569
 R5
 r1
 !s85 0
@@ -212,14 +232,14 @@ R10
 n@reg@i@r
 vRegN
 !i10b 1
-!s100 za0DNb2`>gT6Q5@]d5BMf3
-ISi`f8]3k75hUDWd_aG?fT2
+!s100 D8OJGCeGO_CK2I>?fRC>L2
+I<lB?2=nAB:F=bNVd`BWe<3
 VRbcI2A`fVn5nRQZR92Z6;0
 R1
 R2
 R3
 R4
-L0 446
+L0 491
 R5
 r1
 !s85 0
@@ -233,14 +253,14 @@ R10
 n@reg@n
 vRegN_addr
 !i10b 1
-!s100 0<elAbQWTkgjlCkgO@9HZ0
-I6Q_5fNnj0SEhF=_b0oWlG1
+!s100 PLmBEfDK[NMT5OD5Z@lOL1
+IngDc<HHFmEKKCLfkLVI`c0
 VFkV`>iS66A`<;RX[MMOXF1
 R1
 R2
 R3
 R4
-L0 548
+L0 593
 R5
 r1
 !s85 0
@@ -254,14 +274,14 @@ R10
 n@reg@n_addr
 vRegN_pc
 !i10b 1
-!s100 LgMT@b9]]B31=8nJX`YNB2
-INaN>Yjnmb52^zi1g8j<Q?3
+!s100 RR[E>[]78H@S6Q_KjUnmI0
+IngBVPK;UdaeAoMQnZS[le1
 VOAP?eW8SD5nM^L0dm7gLS1
 R1
 R2
 R3
 R4
-L0 412
+L0 457
 R5
 r1
 !s85 0
@@ -275,14 +295,14 @@ R10
 n@reg@n_pc
 vRegN_W
 !i10b 1
-!s100 ><=dXOSAg<77[00GOJ?3j3
-Iz7[@AzQL^TJg:RFjIh2Bd0
+!s100 G5`6O>1]0@BP]_NK8K4dG2
+IIOTj4hhL<d4c7f8BFPCUX0
 VIWhi@@Q`NPS>KlA>5GViO2
 R1
 R2
 R3
 R4
-L0 581
+L0 626
 R5
 r1
 !s85 0
@@ -296,14 +316,14 @@ R10
 n@reg@n_@w
 vRegUpcode
 !i10b 1
-!s100 zGRImQC02>>KAFYP;IB<70
-I;9b4XcjD[<A[[SM`[?gT?1
+!s100 M]^F;>=43W^jiM[>=e1<;1
+ILcY9omF=W@[S[hPegC4Xn3
 VFYnUf9geaV@FA7m[hgQBg1
 R1
 R2
 R3
 R4
-L0 344
+L0 389
 R5
 r1
 !s85 0
