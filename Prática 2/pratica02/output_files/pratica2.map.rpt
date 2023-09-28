@@ -1,5 +1,5 @@
 Analysis & Synthesis report for pratica2
-Wed Sep 27 19:41:34 2023
+Thu Sep 28 09:59:31 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -56,13 +56,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Sep 27 19:41:34 2023           ;
+; Analysis & Synthesis Status        ; Successful - Thu Sep 28 09:59:31 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; pratica2                                        ;
 ; Top-level Entity Name              ; pratica2                                        ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 705                                             ;
-;     Total combinational functions  ; 572                                             ;
+; Total logic elements               ; 703                                             ;
+;     Total combinational functions  ; 570                                             ;
 ;     Dedicated logic registers      ; 222                                             ;
 ; Total registers                    ; 222                                             ;
 ; Total pins                         ; 178                                             ;
@@ -195,16 +195,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------+
 ; Resource                                    ; Usage  ;
 +---------------------------------------------+--------+
-; Estimated Total logic elements              ; 705    ;
+; Estimated Total logic elements              ; 703    ;
 ;                                             ;        ;
-; Total combinational functions               ; 572    ;
+; Total combinational functions               ; 570    ;
 ; Logic element usage by number of LUT inputs ;        ;
 ;     -- 4 input functions                    ; 292    ;
 ;     -- 3 input functions                    ; 178    ;
-;     -- <=2 input functions                  ; 102    ;
+;     -- <=2 input functions                  ; 100    ;
 ;                                             ;        ;
 ; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 511    ;
+;     -- normal mode                          ; 509    ;
 ;     -- arithmetic mode                      ; 61     ;
 ;                                             ;        ;
 ; Total registers                             ; 222    ;
@@ -216,7 +216,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Embedded Multiplier 9-bit elements          ; 0      ;
 ; Maximum fan-out node                        ; PClock ;
 ; Maximum fan-out                             ; 238    ;
-; Total fan-out                               ; 2855   ;
+; Total fan-out                               ; 2853   ;
 ; Average fan-out                             ; 2.89   ;
 +---------------------------------------------+--------+
 
@@ -226,20 +226,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                       ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------+--------------+
-; |pratica2                                 ; 572 (0)           ; 222 (0)      ; 512         ; 0            ; 0       ; 0         ; 178  ; 0            ; |pratica2                                                                                 ; work         ;
+; |pratica2                                 ; 570 (0)           ; 222 (0)      ; 512         ; 0            ; 0       ; 0         ; 178  ; 0            ; |pratica2                                                                                 ; work         ;
 ;    |mem_ram:mem_data|                     ; 0 (0)             ; 0 (0)        ; 512         ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|mem_ram:mem_data                                                                ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 512         ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|mem_ram:mem_data|altsyncram:altsyncram_component                                ; work         ;
 ;          |altsyncram_35e1:auto_generated| ; 0 (0)             ; 0 (0)        ; 512         ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|mem_ram:mem_data|altsyncram:altsyncram_component|altsyncram_35e1:auto_generated ; work         ;
-;    |proc:processador|                     ; 572 (150)         ; 222 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|proc:processador                                                                ; work         ;
+;    |proc:processador|                     ; 570 (150)         ; 222 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|proc:processador                                                                ; work         ;
 ;       |ALU:alu|                           ; 249 (249)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|proc:processador|ALU:alu                                                        ; work         ;
 ;       |ControlUnit:CU|                    ; 84 (84)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|proc:processador|ControlUnit:CU                                                 ; work         ;
 ;       |Counter:C|                         ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|proc:processador|Counter:C                                                      ; work         ;
 ;       |Reg0:R0|                           ; 2 (2)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|proc:processador|Reg0:R0                                                        ; work         ;
-;       |Reg1:G_reg|                        ; 2 (2)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|proc:processador|Reg1:G_reg                                                     ; work         ;
 ;       |Reg1:R1|                           ; 2 (2)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|proc:processador|Reg1:R1                                                        ; work         ;
 ;       |Reg2:R2|                           ; 1 (1)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|proc:processador|Reg2:R2                                                        ; work         ;
 ;       |RegIR:IR_reg|                      ; 0 (0)             ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|proc:processador|RegIR:IR_reg                                                   ; work         ;
 ;       |RegN:A_reg|                        ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|proc:processador|RegN:A_reg                                                     ; work         ;
+;       |RegN:G_reg|                        ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|proc:processador|RegN:G_reg                                                     ; work         ;
 ;       |RegN:R3|                           ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|proc:processador|RegN:R3                                                        ; work         ;
 ;       |RegN:R4|                           ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|proc:processador|RegN:R4                                                        ; work         ;
 ;       |RegN:R5|                           ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pratica2|proc:processador|RegN:R5                                                        ; work         ;
@@ -345,11 +345,9 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; proc:processador|RegN_pc:R7|PC_output[3]        ; 3       ;
 ; proc:processador|RegN_addr:reg_addr|R_output[1] ; 2       ;
 ; proc:processador|RegN_addr:reg_addr|R_output[3] ; 2       ;
-; proc:processador|Reg1:G_reg|R_output[1]         ; 2       ;
-; proc:processador|Reg1:G_reg|R_output[0]         ; 2       ;
 ; proc:processador|RegN_addr:reg_addr|pc_value[1] ; 1       ;
 ; proc:processador|RegN_addr:reg_addr|pc_value[3] ; 1       ;
-; Total number of inverted registers = 13         ;         ;
+; Total number of inverted registers = 11         ;         ;
 +-------------------------------------------------+---------+
 
 
@@ -537,12 +535,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Sep 27 19:41:32 2023
+    Info: Processing started: Thu Sep 28 09:59:28 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pratica2 -c pratica2
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file mem_ram.v
     Info (12023): Found entity 1: mem_ram
-Warning (10261): Verilog HDL Event Control warning at pratica2.v(358): Event Control contains a complex event expression
+Warning (10261): Verilog HDL Event Control warning at pratica2.v(352): Event Control contains a complex event expression
 Info (12021): Found 14 design units, including 14 entities, in source file pratica2.v
     Info (12023): Found entity 1: pratica2
     Info (12023): Found entity 2: proc
@@ -606,39 +604,38 @@ Warning (10235): Verilog HDL Always Construct warning at pratica2.v(213): variab
 Warning (10235): Verilog HDL Always Construct warning at pratica2.v(218): variable "SRL" is read inside the Always Construct but isn't in the Always Construct's Event Control
 Warning (10235): Verilog HDL Always Construct warning at pratica2.v(223): variable "MV" is read inside the Always Construct but isn't in the Always Construct's Event Control
 Warning (10235): Verilog HDL Always Construct warning at pratica2.v(227): variable "MVI" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(233): variable "MVNZ" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(234): variable "G_output" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(239): variable "SD" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(243): variable "LD" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(231): variable "MVNZ" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(232): variable "G_output" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(237): variable "SD" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(241): variable "LD" is read inside the Always Construct but isn't in the Always Construct's Event Control
 Warning (10763): Verilog HDL warning at pratica2.v(208): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness
 Warning (10270): Verilog HDL Case Statement warning at pratica2.v(208): incomplete case statement has no default case item
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(254): variable "ADD" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(259): variable "SUB" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(264): variable "OR" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(269): variable "SLT" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(274): variable "SLL" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(274): variable "SRL" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(278): variable "MV" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(278): variable "MVNZ" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(282): variable "SD" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10763): Verilog HDL warning at pratica2.v(253): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness
-Warning (10270): Verilog HDL Case Statement warning at pratica2.v(253): incomplete case statement has no default case item
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(293): variable "ADD" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(293): variable "SUB" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(293): variable "OR" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(293): variable "SLT" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(300): variable "SRL" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(300): variable "SLL" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10763): Verilog HDL warning at pratica2.v(292): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness
-Warning (10270): Verilog HDL Case Statement warning at pratica2.v(292): incomplete case statement has no default case item
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(313): variable "LD" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(319): variable "SD" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(324): variable "MVI" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(328): variable "MVI" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10763): Verilog HDL warning at pratica2.v(312): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness
-Warning (10270): Verilog HDL Case Statement warning at pratica2.v(312): incomplete case statement has no default case item
-Warning (10235): Verilog HDL Always Construct warning at pratica2.v(338): variable "MVI" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10270): Verilog HDL Case Statement warning at pratica2.v(337): incomplete case statement has no default case item
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(252): variable "ADD" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(257): variable "SUB" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(262): variable "OR" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(267): variable "SLT" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(272): variable "SLL" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(272): variable "SRL" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(276): variable "MV" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(276): variable "MVNZ" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(280): variable "SD" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10763): Verilog HDL warning at pratica2.v(251): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness
+Warning (10270): Verilog HDL Case Statement warning at pratica2.v(251): incomplete case statement has no default case item
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(291): variable "ADD" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(291): variable "SUB" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(291): variable "OR" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(291): variable "SLT" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(298): variable "SRL" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(298): variable "SLL" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10763): Verilog HDL warning at pratica2.v(290): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness
+Warning (10270): Verilog HDL Case Statement warning at pratica2.v(290): incomplete case statement has no default case item
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(311): variable "LD" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(317): variable "SD" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(322): variable "MVI" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10763): Verilog HDL warning at pratica2.v(310): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness
+Warning (10270): Verilog HDL Case Statement warning at pratica2.v(310): incomplete case statement has no default case item
+Warning (10235): Verilog HDL Always Construct warning at pratica2.v(332): variable "MVI" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10270): Verilog HDL Case Statement warning at pratica2.v(331): incomplete case statement has no default case item
 Warning (10240): Verilog HDL Always Construct warning at pratica2.v(171): inferring latch(es) for variable "ALUOp", which holds its previous value in one or more paths through the always construct
 Warning (10240): Verilog HDL Always Construct warning at pratica2.v(171): inferring latch(es) for variable "is_mvi", which holds its previous value in one or more paths through the always construct
 Warning (10240): Verilog HDL Always Construct warning at pratica2.v(171): inferring latch(es) for variable "is_Load", which holds its previous value in one or more paths through the always construct
@@ -648,29 +645,29 @@ Info (10041): Inferred latch for "ALUOp[0]" at pratica2.v(171)
 Info (10041): Inferred latch for "ALUOp[1]" at pratica2.v(171)
 Info (10041): Inferred latch for "ALUOp[2]" at pratica2.v(171)
 Info (12128): Elaborating entity "ALU" for hierarchy "proc:processador|ALU:alu"
-Warning (10230): Verilog HDL assignment warning at pratica2.v(385): truncated value with size 32 to match size of target (16)
-Warning (10270): Verilog HDL Case Statement warning at pratica2.v(381): incomplete case statement has no default case item
-Warning (10240): Verilog HDL Always Construct warning at pratica2.v(380): inferring latch(es) for variable "ALU_output", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "ALU_output[0]" at pratica2.v(380)
-Info (10041): Inferred latch for "ALU_output[1]" at pratica2.v(380)
-Info (10041): Inferred latch for "ALU_output[2]" at pratica2.v(380)
-Info (10041): Inferred latch for "ALU_output[3]" at pratica2.v(380)
-Info (10041): Inferred latch for "ALU_output[4]" at pratica2.v(380)
-Info (10041): Inferred latch for "ALU_output[5]" at pratica2.v(380)
-Info (10041): Inferred latch for "ALU_output[6]" at pratica2.v(380)
-Info (10041): Inferred latch for "ALU_output[7]" at pratica2.v(380)
-Info (10041): Inferred latch for "ALU_output[8]" at pratica2.v(380)
-Info (10041): Inferred latch for "ALU_output[9]" at pratica2.v(380)
-Info (10041): Inferred latch for "ALU_output[10]" at pratica2.v(380)
-Info (10041): Inferred latch for "ALU_output[11]" at pratica2.v(380)
-Info (10041): Inferred latch for "ALU_output[12]" at pratica2.v(380)
-Info (10041): Inferred latch for "ALU_output[13]" at pratica2.v(380)
-Info (10041): Inferred latch for "ALU_output[14]" at pratica2.v(380)
-Info (10041): Inferred latch for "ALU_output[15]" at pratica2.v(380)
+Warning (10230): Verilog HDL assignment warning at pratica2.v(379): truncated value with size 32 to match size of target (16)
+Warning (10270): Verilog HDL Case Statement warning at pratica2.v(375): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at pratica2.v(374): inferring latch(es) for variable "ALU_output", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "ALU_output[0]" at pratica2.v(374)
+Info (10041): Inferred latch for "ALU_output[1]" at pratica2.v(374)
+Info (10041): Inferred latch for "ALU_output[2]" at pratica2.v(374)
+Info (10041): Inferred latch for "ALU_output[3]" at pratica2.v(374)
+Info (10041): Inferred latch for "ALU_output[4]" at pratica2.v(374)
+Info (10041): Inferred latch for "ALU_output[5]" at pratica2.v(374)
+Info (10041): Inferred latch for "ALU_output[6]" at pratica2.v(374)
+Info (10041): Inferred latch for "ALU_output[7]" at pratica2.v(374)
+Info (10041): Inferred latch for "ALU_output[8]" at pratica2.v(374)
+Info (10041): Inferred latch for "ALU_output[9]" at pratica2.v(374)
+Info (10041): Inferred latch for "ALU_output[10]" at pratica2.v(374)
+Info (10041): Inferred latch for "ALU_output[11]" at pratica2.v(374)
+Info (10041): Inferred latch for "ALU_output[12]" at pratica2.v(374)
+Info (10041): Inferred latch for "ALU_output[13]" at pratica2.v(374)
+Info (10041): Inferred latch for "ALU_output[14]" at pratica2.v(374)
+Info (10041): Inferred latch for "ALU_output[15]" at pratica2.v(374)
 Info (12128): Elaborating entity "RegN" for hierarchy "proc:processador|RegN:A_reg"
-Info (12128): Elaborating entity "Reg1" for hierarchy "proc:processador|Reg1:G_reg"
 Info (12128): Elaborating entity "RegIR" for hierarchy "proc:processador|RegIR:IR_reg"
 Info (12128): Elaborating entity "Reg0" for hierarchy "proc:processador|Reg0:R0"
+Info (12128): Elaborating entity "Reg1" for hierarchy "proc:processador|Reg1:R1"
 Info (12128): Elaborating entity "Reg2" for hierarchy "proc:processador|Reg2:R2"
 Info (12128): Elaborating entity "RegN_pc" for hierarchy "proc:processador|RegN_pc:R7"
 Info (12128): Elaborating entity "RegN_addr" for hierarchy "proc:processador|RegN_addr:reg_addr"
@@ -780,10 +777,10 @@ Info (21057): Implemented 944 device resources after synthesis - the final resou
     Info (21059): Implemented 176 output pins
     Info (21061): Implemented 750 logic cells
     Info (21064): Implemented 16 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 138 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 137 warnings
     Info: Peak virtual memory: 4622 megabytes
-    Info: Processing ended: Wed Sep 27 19:41:34 2023
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Thu Sep 28 09:59:31 2023
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:01
 
 

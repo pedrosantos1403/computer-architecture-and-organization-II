@@ -7,9 +7,9 @@ Testes:
     2.3 - MV  (OK!)
     2.4 - MVI (OK!)
     2.5 - SLT (OK!)
-    2.6 - SLL
-    2.7 - SLR
-    2.8 - OR
+    2.6 - SLL (OK!)
+    2.7 - SLR (OK!)
+    2.8 - OR  (OK!)
     2.9 - MVNZ
     2.10 - LD
     2.11 - SD

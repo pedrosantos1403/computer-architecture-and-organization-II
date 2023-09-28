@@ -1,5 +1,5 @@
 EDA Netlist Writer report for pratica2
-Wed Sep 27 19:41:49 2023
+Thu Sep 28 09:59:49 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed Sep 27 19:41:49 2023 ;
+; EDA Netlist Writer Status ; Successful - Thu Sep 28 09:59:49 2023 ;
 ; Revision Name             ; pratica2                              ;
 ; Top-level Entity Name     ; pratica2                              ;
 ; Family                    ; Cyclone II                            ;
@@ -84,12 +84,12 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Sep 27 19:41:49 2023
+    Info: Processing started: Thu Sep 28 09:59:49 2023
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off pratica2 -c pratica2
 Info (204026): Generated files "pratica2.vo", "pratica2_fast.vo", "pratica2_v.sdo" and "pratica2_v_fast.sdo" in directory "C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4532 megabytes
-    Info: Processing ended: Wed Sep 27 19:41:49 2023
+    Info: Processing ended: Thu Sep 28 09:59:49 2023
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 

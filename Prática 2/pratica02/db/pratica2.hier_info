@@ -1036,7 +1036,7 @@ R_output[14] <= R_output[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 R_output[15] <= R_output[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pratica2|proc:processador|Reg1:G_reg
+|pratica2|proc:processador|RegN:G_reg
 Clock => R_output[0]~reg0.CLK
 Clock => R_output[1]~reg0.CLK
 Clock => R_output[2]~reg0.CLK

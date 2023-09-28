@@ -1,7 +1,0 @@
-<?xml version="1.0" ?>
-<LOG_ROOT>
-	<PROJECT NAME="pratica_2">
-		<CBX_INST_ENTRY INSTANCE_NAME="|pratica_2|ram_lpm:RAM|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_qte1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|pratica_2|rom_lpm:ROM|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_5r91.tdf"/>
-	</PROJECT>
-</LOG_ROOT>

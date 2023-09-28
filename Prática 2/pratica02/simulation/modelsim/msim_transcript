@@ -45,9 +45,9 @@ vsim +altera -L altera_mf_ver -do pratica2_run_msim_rtl_verilog.do -l msim_trans
 # Loading work.ControlUnit
 # Loading work.ALU
 # Loading work.RegN
-# Loading work.Reg1
 # Loading work.RegIR
 # Loading work.Reg0
+# Loading work.Reg1
 # Loading work.Reg2
 # Loading work.RegN_pc
 # Loading work.RegN_addr
@@ -62,13 +62,13 @@ vsim +altera -L altera_mf_ver -do pratica2_run_msim_rtl_verilog.do -l msim_trans
 # ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v(90): [PCDPC] - Port size (8 or 8) does not match connection size (16) for port 'RNin'. The port definition is at: C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v(147).
 # 
 #         Region: /pratica2/processador/CU
-# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v(98): [PCDPC] - Port size (1 or 1) does not match connection size (11) for port 'Rin'. The port definition is at: C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v(533).
+# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v(98): [PCDPC] - Port size (1 or 1) does not match connection size (11) for port 'Rin'. The port definition is at: C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v(527).
 # 
 #         Region: /pratica2/processador/IR_reg
-# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v(108): [PCDPC] - Port size (1 or 1) does not match connection size (16) for port 'Bus'. The port definition is at: C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v(419).
+# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v(108): [PCDPC] - Port size (1 or 1) does not match connection size (16) for port 'Bus'. The port definition is at: C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v(413).
 # 
 #         Region: /pratica2/processador/R7
-# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v(111): [PCDPC] - Port size (1 or 1) does not match connection size (16) for port 'pc_output'. The port definition is at: C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v(555).
+# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v(111): [PCDPC] - Port size (1 or 1) does not match connection size (16) for port 'pc_output'. The port definition is at: C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v(549).
 # 
 #         Region: /pratica2/processador/reg_addr
 # ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v(34): [PCDPC] - Port size (5 or 5) does not match connection size (16) for port 'address'. The port definition is at: C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/mem_ram.v(40).
@@ -126,11 +126,9 @@ sim:/pratica2/processador/RNin
 add wave -position insertpoint  \
 sim:/pratica2/processador/RNout
 add wave -position insertpoint  \
+sim:/pratica2/processador/G_output
+add wave -position insertpoint  \
 sim:/pratica2/processador/Incr_pc
-add wave -position insertpoint  \
-sim:/pratica2/processador/ALUop
-add wave -position insertpoint  \
-sim:/pratica2/processador/Gout
 add wave -position insertpoint  \
 sim:/pratica2/processador/Done
 run

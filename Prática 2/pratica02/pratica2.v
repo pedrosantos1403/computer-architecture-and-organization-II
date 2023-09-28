@@ -94,7 +94,7 @@ ALU alu(A_output, BusWires, ALUop, ALU_output);
 
 //Registradores (A, G, IR, R0, R1, R2, R3, R4, R5, R6)
 RegN A_reg(Clock, Ain, BusWires, A_output);
-Reg1 G_reg(Clock, Gin, ALU_output, G_output); // Voltar para regn - Valor: 1
+RegN G_reg(Clock, Gin, ALU_output, G_output); // Voltar para regn - Valor: 1
 RegIR IR_reg(Clock, Done, IRin, DIN, IR_output);
 Reg0 R0(Clock, RNin[0], BusWires, R0_output); // 9
 Reg1 R1(Clock, RNin[1], BusWires, R1_output); // 3
@@ -225,10 +225,8 @@ always @(Counter or IR or XXX or YYY) begin
                RNin = XXX;            // Habilita a escrita no registrador XXX
             end
 				MVI: begin
-					// 1 - Pegue DIN[15:10] -> Esse valor indica a posição de memória do imediato
-					// 2 - Incrementar o PC -> Assim o valor em DIN vai mudar
-					Incr_pc = 1'b1; // Incrementa o PC para buscar o imediato que está na posição subsequente da memória
-					is_mvi = 1'b1;  // Habilita o sinal que indica que a instrução é um MVI
+					Incr_pc = 1'b1;        // Incrementa o PC para buscar o imediato que está na posição subsequente da memória
+					is_mvi = 1'b1;         // Habilita o sinal que indica que a instrução é um MVI
 				end
 				MVNZ: begin
 					if (G_output != 16'b0) begin  // Realiza um mv apenas se o conteúdo de G != 0
@@ -324,10 +322,6 @@ always @(Counter or IR or XXX or YYY) begin
 				MVI: begin
 					RNin = XXX;            // Habilita a escrita no registrador XXX
 					DINout = 1'b1;         // Habilita a leitura dos dados de DIN (Imediato)
-				end
-				MVI: begin
-					Done = 1'b1;           // Define o término da instrução
-					Incr_pc = 1'b1;        // Finaliza a instrução e incrementa PC
 				end
 			endcase
 		end
