@@ -5,7 +5,7 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/LaboratÃ³rio\ AOC\ II/PrÃ¡ticas\ AOC2/PrÃ¡tica\ 2/pratica02 {C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/mem_ram.v}
-vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/LaboratÃ³rio\ AOC\ II/PrÃ¡ticas\ AOC2/PrÃ¡tica\ 2/pratica02 {C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/disp7seg.v}
-vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/LaboratÃ³rio\ AOC\ II/PrÃ¡ticas\ AOC2/PrÃ¡tica\ 2/pratica02 {C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v}
+vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Ãrea\ de\ Trabalho/pratica2final/Pr-ticas-AOC2-main/PrÃ¡tica\ 2/pratica02 {C:/Users/pedro/OneDrive/Área de Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática 2/pratica02/mem_ram.v}
+vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Ãrea\ de\ Trabalho/pratica2final/Pr-ticas-AOC2-main/PrÃ¡tica\ 2/pratica02 {C:/Users/pedro/OneDrive/Área de Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática 2/pratica02/disp7seg.v}
+vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Ãrea\ de\ Trabalho/pratica2final/Pr-ticas-AOC2-main/PrÃ¡tica\ 2/pratica02 {C:/Users/pedro/OneDrive/Área de Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática 2/pratica02/pratica2.v}
 

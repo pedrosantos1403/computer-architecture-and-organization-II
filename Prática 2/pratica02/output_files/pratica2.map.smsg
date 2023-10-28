@@ -5,9 +5,7 @@ Info (10281): Verilog HDL Declaration information at pratica2.v(26): object "r0"
 Info (10281): Verilog HDL Declaration information at pratica2.v(27): object "r1" differs only in case from object "R1" in the same scope
 Info (10281): Verilog HDL Declaration information at pratica2.v(28): object "r2" differs only in case from object "R2" in the same scope
 Info (10281): Verilog HDL Declaration information at pratica2.v(29): object "r3" differs only in case from object "R3" in the same scope
-Warning (10268): Verilog HDL information at pratica2.v(165): always construct contains both blocking and non-blocking assignments
-Warning (10273): Verilog HDL warning at pratica2.v(341): extended using "x" or "z"
-Warning (10273): Verilog HDL warning at pratica2.v(348): extended using "x" or "z"
-Warning (10273): Verilog HDL warning at pratica2.v(582): extended using "x" or "z"
-Warning (10268): Verilog HDL information at pratica2.v(578): always construct contains both blocking and non-blocking assignments
-Warning (10268): Verilog HDL information at pratica2.v(609): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at pratica2.v(158): always construct contains both blocking and non-blocking assignments
+Warning (10273): Verilog HDL warning at pratica2.v(543): extended using "x" or "z"
+Warning (10268): Verilog HDL information at pratica2.v(539): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at pratica2.v(570): always construct contains both blocking and non-blocking assignments

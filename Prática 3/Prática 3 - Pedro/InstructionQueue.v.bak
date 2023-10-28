@@ -1,0 +1,69 @@
+// Fila de Instruções
+module InstructionQueue(
+	input clock,
+	input reset,
+	input stall,
+	output [2:0] opcode,
+	output RX,
+	output RY
+);
+
+reg [2:0] Opcode;
+reg Rx, Ry;
+reg [2:0] counter;
+
+// Memória de Instruções - Matriz 5x5
+reg[4:0] InstructionMemory[4:0];
+
+// Registradores
+// R0 -> 0
+// R1 -> 1
+
+// Instruções
+// ADD -> 000
+// SUB -> 001
+// LD  -> 010
+// SD  -> 011 
+
+initial begin
+
+	// Inicializando o Contador
+	counter <= 0;
+	
+	// Inicializando a Memória de Instruções
+	InstructionMemory[0] <= 5'b00010; // ADD R1, R0
+	InstructionMemory[1] <= 5'b00101; // SUB R0, R1
+	InstructionMemory[2] <= 5'b00001; // ADD R0, R1
+	InstructionMemory[3] <= 5'b01010; // LD R1, R0
+	InstructionMemory[4] <= 5'b01101; // SD R0, R1
+	
+end
+
+always @(posedge clock) begin
+	
+	if (reset == 1'b1 || counter > 3'b101) begin
+		
+		Opcode <= 3'b000;
+		Rx <= 1'b0;
+		Ry <= 1'b0;
+		counter <= 3'b000;
+		
+	end
+	
+	else if (stall == 1'b0) begin
+		
+		opcode <= InstructionMemory[counte][4:2];
+		RX <= InstructionMemory[counter][1:1];
+		RY <= InstructionMemory[counter][0:0];
+		
+		// Incrementa o Contador
+		counter <= counter + 1'b1;
+		
+	end
+	
+	// Uma outra opção seria salvar os valores dos regs em output quando stall == 1
+	// e salva os valores da memória no output quando stall == 0
+	
+end
+
+endmodule

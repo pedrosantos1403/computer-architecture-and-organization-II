@@ -1,0 +1,6 @@
+module ReserveStation(
+	input clock,
+	/*ALU OP*/
+	/*RX*/
+	/*RY*/
+)

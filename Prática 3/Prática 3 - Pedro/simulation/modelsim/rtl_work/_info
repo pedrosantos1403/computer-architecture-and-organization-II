@@ -1,0 +1,214 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\pedro\OneDrive\Documentos\CEFETMG\2023.2\Laboratório AOC II\Práticas AOC2\Prática 3\Prática 3 - Pedro\simulation\modelsim
+vBankOfRegisters
+IP<fZIY_fB=GJ7=dWbzcid2
+Vi95AzHUWNlXm<iQA=<4GU2
+Z1 dC:\Users\pedro\OneDrive\Documentos\CEFETMG\2023.2\Laboratório AOC II\Práticas AOC2\Prática 3\Prática 3 - Pedro\simulation\modelsim
+Z2 w1698426234
+Z3 8C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/BankOfRegisters.v
+Z4 FC:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/BankOfRegisters.v
+L0 1
+Z5 OV;L;10.1d;51
+r1
+31
+Z6 !s108 1698430601.990000
+Z7 !s107 C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/BankOfRegisters.v|
+Z8 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro|C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/BankOfRegisters.v|
+Z9 o-vlog01compat -work work -O0
+Z10 !s92 -vlog01compat -work work {+incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro} -O0
+n@bank@of@registers
+!i10b 1
+!s100 9_EA[Ka97PfAll6^oRo^H0
+!s85 0
+!s101 -O0
+vCDBArbiter
+!i10b 1
+!s100 bATiEcjln5Km]MaYb[iEW3
+I7Od9?zW4fYo;^6e41MAGN0
+VD5oXRS0g6iHAQ]nR61@@B1
+R1
+w1698430479
+8C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/CDBArbiter.v
+FC:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/CDBArbiter.v
+L0 1
+R5
+r1
+!s85 0
+31
+!s108 1698430602.179000
+!s107 C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/CDBArbiter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro|C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/CDBArbiter.v|
+!s101 -O0
+R9
+R10
+n@c@d@b@arbiter
+vInstructionQueue
+I7GbjOBEYTWTXg4?j6md`H3
+VDgoo0@2c1oo`JVCmZzDZe3
+R1
+w1698354661
+8C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/InstructionQueue.v
+FC:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/InstructionQueue.v
+L0 1
+R5
+r1
+31
+R9
+R10
+n@instruction@queue
+!i10b 1
+!s100 U[Sa7:2kclc:F9D>gjQ?]0
+!s85 0
+!s108 1698430601.706000
+!s107 C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/InstructionQueue.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro|C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/InstructionQueue.v|
+!s101 -O0
+vReg0
+IUG?Pl6aXMMP8J_OCXe2EO1
+VGVZ4_BaT:f]fJJcF`XLIA1
+R1
+R2
+R3
+R4
+L0 37
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+n@reg0
+!i10b 1
+!s100 gbizU4VcHo>QeIHn<>5do3
+!s85 0
+!s101 -O0
+vReg1
+I=j0Wb`[CnRO>1I_aRVX2d3
+VNf]5;;oiB6MnCPoa1T`Cm0
+R1
+R2
+R3
+R4
+L0 57
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+n@reg1
+!i10b 1
+!s100 ERT6Qo@R]JWKOfo[B_7iM3
+!s85 0
+!s101 -O0
+vReg2
+IjWC15R5IR>j0h5[ho4bV32
+V1XefHAFU7aTTiHe02@>LE2
+R1
+R2
+R3
+R4
+L0 77
+R5
+r1
+31
+R6
+R7
+R8
+R9
+R10
+n@reg2
+!i10b 1
+!s100 oKlT:5Ad[U@?Rg;IciWkh3
+!s85 0
+!s101 -O0
+vReservationStation
+IDoTKK;fYo3P@mCcM1<OeX1
+V2Tk7ilBjdc5Ga5W:Ga0O[3
+R1
+w1698425626
+8C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/ReservationStation.v
+FC:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/ReservationStation.v
+L0 1
+R5
+r1
+31
+R9
+R10
+n@reservation@station
+!i10b 1
+!s100 [;Sdm^ceY[dT8FikGQ?QB1
+!s85 0
+!s108 1698430601.912000
+!s107 C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/ReservationStation.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro|C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/ReservationStation.v|
+!s101 -O0
+vtomasulo
+IdN_166Ae=aD4=<WSlKooA0
+V38a9zQJ<7Inm3eP[J:olo1
+R1
+w1698426260
+8C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/tomasulo.v
+FC:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/tomasulo.v
+L0 1
+R5
+r1
+31
+R9
+R10
+!i10b 1
+!s100 EmEN1Zz;j<Mn04V=;e8=Y0
+!s85 0
+!s108 1698430601.629000
+!s107 C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/tomasulo.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro|C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/tomasulo.v|
+!s101 -O0
+vULA
+I5GkPI>i0JdU0VQNCAeT^71
+V[X33j^Fc;TEOlWPkzRnIF2
+R1
+w1698427719
+8C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/ULA.v
+FC:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/ULA.v
+L0 2
+R5
+r1
+31
+R9
+R10
+n@u@l@a
+!i10b 1
+!s100 n5G7kgMV2@h`NGYRO[;=m0
+!s85 0
+!s108 1698430601.785000
+!s107 C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/ULA.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro|C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/ULA.v|
+!s101 -O0
+vULA_LD_SD
+IUhXzJ[h_i@`G]hgVa0l5`2
+VDR1=8:Kzl_W_T_:ER7Uk^3
+R1
+w1698347348
+8C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/ULA_LD_SD.v
+FC:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/ULA_LD_SD.v
+L0 2
+R5
+r1
+31
+R9
+R10
+n@u@l@a_@l@d_@s@d
+!i10b 1
+!s100 hzgm;BN]8[3J[M0YgQ9Ym2
+!s85 0
+!s108 1698430601.848000
+!s107 C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/ULA_LD_SD.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro|C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/ULA_LD_SD.v|
+!s101 -O0

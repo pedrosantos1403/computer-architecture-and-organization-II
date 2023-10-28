@@ -58,26 +58,25 @@ proc processador(clock /*PClock*/, DIN, reset /*ResetIn*/, r0, r1, r2, r3, r4, r
 mem_ram mem_data (addr, clock, DataInMem, W, DIN);
 
 // DISPLAYS
-disp7seg PC (pc, HEX7); //OK
-disp7seg Counter (contador, HEX4); //OK
-disp7seg Addr (addr, HEX6); //OK
-disp7seg R0 (r0, HEX3); // 9 -> OK
-disp7seg R1 (r1, HEX2); // 3 -> OK
-disp7seg R2 (r2, HEX1); // 1 -> OK
-disp7seg R3 (r3, HEX0); // 0 -> OK
+disp7seg PC (pc, HEX7);
+disp7seg Counter (contador, HEX4);
+disp7seg Addr (addr, HEX6);
+disp7seg R0 (r0, HEX0);
+disp7seg R1 (r1, HEX1);
+disp7seg R2 (r2, HEX2);
+disp7seg R3 (r3, HEX3);
 
 // LEDG
-assign LEDG[2:0] = r0;
-assign LEDG[7:5] = r1;
+assign LEDG[7:5] = aluop;
 
 // LEDR
-assign LEDR[4:2] = aluop;
 assign LEDR[17:8] = ir;
 
 // Inicializando HEX5 sem valor
 assign HEX5 = 7'b1111111;
 
 endmodule
+
 
 module proc(
 	input Clock,
@@ -101,10 +100,6 @@ module proc(
 	output [2:0] ALUop
 ); 
 	
-// wire [2:0] Counter;
-// wire [9:0] IR_output;
-// wire [2:0] ALUop;
-
 wire [15:0] RNin; 			 			// Recebe o sinal que habilita a escrita nos registradores RN
 wire [10:0] IRin; 						// Recebe o sinal que habilita a escrita no registrador IR
 wire Ain, Gin; 							// Recebe o sinal que habilita a escrita nos registradores A e G
@@ -140,15 +135,14 @@ ALU alu(A_output, BusWires, ALUop, ALU_output);
 RegN A_reg(Clock, Ain, BusWires, A_output);
 RegN G_reg(Clock, Gin, ALU_output, G_output); // Voltar para regn - Valor: 1
 RegIR IR_reg(Clock, Done, IRin, DIN, IR_output);
-Reg0 R0(Clock, RNin[0], BusWires, R0_output); // 9
-Reg1 R1(Clock, RNin[1], BusWires, R1_output); // 3
-Reg2 R2(Clock, RNin[2], BusWires, R2_output); // 1
+RegN R0(Clock, RNin[0], BusWires, R0_output); // 9
+RegN R1(Clock, RNin[1], BusWires, R1_output); // 3
+RegN R2(Clock, RNin[2], BusWires, R2_output); // 1
 RegN R3(Clock, RNin[3], BusWires, R3_output);
 RegN R4(Clock, RNin[4], BusWires, R4_output);
 RegN R5(Clock, RNin[5], BusWires, R5_output);
 RegN R6(Clock, RNin[6], BusWires, R6_output);
 
-//PC
 RegN_pc R7(BusWires, RNin[7], Clock, Incr_pc, Clear, R7_output);
 
 //ADDR
@@ -200,16 +194,22 @@ module ControlUnit(
 	output reg Dout_in,
 	output reg Incr_pc,      //Habilita a escrita no reg R7: incremento do PC.
 	output reg is_Load,
-	output reg is_mvi
+	output reg is_mvi,
+	output reg write_pc
 );  
 
 wire[3:0] ADD = 4'b0000, SUB = 4'b0001, OR = 4'b0010, SLT = 4'b0011, SLL = 4'b0100, SRL = 4'b0101, MV = 4'b0110, MVI = 4'b0111, LD = 4'b1000, SD = 4'b1001, MVNZ = 4'b1010; 
+
+// Variável reg usada para salvar o valor do registrador onde será salvo o dado da instrução LOAD
+// Essa variável foi criada apenas para facilitar o funcionamento na FPGA, uma vez que o sinal do registrador de destino estava sendo perdido
+reg [7:0] r_dest;
 
 initial begin
 	// Sinal para controlar se a instrução em questão é ou não um load ou um MVI
 	// Esse sinal foi criado para evitar que o valor dos registradores XXX e YYY sejam alterados quando a instrução de load ou MVI carregar um dado em DIN
 	is_Load = 1'b0;
 	is_mvi = 1'b0;
+	r_dest = 8'b0;
 end
 
 always @(Counter or IR or XXX or YYY) begin
@@ -225,7 +225,7 @@ always @(Counter or IR or XXX or YYY) begin
 	Done = 1'b0;
 	W_D = 1'b0;
 	Addr_in = 1'b0;
-	Dout_in = 1'b0;
+	Dout_in = 1'b0;	
 	 
 	case (Counter)
 		
@@ -234,7 +234,9 @@ always @(Counter or IR or XXX or YYY) begin
 			RNout = 8'b10000000;         // Habilita a escrita do valor de PC (Reg7) no Bus
 			Addr_in = 1'b1;              // Habilita a escrita em Addr -> Addr receberá o valor de PC
 			is_Load = 1'b0;              // Coloca o sinal de LD para 0 no início da execução, caso a última instrução tenha sido um LD
-			is_mvi = 1'b0;              // Coloca o sinal de MVI para 0 no início da execução, caso a última instrução tenha sido um MVI
+			is_mvi = 1'b0;               // Coloca o sinal de MVI para 0 no início da execução, caso a última instrução tenha sido um MVI
+			ALUOp = 3'b0;					  // Limpa o sinal de operação da ULA para evitar operações indesejadas
+			r_dest = 8'b0;					  // Limpa r_dest
 		end
 		
 		// Time Step 1
@@ -246,6 +248,7 @@ always @(Counter or IR or XXX or YYY) begin
 		3'b010: begin
 			IRin = 1'b1;                 // Habilita a escrita em IR -> IR recebe os dados referente a instrução atual
 		end
+		
 			
 		// Time Step 3
 		3'b011: begin			
@@ -269,6 +272,7 @@ always @(Counter or IR or XXX or YYY) begin
                RNin = XXX;            // Habilita a escrita no registrador XXX
             end
 				MVI: begin
+				   r_dest = XXX;
 					Incr_pc = 1'b1;        // Incrementa o PC para buscar o imediato que está na posição subsequente da memória
 					is_mvi = 1'b1;         // Habilita o sinal que indica que a instrução é um MVI
 				end
@@ -309,15 +313,25 @@ always @(Counter or IR or XXX or YYY) begin
 					ALUOp = 3'b010;        // Define a operação de or na ULA
 				end
 				SLT: begin                // Instrução slt
-					RNout = YYY;           // Define o registrador de leitura YYY
 					Gin = 1'b1;            // Habilita a escrita no registrador G
+					RNout = YYY;           // Define o registrador de leitura YYY
 					ALUOp = 3'b101;        // Define a operação de slt na ULA
 				end
-				SLL, SRL: begin           // Instrução sll e srl
+				SLL: begin           // Instrução sll e srl
 					Gin = 1'b1;            // Habilita a escrita no registrador G
 					RNout = YYY;           // Define o registrador de leitura YYY
+					ALUOp = 3'b011;
             end
-				MV, MVNZ: begin
+				SRL: begin           // Instrução sll e srl
+					Gin = 1'b1;            // Habilita a escrita no registrador G
+					RNout = YYY;           // Define o registrador de leitura YYY
+					ALUOp = 3'b111;        // Define a operação de srl na ULA
+            end
+				MV: begin
+					Done = 1'b1;           // Define o término da instrução de mv ou mvnz
+					Incr_pc = 1'b1;        // Finaliza a instrução e incrementa PC
+				end
+				MVNZ: begin
 					Done = 1'b1;           // Define o término da instrução de mv ou mvnz
 					Incr_pc = 1'b1;        // Finaliza a instrução e incrementa PC
 				end
@@ -325,6 +339,10 @@ always @(Counter or IR or XXX or YYY) begin
 					RNout = XXX;           // Define o registrador de leitura XXX -> O valor de XXX será salvo na memória
 					Dout_in = 1'b1;        // Habilita a escrita no registrador DOUT -> DOUT recebe o valor de XXX para salvar na memória
 					W_D = 1'b1;            // Habilita escrita na memória (wren)
+				end
+				LD: begin
+					is_Load = 1'b1;        // Habilita o sinal que indica que a instrução é um load
+					r_dest = XXX;          // Salva o registrador de destino em r_dest
 				end
 			endcase
 		end
@@ -337,14 +355,15 @@ always @(Counter or IR or XXX or YYY) begin
 					RNin = XXX;            // Habilita a escrita no registrador XXX
 					Done = 1'b1;           // Define o término da instrução
 					Incr_pc = 1'b1;        // Finaliza a instrução e incrementa PC
-					ALUOp = 3'bx;          // Reseta o valor de AluOp para que nenhuma operação fique indicada na ULA
 				end
 				SRL, SLL: begin						
 					Gout = 1'b1;           // Define que o dado de escrita é da saída da ULA
 					RNin = XXX;            // Habilita a escrita no registrador XXX
 					Done = 1'b1;           // Define o término da instrução
 					Incr_pc = 1'b1;        // Finaliza a instrução e incrementa PC
-					ALUOp = 3'bx;          // Reseta o valor de AluOp para que nenhuma operação fique indicada na ULA
+				end
+				LD: begin
+					is_Load = 1'b1;        // Habilita o sinal que indica que a instrução é um load
 				end
 			endcase
 		end
@@ -353,8 +372,9 @@ always @(Counter or IR or XXX or YYY) begin
 		3'b110: begin
 			case (IR[9:6])
 				LD: begin
+					is_Load = 1'b1;        // Habilita o sinal que indica que a instrução é um load
+					RNin = r_dest;         // Habilita a escrita no reg XXX salvo em r_dest -> O dado que será escrito em XXX foi retornado da memória para DIN
 					DINout = 1'b1;         // DIN vai conter o dado que foi pego na memória
-					RNin = XXX;            // Habilita a escrita no reg XXX -> O dado que será escrito em XXX foi retornado da memória para DIN
 					Done = 1'b1;           // Define o término da instrução
 					Incr_pc = 1'b1;        // Finaliza a instrução e incrementa PC
 				end
@@ -364,7 +384,7 @@ always @(Counter or IR or XXX or YYY) begin
 					Incr_pc = 1'b1;        // Finaliza a instrução e incrementa PC
 				end
 				MVI: begin
-					RNin = XXX;            // Habilita a escrita no registrador XXX
+					RNin = r_dest;            // Habilita a escrita no registrador XXX
 					DINout = 1'b1;         // Habilita a leitura dos dados de DIN (Imediato)
 				end
 			endcase
@@ -470,18 +490,19 @@ always @(posedge Clock) begin
 
 	// Reinicia o PC sempre que uma instrução é finalizada
    if(Clear) begin
-      PC_output <= 16'b0000000000001010;
+      PC_output = 16'b0000000000001010;
 	end
 	
 	// Salva um valor no PC
 	else if (Rin) begin
-		PC_output <= Bus;
+		PC_output = Bus;
 	end
 	
 	// Incrementa o PC em uma posição
-   else if (incr) begin
-      PC_output <= PC_output + 1'b1;
+	else if (incr) begin
+		PC_output = PC_output + 1'b1;
 	end
+	
 	
 end
 	
@@ -502,65 +523,6 @@ always @(posedge Clock) begin
 	if(Rin) begin
 		R_output = Bus;
 	end
-end
-
-endmodule
-
-// MÓDULO UTILIZADO PARA TESTE
-module Reg0(
-   input Clock,
-   input Rin, //Habilita a escrita de dados no reg RN.
-   input [15:0] Bus, //Dado de escrita em RN.
-   output reg [15:0] R_output //Dado de saída de RN.
-);  
-
-initial begin
-	R_output = 16'b0000_0000_0000_1001;
-end
-	
-always @(posedge Clock) begin
-	if(Rin) begin
-		R_output = Bus;
-	end
-end
-
-endmodule
-
-// MÓDULO UTILIZADO PARA TESTE
-module Reg1(
-   input Clock,
-   input Rin, //Habilita a escrita de dados no reg RN.
-   input [15:0] Bus, //Dado de escrita em RN.
-   output reg[15:0] R_output //Dado de saída de RN.
-);  
-
-initial begin
-	R_output = 16'b0000_0000_0000_0011;
-end
-	
-always @(posedge Clock) begin
-	if(Rin) begin
-		R_output = Bus;
-	end
-end
-
-endmodule
-
-// MÓDULO UTILIZADO PARA TESTE
-module Reg2(
-   input Clock,
-   input Rin, //Habilita a escrita de dados no reg RN.
-   input [15:0] Bus, //Dado de escrita em RN.
-   output reg[15:0] R_output //Dado de saída de RN.
-);  
-initial begin
-	R_output = 16'b0000_0000_0000_0001;
-end
-	
-always @(posedge Clock) begin
-	if(Rin) begin
-		R_output = Bus;
-		end
 end
 
 endmodule

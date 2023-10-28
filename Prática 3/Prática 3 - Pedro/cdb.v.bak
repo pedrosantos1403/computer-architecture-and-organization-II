@@ -1,0 +1,2 @@
+// O CDB vai receber o dado produzido pela ULA e o registrador de destino daquele dado, a partir disso ele irá criar um sinal de wren que indica em qual registrador
+// do Banco de Registradores ocorrerá a escrita do dado

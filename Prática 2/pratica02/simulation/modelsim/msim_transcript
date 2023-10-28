@@ -10,19 +10,19 @@
 # ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório\ AOC\ II/Práticas\ AOC2/Prática\ 2/pratica02 {C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/mem_ram.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Área\ de\ Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática\ 2/pratica02 {C:/Users/pedro/OneDrive/Área de Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática 2/pratica02/mem_ram.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module mem_ram
 # 
 # Top level modules:
 # 	mem_ram
-# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório\ AOC\ II/Práticas\ AOC2/Prática\ 2/pratica02 {C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/disp7seg.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Área\ de\ Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática\ 2/pratica02 {C:/Users/pedro/OneDrive/Área de Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática 2/pratica02/disp7seg.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module disp7seg
 # 
 # Top level modules:
 # 	disp7seg
-# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório\ AOC\ II/Práticas\ AOC2/Prática\ 2/pratica02 {C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Área\ de\ Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática\ 2/pratica02 {C:/Users/pedro/OneDrive/Área de Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática 2/pratica02/pratica2.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module pratica2
 # -- Compiling module proc
@@ -41,6 +41,9 @@
 # 
 # Top level modules:
 # 	pratica2
+# 	Reg0
+# 	Reg1
+# 	Reg2
 # 
 vsim +altera -L altera_mf_ver -do pratica2_run_msim_rtl_verilog.do -l msim_transcript -gui work.pratica2
 # vsim +altera -L altera_mf_ver -do pratica2_run_msim_rtl_verilog.do -l msim_transcript -gui work.pratica2 
@@ -52,9 +55,6 @@ vsim +altera -L altera_mf_ver -do pratica2_run_msim_rtl_verilog.do -l msim_trans
 # Loading work.ALU
 # Loading work.RegN
 # Loading work.RegIR
-# Loading work.Reg0
-# Loading work.Reg1
-# Loading work.Reg2
 # Loading work.RegN_pc
 # Loading work.RegN_addr
 # Loading work.RegN_W
@@ -63,37 +63,42 @@ vsim +altera -L altera_mf_ver -do pratica2_run_msim_rtl_verilog.do -l msim_trans
 # Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
 # Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
 # Loading work.disp7seg
-# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v(135): [PCDPC] - Port size (8 or 8) does not match connection size (16) for port 'RNin'. The port definition is at: C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v(192).
+# ** Warning: (vsim-3017) C:/Users/pedro/OneDrive/Área de Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática 2/pratica02/pratica2.v(129): [TFMPC] - Too few port connections. Expected 21, found 20.
 # 
 #         Region: /pratica2/processador/CU
-# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v(143): [PCDPC] - Port size (1 or 1) does not match connection size (11) for port 'Rin'. The port definition is at: C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v(572).
+# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Área de Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática 2/pratica02/pratica2.v(129): [PCDPC] - Port size (8 or 8) does not match connection size (16) for port 'RNin'. The port definition is at: C:/Users/pedro/OneDrive/Área de Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática 2/pratica02/pratica2.v(185).
+# 
+#         Region: /pratica2/processador/CU
+# ** Warning: (vsim-3722) C:/Users/pedro/OneDrive/Área de Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática 2/pratica02/pratica2.v(129): [TFMPC] - Missing connection for port 'write_pc'.
+# 
+# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Área de Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática 2/pratica02/pratica2.v(137): [PCDPC] - Port size (1 or 1) does not match connection size (11) for port 'Rin'. The port definition is at: C:/Users/pedro/OneDrive/Área de Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática 2/pratica02/pratica2.v(599).
 # 
 #         Region: /pratica2/processador/IR_reg
-# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v(153): [PCDPC] - Port size (1 or 1) does not match connection size (16) for port 'Bus'. The port definition is at: C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v(458).
+# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Área de Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática 2/pratica02/pratica2.v(146): [PCDPC] - Port size (1 or 1) does not match connection size (16) for port 'Bus'. The port definition is at: C:/Users/pedro/OneDrive/Área de Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática 2/pratica02/pratica2.v(484).
 # 
 #         Region: /pratica2/processador/R7
-# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v(156): [PCDPC] - Port size (1 or 1) does not match connection size (16) for port 'pc_output'. The port definition is at: C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v(594).
+# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Área de Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática 2/pratica02/pratica2.v(149): [PCDPC] - Port size (1 or 1) does not match connection size (16) for port 'pc_output'. The port definition is at: C:/Users/pedro/OneDrive/Área de Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática 2/pratica02/pratica2.v(621).
 # 
 #         Region: /pratica2/processador/reg_addr
-# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v(58): [PCDPC] - Port size (5 or 5) does not match connection size (16) for port 'address'. The port definition is at: C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/mem_ram.v(40).
+# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Área de Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática 2/pratica02/pratica2.v(58): [PCDPC] - Port size (5 or 5) does not match connection size (16) for port 'address'. The port definition is at: C:/Users/pedro/OneDrive/Área de Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática 2/pratica02/mem_ram.v(40).
 # 
 #         Region: /pratica2/mem_data
-# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v(61): [PCDPC] - Port size (8 or 8) does not match connection size (16) for port 'entry'. The port definition is at: C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/disp7seg.v(1).
+# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Área de Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática 2/pratica02/pratica2.v(61): [PCDPC] - Port size (8 or 8) does not match connection size (16) for port 'entry'. The port definition is at: C:/Users/pedro/OneDrive/Área de Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática 2/pratica02/disp7seg.v(1).
 # 
 #         Region: /pratica2/PC
-# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v(63): [PCDPC] - Port size (8 or 8) does not match connection size (16) for port 'entry'. The port definition is at: C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/disp7seg.v(1).
+# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Área de Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática 2/pratica02/pratica2.v(63): [PCDPC] - Port size (8 or 8) does not match connection size (16) for port 'entry'. The port definition is at: C:/Users/pedro/OneDrive/Área de Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática 2/pratica02/disp7seg.v(1).
 # 
 #         Region: /pratica2/Addr
-# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v(64): [PCDPC] - Port size (8 or 8) does not match connection size (16) for port 'entry'. The port definition is at: C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/disp7seg.v(1).
+# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Área de Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática 2/pratica02/pratica2.v(64): [PCDPC] - Port size (8 or 8) does not match connection size (16) for port 'entry'. The port definition is at: C:/Users/pedro/OneDrive/Área de Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática 2/pratica02/disp7seg.v(1).
 # 
 #         Region: /pratica2/R0
-# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v(65): [PCDPC] - Port size (8 or 8) does not match connection size (16) for port 'entry'. The port definition is at: C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/disp7seg.v(1).
+# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Área de Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática 2/pratica02/pratica2.v(65): [PCDPC] - Port size (8 or 8) does not match connection size (16) for port 'entry'. The port definition is at: C:/Users/pedro/OneDrive/Área de Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática 2/pratica02/disp7seg.v(1).
 # 
 #         Region: /pratica2/R1
-# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v(66): [PCDPC] - Port size (8 or 8) does not match connection size (16) for port 'entry'. The port definition is at: C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/disp7seg.v(1).
+# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Área de Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática 2/pratica02/pratica2.v(66): [PCDPC] - Port size (8 or 8) does not match connection size (16) for port 'entry'. The port definition is at: C:/Users/pedro/OneDrive/Área de Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática 2/pratica02/disp7seg.v(1).
 # 
 #         Region: /pratica2/R2
-# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v(67): [PCDPC] - Port size (8 or 8) does not match connection size (16) for port 'entry'. The port definition is at: C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/disp7seg.v(1).
+# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Área de Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática 2/pratica02/pratica2.v(67): [PCDPC] - Port size (8 or 8) does not match connection size (16) for port 'entry'. The port definition is at: C:/Users/pedro/OneDrive/Área de Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática 2/pratica02/disp7seg.v(1).
 # 
 #         Region: /pratica2/R3
 # do pratica2_run_msim_rtl_verilog.do 
@@ -104,19 +109,19 @@ vsim +altera -L altera_mf_ver -do pratica2_run_msim_rtl_verilog.do -l msim_trans
 # vmap work rtl_work
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório\ AOC\ II/Práticas\ AOC2/Prática\ 2/pratica02 {C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/mem_ram.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Área\ de\ Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática\ 2/pratica02 {C:/Users/pedro/OneDrive/Área de Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática 2/pratica02/mem_ram.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module mem_ram
 # 
 # Top level modules:
 # 	mem_ram
-# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório\ AOC\ II/Práticas\ AOC2/Prática\ 2/pratica02 {C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/disp7seg.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Área\ de\ Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática\ 2/pratica02 {C:/Users/pedro/OneDrive/Área de Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática 2/pratica02/disp7seg.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module disp7seg
 # 
 # Top level modules:
 # 	disp7seg
-# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório\ AOC\ II/Práticas\ AOC2/Prática\ 2/pratica02 {C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 2/pratica02/pratica2.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Área\ de\ Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática\ 2/pratica02 {C:/Users/pedro/OneDrive/Área de Trabalho/pratica2final/Pr-ticas-AOC2-main/Prática 2/pratica02/pratica2.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module pratica2
 # -- Compiling module proc
@@ -135,12 +140,62 @@ vsim +altera -L altera_mf_ver -do pratica2_run_msim_rtl_verilog.do -l msim_trans
 # 
 # Top level modules:
 # 	pratica2
+# 	Reg0
+# 	Reg1
+# 	Reg2
 # 
 force -freeze {sim:/pratica2/KEY[0]} 1 0, 0 {50 ps} -r 100
 add wave -position insertpoint  \
-sim:/pratica2/LEDR
+sim:/pratica2/pc
+add wave -position insertpoint  \
+sim:/pratica2/r2
+add wave -position insertpoint  \
+sim:/pratica2/r3
+add wave -position insertpoint  \
+sim:/pratica2/r4
 add wave -position insertpoint  \
 sim:/pratica2/counter
+add wave -position insertpoint  \
+sim:/pratica2/processador/RNin
+add wave -position insertpoint  \
+sim:/pratica2/processador/RNout
+add wave -position insertpoint  \
+sim:/pratica2/processador/XXX
+add wave -position insertpoint  \
+sim:/pratica2/processador/YYY
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
 run
 run
 run

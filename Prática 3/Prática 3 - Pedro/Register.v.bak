@@ -1,0 +1,18 @@
+module Register(
+   input Clock,
+   input Rin,
+   input [4:0] cdb,
+   output reg[15:0] R_output
+);  
+
+initial begin
+	R_output = 16'b0;
+end
+	
+always @(posedge Clock) begin
+	if(Rin) begin
+		R_output = Bus;
+	end
+end
+
+endmodule
