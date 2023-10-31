@@ -19,6 +19,19 @@ module CDBArbiter(
 	
 );
 
+// Fila de Prioridade do CDB Arbiter
+reg[15:0] PriorityQueue[4:0];
+
+// Sinal que registra quando a instrução de maior prioridade é escrita no CDB
+reg Done;
+
+// Sinal para controlar Loop
+reg break_loop;
+
+// Sinais que salvam a ocorrência e uma entrada na Fila de Prioridade
+reg input1_already_in;
+reg input2_already_in;
+
 // O arbiter também avalia se o que está no CDB é um dado que será salvo no registrador ou um endereço de load e store
 // Adicionar Lógica de calculo de endereco e bloqueamento do cdb
 
@@ -33,50 +46,115 @@ module CDBArbiter(
 // da memória ele será mandado direto para o cdb arbiter onde a instrução de Load está instanciada, logo, quando o cdb arbiter receber o dado da memória ele
 // manda esse dado direto para o banco de registradores.
 
-reg ULA_can_write;
-reg ULA_ld_sd_can_write;
-
 initial begin
-
-	// Inicializando variáveis que controlam escrita da ULA
-	ULA_can_write <= 1'b0;
-	ULA_ld_sd_can_write <= 1'b0;
 	
 	// Inicializando o cdb com um valor inválido
 	cdb = 16'b0000000000000000;
+	
+	// Inicializando Fila de Prioridade
+	PriorityQueue[0] = 16'b1111111111111111;
+	PriorityQueue[1] = 16'b1111111111111111;
+	PriorityQueue[2] = 16'b1111111111111111;
+	PriorityQueue[3] = 16'b1111111111111111;
+	PriorityQueue[4] = 16'b1111111111111111;
+	
+	// Inicializando Done
+	Done = 1'b0;
+	
+	// Inicializando Break Loop
+	break_loop = 1'b0;
+	
+	// Inicializando demais variáveis
+	input1_already_in = 1'b0;
+	input2_already_in = 1'b0;
 	
 end
 
 always @(posedge clock) begin
 
 	// Resetando Variáveis
-	cdb = 16'b0000000000000000;
-
-	// Checar se a saída das ULA's é válida
-	if (ULA_output != 16'b1111111111111111) begin
-		ULA_can_write <= 1'b1;
-	end
+	break_loop = 1'b0;
+	input1_already_in = 1'b0;
+	input2_already_in = 1'b0;
 	
-	if (ULA_ld_sd_output != 16'b1111111111111111) begin
-		ULA_ld_sd_can_write <= 1'b1;
-		// Acrescentar lógica da memória de dados
-	end
-
-	// ULA de Sum/Sub tem prioridade para escrever no cdb
-	if (ULA_can_write) begin
-		cdb = ULA_output;
-		ULA_can_write <= 1'b0;
-	end
-	
-	else if (ULA_ld_sd_can_write) begin
-	
-		// Se for um Load/Store o cdb não escreve no Banco de Registradores, ele deve apenas retornar
-		// o endereço de memória para a RS e salvar esse endereço na coluna Address
+	// Lógica para checar se o dado presente em ULA_output ou ULA_ld_sd_output já está presente na Fila de Prioridade
+	for(i = 0; i <= 4; i = i + 1) begin
 		
-		cdb = ULA_ld_sd_output;
-		ULA_ld_sd_can_write <= 1'b0;
-		// Acrescentar lógica da memória de dados
+		if (ULA_output == PriorityQueue[i]) begin
+			input1_already_in = 1'b1;
+		end
+		else if (ULA_ld_sd_output == PriorityQueue[i]) begin
+			input2_already_in = 1'b1;
+		end
+		
 	end
+
+	// Adicionar entrada de ULA_output
+	if (input1_already_in == 1'b0 && ULA_output != 16'b1111111111111111) begin
+	
+		for(i = 0; i <= 4 && break_loop != 1; i = i + 1) begin
+		
+			// Checar se a posição da Fila está vazia
+			if (PriorityQueue[i] == 16'b1111111111111111) begin
+				
+				// Adicionar entrada de ULA_output
+				PriorityQueue[i] = ULA_output;
+				break_loop = 1'b1;
+				
+			end
+			
+		end
+		
+	end
+	
+	// Resetando Break Loop
+	break_loop = 1'b0;
+	
+	// Adicionar entrada de ULA_ld_sd_output
+	if (input2_already_in == 1'b0 && ULA_ld_sd_output != 16'b1111111111111111) begin
+	
+		for(i = 0; i <= 4 && break_loop != 1; i = i + 1) begin
+		
+			// Checar se a posição da Fila está vazia
+			if (PriorityQueue[i] == 16'b1111111111111111) begin
+				
+				// Adicionar entrada de ULA_ld_sd_output
+				PriorityQueue[i] = ULA_ld_sd_output;
+				break_loop = 1'b1;
+				
+			end
+			
+		end
+		
+	end
+	
+	
+	
+	// CDB recebe a primeira posição da Fila de Prioridade
+	if (PriorityQueue[0] != 16'b1111111111111111) begin
+		cdb = PriorityQueue[0];
+		Done = 1'b1;
+	end
+
+	
+	// Atualizar a Fila de Prioridade
+	if (Done) begin
+		PriorityQueue[0] = PriorityQueue[1];
+		PriorityQueue[1] = PriorityQueue[2];
+		PriorityQueue[2] = PriorityQueue[3];
+		PriorityQueue[3] = PriorityQueue[4];
+		PriorityQueue[4] = 16'b1111111111111111;
+		Done = 1'b0;
+	end
+	
+	
+	// TODO
+	// Acresecentar uma variável que controle se o dado presente no cdb já foi utilizado ou nao, sendo assim, é possível impedir com que
+	// o cdb escreva no BR todos os ciclos
+	
+	// TODO
+	// Acrescentar lógica para que o CDB receba o dado no mesmo ciclo em que o sinal "Ula_can_write" seja setado para 1
+
 	
 end
 

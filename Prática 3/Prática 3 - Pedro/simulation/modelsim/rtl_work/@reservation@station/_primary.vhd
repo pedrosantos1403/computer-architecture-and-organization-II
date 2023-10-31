@@ -10,9 +10,9 @@ entity ReservationStation is
         ULA_op          : in     vl_logic_vector(2 downto 0);
         immediate       : in     vl_logic_vector(3 downto 0);
         cdb             : in     vl_logic_vector(15 downto 0);
-        R0_data         : in     vl_logic_vector(15 downto 0);
-        R1_data         : in     vl_logic_vector(15 downto 0);
-        R2_data         : in     vl_logic_vector(15 downto 0);
+        R0_data         : in     vl_logic_vector(9 downto 0);
+        R1_data         : in     vl_logic_vector(9 downto 0);
+        R2_data         : in     vl_logic_vector(9 downto 0);
         operand1_sumsub : out    vl_logic_vector(15 downto 0);
         operand2_sumsub : out    vl_logic_vector(15 downto 0);
         Opcode_sumsub   : out    vl_logic_vector(2 downto 0);

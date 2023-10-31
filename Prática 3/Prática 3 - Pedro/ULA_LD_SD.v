@@ -29,20 +29,13 @@ module ULA_LD_SD(
 	
 );
 
-reg [15:0] data;
-reg [2:0] R0, R1, R2;
+reg [9:0] data;
 reg ULA;
 
 initial begin
 
 	// Inicializando as saídas da ULA com sendo 16'b1 -> Saída Inválida
 	ULA_output = 16'b1111111111111111;
-	
-	R0 = 3'b100;
-	R1 = 3'b010;
-	R2 = 3'b001;
-	
-	ULA = 1'b0;
 	
 end
 
@@ -59,13 +52,13 @@ always @(posedge clock) begin
 
 		// Montando Sinal de Saída
 		if (reg_dest == 3'b000 /*R0*/) begin
-			ULA_output = {R0,RS_position,ULA,data};
+			ULA_output = {3'b100/*R0*/,2'b00/*RS[0]*/,1'b0/*ULA_ldsd*/,data};
 		end
 		else if (reg_dest == 3'b001 /*R1*/) begin
-			ULA_output = {R1,RS_position,ULA,data};
+			ULA_output = {3'b010/*R1*/,2'b01/*RS[1]*/,1'b0/*ULA_ldsd*/,data};
 		end
 		else if (reg_dest == 3'b010 /*R2*/) begin
-			ULA_output = {R2,RS_position,ULA,data};
+			ULA_output = {3'b001/*R2*/,2'b10/*RS[2]*/,1'b0/*ULA_ldsd*/,data};
 		end
 		
 	end

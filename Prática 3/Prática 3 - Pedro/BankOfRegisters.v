@@ -10,11 +10,12 @@ module BankOfRegisters(
 	// cdb[9:0]   -> Dado
 	input[15:0] cdb,
 	
-	output [15:0] R0_output,
-	output [15:0] R1_output,
-	output [15:0] R2_output
+	output [9:0] R0_output,
+	output [9:0] R1_output,
+	output [9:0] R2_output
 );
 
+// TODO
 // Montar lógica de reset
 
 // cdb[15:15] -> R0_in
@@ -37,12 +38,12 @@ endmodule
 module Reg0(
    input clock,
 	input wren,
-   input [15:0] data,
-   output reg[15:0] R_output
+   input [9:0] data,
+   output reg[9:0] R_output
 );  
 
 initial begin
-	R_output = 16'b0000000000000000;
+	R_output = 10'b0000000000;
 end
 	
 always @(posedge clock) begin
@@ -57,12 +58,12 @@ endmodule
 module Reg1(
    input clock,
 	input wren,
-   input [15:0] data,
-   output reg[15:0] R_output
+   input [9:0] data,
+   output reg[9:0] R_output
 );  
 
 initial begin
-	R_output = 16'b0000000000000111;
+	R_output = 10'b0000000111;
 end
 	
 always @(posedge clock) begin
@@ -77,12 +78,12 @@ endmodule
 module Reg2(
    input clock,
 	input wren,
-   input [15:0] data,
-   output reg[15:0] R_output
+   input [9:0] data,
+   output reg[9:0] R_output
 );  
 
 initial begin
-	R_output = 16'b0000000000000100;
+	R_output = 10'b0000000100;
 end
 	
 always @(posedge clock) begin

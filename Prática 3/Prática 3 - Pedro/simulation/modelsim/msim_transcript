@@ -68,27 +68,40 @@ vsim work.tomasulo
 # Loading work.ULA
 # Loading work.ULA_LD_SD
 # Loading work.CDBArbiter
-# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/BankOfRegisters.v(30): [PCDPC] - Port size (16 or 16) does not match connection size (10) for port 'data'. The port definition is at: C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/BankOfRegisters.v(40).
-# 
-#         Region: /tomasulo/bank_of_registers/R0
-# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/BankOfRegisters.v(31): [PCDPC] - Port size (16 or 16) does not match connection size (10) for port 'data'. The port definition is at: C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/BankOfRegisters.v(60).
-# 
-#         Region: /tomasulo/bank_of_registers/R1
-# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/BankOfRegisters.v(32): [PCDPC] - Port size (16 or 16) does not match connection size (10) for port 'data'. The port definition is at: C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/BankOfRegisters.v(80).
-# 
-#         Region: /tomasulo/bank_of_registers/R2
 # ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/tomasulo.v(66): [PCDPC] - Port size (4 or 4) does not match connection size (16) for port 'imediate'. The port definition is at: C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/ULA_LD_SD.v(8).
 # 
 #         Region: /tomasulo/ula_ld_sd
 wave create -driver freeze -pattern clock -initialvalue 0 -period 50ps -dutycycle 50 -starttime 0ps -endtime 1000ps sim:/tomasulo/clock
+add wave -position insertpoint  \
+sim:/tomasulo/operand1_sumsub
+add wave -position insertpoint  \
+sim:/tomasulo/operand2_sumsub
+add wave -position insertpoint  \
+sim:/tomasulo/Opcode_sumsub
+add wave -position insertpoint  \
+sim:/tomasulo/Reg_dest_sumsub
+add wave -position insertpoint  \
+sim:/tomasulo/operands_ready_sumsub
+add wave -position insertpoint  \
+sim:/tomasulo/sumsub_position
+add wave -position insertpoint  \
+sim:/tomasulo/ULA_output
+add wave -position insertpoint  \
+sim:/tomasulo/cdb_arbiter/ULA_output
+add wave -position insertpoint  \
+sim:/tomasulo/cdb_arbiter/cdb
+add wave -position insertpoint  \
+sim:/tomasulo/cdb
+add wave -position insertpoint  \
+sim:/tomasulo/cdb_arbiter/ULA_can_write
 add wave -position insertpoint  \
 sim:/tomasulo/bank_of_registers/R0_output
 add wave -position insertpoint  \
 sim:/tomasulo/bank_of_registers/R1_output
 add wave -position insertpoint  \
 sim:/tomasulo/bank_of_registers/R2_output
-add wave -position insertpoint  \
-sim:/tomasulo/bank_of_registers/cdb
+run
+run
 run
 run
 run

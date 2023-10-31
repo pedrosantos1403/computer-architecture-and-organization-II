@@ -20,9 +20,9 @@ module ReservationStation(
 	input[15:0] cdb,
 	
 	// Informações do Bank Of Registers
-	input[15:0] R0_data,
-	input[15:0] R1_data,
-	input[15:0] R2_data,
+	input[9:0] R0_data,
+	input[9:0] R1_data,
+	input[9:0] R2_data,
 	
 	// Saídas para ULA de Soma/Sub
 	output reg[15:0] operand1_sumsub, operand2_sumsub,
@@ -136,6 +136,9 @@ always @(posedge clock) begin
 	
 	// Se o cdb possui um dado válido esse dado será analisado
 	if (cdb != 16'b0000000000000000) begin
+	
+		// DEBUG
+		teste = 1'b1;
 		
 		// Resetando variável auxiliar
 		reg_dest_aux = 3'b000;
@@ -238,9 +241,6 @@ always @(posedge clock) begin
 			// Quebrar o Loop ao adicionar uma instrução
 			break_loop = 1'b1;
 		
-			// Teste
-			teste = 1'b1;
-		
 			// Alterar o Busy para 1 na linha em que a instrução for inserida
 			Busy[i] = 1;
 			
@@ -255,17 +255,6 @@ always @(posedge clock) begin
 			
 				// Salvar o Registrador de Destino (RX)
 				Reg_dest[i] = RX;
-				
-				// Salvar que Reg_dest está esperando um valor novo
-				if (RX == 3'b000) begin
-					is_waiting_value[0:0] = 1'b1;
-				end
-				else if (RX == 3'b001) begin
-					is_waiting_value[1:1] = 1'b1;
-				end
-				if (RX == 3'b010) begin
-					is_waiting_value[2:2] = 1'b1;
-				end
 				
 				// Checar se o primeiro operando está disponível (RY)
 				if (RY == 3'b000 /*R0*/ && is_waiting_value[0:0] == 0) begin
@@ -309,6 +298,17 @@ always @(posedge clock) begin
 				end
 				else if (RZ == 3'b010 /*R2*/ && is_waiting_value[2:2] == 1) begin
 					Qk[i] = RZ;
+				end
+				
+				// Salvar que Reg_dest está esperando um valor novo
+				if (RX == 3'b000) begin
+					is_waiting_value[0:0] = 1'b1;
+				end
+				else if (RX == 3'b001) begin
+					is_waiting_value[1:1] = 1'b1;
+				end
+				if (RX == 3'b010) begin
+					is_waiting_value[2:2] = 1'b1;
 				end
 				
 			end

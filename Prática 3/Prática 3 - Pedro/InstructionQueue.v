@@ -35,10 +35,10 @@ initial begin
 	
 	// Inicializando a Memória de Instruções
 	InstructionMemory[0] <= 16'b0000000000001010; // ADD R0, R1, R2
-	InstructionMemory[1] <= 16'b0000001001010000; // SUB R1, R2, R0
-	InstructionMemory[2] <= 16'b1111111111111111;
-	InstructionMemory[3] <= 16'b1111111111111111;
-	InstructionMemory[4] <= 16'b1111111111111111;
+	InstructionMemory[1] <= 16'b0000001001000001; // SUB R1, R0, R1
+	//InstructionMemory[2] <= 16'b1111111111111111;
+	//InstructionMemory[3] <= 16'b1111111111111111;
+	//InstructionMemory[4] <= 16'b1111111111111111;
 	
 end
 

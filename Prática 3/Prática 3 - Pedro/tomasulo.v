@@ -36,7 +36,7 @@ wire[1:0] ldsd_position;
 wire[15:0] ULA_ld_sd_output;
 
 // Sinais de saída do Banco de Registradores
-wire[15:0] R0_output, R1_output, R2_output;
+wire[9:0] R0_output, R1_output, R2_output;
 
 // Sinal de sáida da Memória RAM
 wire [15:0] mem_output;

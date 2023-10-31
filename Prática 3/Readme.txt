@@ -21,11 +21,29 @@ Tarefas Código:
 8) cdb como fila de prioridade.
 
 
+Testes Iniciais:
 
-Testes:
+a) Checar os valores que saem da IQ (OK)
+b) Checar os valores que entram na RS (OK)
+c) Checar os valores que entram na ULA (OK)
+d) Checar os valores que são mandados para o CDB ()
+   d.1) O cdb não pode ter seu valor resetado (OK)
+   d.2) Encontrar um jeito de garantir que o cdb só considera a saída da ULA quando for uma instrução nova
+e) Checar os valores que são salvos no BR
+f) Checar os valores que são atualizados na RS
+g) Checar se as variáveis não são reinicializadas de forma errada
 
-1) Testar valores dos registradores.
 
+Testes Finais:
+
+a) Dependência de dados verdadeira ou RAW (Read After Write) -> Soma/Sub
+b) Dependência de saída ou WAW (Write After Write) -> Soma/Sub
+c) Antidependência ou WAR (Write After Read) -> Soma/Load
+d) Dependência/hazard estrutural (STALL - unidade funcional cheia) -> Soma e Sub com os mesmos operandos
+e) Conflito no CDB -> Soma e Load mostrando que os sinais "Ula_can_write" e "Ula_ldsd_can_write" sao setados para 1 ao mesmo tempo
+	              porém a Ula de Soma/Sub tem prioridade para escrever no CDB
+f) Adiantamento na estação de reserva -> Mostrar o sinal de stall igual a 1 na IQ, mostrando que nenhuma instrucao é despachada
+g) Renomeação de registradores
 
 
 Relatório:
