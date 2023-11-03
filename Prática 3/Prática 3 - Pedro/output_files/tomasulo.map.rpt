@@ -1,5 +1,5 @@
 Analysis & Synthesis report for tomasulo
-Fri Nov 03 03:51:52 2023
+Fri Nov 03 13:59:45 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -22,10 +22,9 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  14. altsyncram Parameter Settings by Entity Instance
  15. Port Connectivity Checks: "ULA_LD_SD:ula_ld_sd"
  16. Port Connectivity Checks: "ReservationStation:reservation_station"
- 17. Port Connectivity Checks: "ram:mem_ram"
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
- 20. Analysis & Synthesis Suppressed Messages
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
+ 19. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -51,7 +50,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 03 03:51:52 2023           ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 03 13:59:45 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; tomasulo                                        ;
 ; Top-level Entity Name              ; tomasulo                                        ;
@@ -486,37 +485,38 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; CDBArbiter:cdb_arbiter|old_instructions[9][15]                 ; Lost fanout                            ;
 ; ULA_LD_SD:ula_ld_sd|ULA_output[0..15]                          ; Lost fanout                            ;
 ; ULA:ula|ULA_output[0..15]                                      ; Lost fanout                            ;
-; ReservationStation:reservation_station|operand1_sumsub[0..6]   ; Lost fanout                            ;
+; ReservationStation:reservation_station|Operation[2][0]         ; Lost fanout                            ;
+; ReservationStation:reservation_station|Operation[1][2]         ; Lost fanout                            ;
+; ReservationStation:reservation_station|Operation[1][1]         ; Lost fanout                            ;
+; ReservationStation:reservation_station|Operation[1][0]         ; Lost fanout                            ;
+; ReservationStation:reservation_station|Operation[0][2]         ; Lost fanout                            ;
+; ReservationStation:reservation_station|Operation[0][1]         ; Lost fanout                            ;
+; ReservationStation:reservation_station|Operation[0][0]         ; Lost fanout                            ;
+; ReservationStation:reservation_station|Reg_dest[2][2]          ; Lost fanout                            ;
+; ReservationStation:reservation_station|Reg_dest[2][1]          ; Lost fanout                            ;
+; ReservationStation:reservation_station|Reg_dest[2][0]          ; Lost fanout                            ;
+; ReservationStation:reservation_station|Reg_dest[1][2]          ; Lost fanout                            ;
+; ReservationStation:reservation_station|Reg_dest[1][1]          ; Lost fanout                            ;
+; ReservationStation:reservation_station|Reg_dest[1][0]          ; Lost fanout                            ;
+; ReservationStation:reservation_station|Reg_dest[0][2]          ; Lost fanout                            ;
+; ReservationStation:reservation_station|Reg_dest[0][1]          ; Lost fanout                            ;
+; ReservationStation:reservation_station|Reg_dest[0][0]          ; Lost fanout                            ;
+; ReservationStation:reservation_station|operand1_sumsub[0..15]  ; Lost fanout                            ;
 ; ReservationStation:reservation_station|operand2_sumsub[0..15]  ; Lost fanout                            ;
-; ReservationStation:reservation_station|Reg_dest_sumsub[2]      ; Lost fanout                            ;
+; ReservationStation:reservation_station|Reg_dest_sumsub[0..2]   ; Lost fanout                            ;
+; ReservationStation:reservation_station|Opcode_sumsub[2]        ; Lost fanout                            ;
 ; ReservationStation:reservation_station|ldsd_position[0]        ; Lost fanout                            ;
-; ReservationStation:reservation_station|Reg_dest_sumsub[0,1]    ; Lost fanout                            ;
-; ReservationStation:reservation_station|Opcode_sumsub[1,2]      ; Lost fanout                            ;
 ; ReservationStation:reservation_station|stall                   ; Lost fanout                            ;
-; ReservationStation:reservation_station|Opcode_sumsub[0]        ; Lost fanout                            ;
+; ReservationStation:reservation_station|Opcode_sumsub[0,1]      ; Lost fanout                            ;
 ; ReservationStation:reservation_station|sumsub_position[0,1]    ; Lost fanout                            ;
-; ReservationStation:reservation_station|operand1_ldsd[0..15]    ; Lost fanout                            ;
+; ReservationStation:reservation_station|operand1_ldsd[6..15]    ; Lost fanout                            ;
+; ReservationStation:reservation_station|Reg_dest_ldsd[1]        ; Lost fanout                            ;
+; ReservationStation:reservation_station|operand1_ldsd[0..5]     ; Lost fanout                            ;
 ; ReservationStation:reservation_station|Reg_dest_ldsd[0]        ; Lost fanout                            ;
+; ReservationStation:reservation_station|Opcode_ldsd[0..2]       ; Lost fanout                            ;
 ; ReservationStation:reservation_station|ldsd_position[1]        ; Lost fanout                            ;
 ; ReservationStation:reservation_station|operand2_ldsd[0..3]     ; Lost fanout                            ;
-; ReservationStation:reservation_station|Reg_dest_ldsd[1,2]      ; Lost fanout                            ;
-; ReservationStation:reservation_station|operand1_sumsub[7..15]  ; Lost fanout                            ;
-; ReservationStation:reservation_station|Reg_dest[0][0]          ; Lost fanout                            ;
-; ReservationStation:reservation_station|Reg_dest[0][1]          ; Lost fanout                            ;
-; ReservationStation:reservation_station|Reg_dest[0][2]          ; Lost fanout                            ;
-; ReservationStation:reservation_station|Reg_dest[1][0]          ; Lost fanout                            ;
-; ReservationStation:reservation_station|Reg_dest[1][1]          ; Lost fanout                            ;
-; ReservationStation:reservation_station|Reg_dest[1][2]          ; Lost fanout                            ;
-; ReservationStation:reservation_station|Reg_dest[2][0]          ; Lost fanout                            ;
-; ReservationStation:reservation_station|Reg_dest[2][1]          ; Lost fanout                            ;
-; ReservationStation:reservation_station|Reg_dest[2][2]          ; Lost fanout                            ;
-; ReservationStation:reservation_station|Operation[0][0]         ; Lost fanout                            ;
-; ReservationStation:reservation_station|Operation[0][1]         ; Lost fanout                            ;
-; ReservationStation:reservation_station|Operation[0][2]         ; Lost fanout                            ;
-; ReservationStation:reservation_station|Operation[1][0]         ; Lost fanout                            ;
-; ReservationStation:reservation_station|Operation[1][1]         ; Lost fanout                            ;
-; ReservationStation:reservation_station|Operation[1][2]         ; Lost fanout                            ;
-; ReservationStation:reservation_station|Operation[2][0]         ; Lost fanout                            ;
+; ReservationStation:reservation_station|Reg_dest_ldsd[2]        ; Lost fanout                            ;
 ; ReservationStation:reservation_station|Operation[2][1]         ; Lost fanout                            ;
 ; ReservationStation:reservation_station|Operation[2][2]         ; Lost fanout                            ;
 ; ReservationStation:reservation_station|full_instruction[0][0]  ; Lost fanout                            ;
@@ -569,6 +569,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ReservationStation:reservation_station|full_instruction[2][15] ; Lost fanout                            ;
 ; ReservationStation:reservation_station|operands_ready_ldsd     ; Lost fanout                            ;
 ; ReservationStation:reservation_station|operands_ready_sumsub   ; Lost fanout                            ;
+; ReservationStation:reservation_station|data_in_mem[0..15]      ; Lost fanout                            ;
+; ReservationStation:reservation_station|wren                    ; Lost fanout                            ;
 ; ReservationStation:reservation_station|ULA_ld_sd_free          ; Lost fanout                            ;
 ; ReservationStation:reservation_station|ULA_free                ; Lost fanout                            ;
 ; ReservationStation:reservation_station|Busy[0..2]              ; Lost fanout                            ;
@@ -698,124 +700,122 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; BankOfRegisters:bank_of_registers|Reg2:R2|R_output[0..9]       ; Lost fanout                            ;
 ; BankOfRegisters:bank_of_registers|Reg1:R1|R_output[0..9]       ; Lost fanout                            ;
 ; BankOfRegisters:bank_of_registers|Reg0:R0|R_output[0..9]       ; Lost fanout                            ;
-; Total Number of Removed Registers = 601                        ;                                        ;
+; Total Number of Removed Registers = 621                        ;                                        ;
 +----------------------------------------------------------------+----------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                                    ;
-+----------------------------------------------------------------+---------------------------+-----------------------------------------------------------------------------------+
-; Register name                                                  ; Reason for Removal        ; Registers Removed due to This Register                                            ;
-+----------------------------------------------------------------+---------------------------+-----------------------------------------------------------------------------------+
-; CDBArbiter:cdb_arbiter|Done                                    ; Stuck at GND              ; CDBArbiter:cdb_arbiter|load_store_running, ULA_LD_SD:ula_ld_sd|ULA_output[4],     ;
-;                                                                ; due to stuck port data_in ; ULA_LD_SD:ula_ld_sd|ULA_output[1], ULA_LD_SD:ula_ld_sd|ULA_output[0],             ;
-;                                                                ;                           ; ULA_LD_SD:ula_ld_sd|ULA_output[3], ULA_LD_SD:ula_ld_sd|ULA_output[2],             ;
-;                                                                ;                           ; ULA_LD_SD:ula_ld_sd|ULA_output[5], ULA_LD_SD:ula_ld_sd|ULA_output[6],             ;
-;                                                                ;                           ; ULA_LD_SD:ula_ld_sd|ULA_output[7], ULA_LD_SD:ula_ld_sd|ULA_output[8],             ;
-;                                                                ;                           ; ULA_LD_SD:ula_ld_sd|ULA_output[9], ULA_LD_SD:ula_ld_sd|ULA_output[10],            ;
-;                                                                ;                           ; ULA_LD_SD:ula_ld_sd|ULA_output[11], ULA_LD_SD:ula_ld_sd|ULA_output[12],           ;
-;                                                                ;                           ; ULA_LD_SD:ula_ld_sd|ULA_output[13], ULA_LD_SD:ula_ld_sd|ULA_output[14],           ;
-;                                                                ;                           ; ULA_LD_SD:ula_ld_sd|ULA_output[15], ULA:ula|ULA_output[3], ULA:ula|ULA_output[2], ;
-;                                                                ;                           ; ULA:ula|ULA_output[0], ULA:ula|ULA_output[1], ULA:ula|ULA_output[4],              ;
-;                                                                ;                           ; ULA:ula|ULA_output[5], ULA:ula|ULA_output[6], ULA:ula|ULA_output[7],              ;
-;                                                                ;                           ; ULA:ula|ULA_output[8], ULA:ula|ULA_output[9], ULA:ula|ULA_output[10],             ;
-;                                                                ;                           ; ULA:ula|ULA_output[11], ULA:ula|ULA_output[12], ULA:ula|ULA_output[13],           ;
-;                                                                ;                           ; ULA:ula|ULA_output[14], ULA:ula|ULA_output[15],                                   ;
-;                                                                ;                           ; ReservationStation:reservation_station|Opcode_sumsub[2],                          ;
-;                                                                ;                           ; ReservationStation:reservation_station|Opcode_sumsub[1],                          ;
-;                                                                ;                           ; ReservationStation:reservation_station|Operation[0][1],                           ;
-;                                                                ;                           ; ReservationStation:reservation_station|Operation[0][2],                           ;
-;                                                                ;                           ; ReservationStation:reservation_station|Operation[1][1],                           ;
-;                                                                ;                           ; ReservationStation:reservation_station|Operation[1][2],                           ;
-;                                                                ;                           ; ReservationStation:reservation_station|operands_ready_ldsd,                       ;
-;                                                                ;                           ; ReservationStation:reservation_station|operands_ready_sumsub,                     ;
-;                                                                ;                           ; ReservationStation:reservation_station|address[0],                                ;
-;                                                                ;                           ; InstructionQueue:instruction_queue|opcode[1],                                     ;
-;                                                                ;                           ; InstructionQueue:instruction_queue|opcode[2]                                      ;
-; ReservationStation:reservation_station|operand1_sumsub[6]      ; Lost Fanouts              ; ReservationStation:reservation_station|Operation[2][2],                           ;
-;                                                                ;                           ; ReservationStation:reservation_station|Busy[0],                                   ;
-;                                                                ;                           ; ReservationStation:reservation_station|Busy[1],                                   ;
-;                                                                ;                           ; ReservationStation:reservation_station|Busy[2],                                   ;
-;                                                                ;                           ; ReservationStation:reservation_station|Qk[2][2],                                  ;
-;                                                                ;                           ; ReservationStation:reservation_station|Vj[2][6]                                   ;
-; ReservationStation:reservation_station|Opcode_sumsub[0]        ; Lost Fanouts              ; ReservationStation:reservation_station|Operation[0][0],                           ;
-;                                                                ;                           ; ReservationStation:reservation_station|Operation[1][0],                           ;
-;                                                                ;                           ; ReservationStation:reservation_station|Operation[2][0],                           ;
-;                                                                ;                           ; InstructionQueue:instruction_queue|opcode[0]                                      ;
-; ReservationStation:reservation_station|Reg_dest_sumsub[2]      ; Lost Fanouts              ; ReservationStation:reservation_station|Reg_dest[0][2],                            ;
-;                                                                ;                           ; ReservationStation:reservation_station|Reg_dest[1][2],                            ;
-;                                                                ;                           ; ReservationStation:reservation_station|Reg_dest[2][2]                             ;
-; ReservationStation:reservation_station|Reg_dest_sumsub[1]      ; Lost Fanouts              ; ReservationStation:reservation_station|Reg_dest[0][1],                            ;
-;                                                                ;                           ; ReservationStation:reservation_station|Reg_dest[1][1],                            ;
-;                                                                ;                           ; ReservationStation:reservation_station|Reg_dest[2][1]                             ;
-; ReservationStation:reservation_station|Reg_dest_sumsub[0]      ; Lost Fanouts              ; ReservationStation:reservation_station|Reg_dest[0][0],                            ;
-;                                                                ;                           ; ReservationStation:reservation_station|Reg_dest[1][0],                            ;
-;                                                                ;                           ; ReservationStation:reservation_station|Reg_dest[2][0]                             ;
-; CDBArbiter:cdb_arbiter|PriorityQueue[0][5]                     ; Lost Fanouts              ; ReservationStation:reservation_station|address[1],                                ;
-;                                                                ;                           ; ReservationStation:reservation_station|address[2]                                 ;
-; CDBArbiter:cdb_arbiter|PriorityQueue[3][1]                     ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[4][1]                                        ;
-; CDBArbiter:cdb_arbiter|PriorityQueue[3][0]                     ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[4][0]                                        ;
-; CDBArbiter:cdb_arbiter|PriorityQueue[2][15]                    ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[3][15]                                       ;
-; CDBArbiter:cdb_arbiter|PriorityQueue[2][14]                    ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[3][14]                                       ;
-; CDBArbiter:cdb_arbiter|PriorityQueue[2][13]                    ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[3][13]                                       ;
-; CDBArbiter:cdb_arbiter|PriorityQueue[2][12]                    ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[3][12]                                       ;
-; CDBArbiter:cdb_arbiter|PriorityQueue[2][11]                    ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[3][11]                                       ;
-; CDBArbiter:cdb_arbiter|PriorityQueue[2][10]                    ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[3][10]                                       ;
-; CDBArbiter:cdb_arbiter|PriorityQueue[2][9]                     ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[3][9]                                        ;
-; CDBArbiter:cdb_arbiter|PriorityQueue[2][8]                     ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[3][8]                                        ;
-; CDBArbiter:cdb_arbiter|PriorityQueue[2][7]                     ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[3][7]                                        ;
-; CDBArbiter:cdb_arbiter|PriorityQueue[2][6]                     ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[3][6]                                        ;
-; ReservationStation:reservation_station|operand1_sumsub[5]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][5]                                   ;
-; ReservationStation:reservation_station|operand1_sumsub[4]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][4]                                   ;
-; ReservationStation:reservation_station|operand1_sumsub[3]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][3]                                   ;
-; ReservationStation:reservation_station|operand1_sumsub[2]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][2]                                   ;
-; ReservationStation:reservation_station|operand1_sumsub[1]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][1]                                   ;
-; ReservationStation:reservation_station|operand1_sumsub[0]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][0]                                   ;
-; ReservationStation:reservation_station|operand2_sumsub[15]     ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][15]                                  ;
-; ReservationStation:reservation_station|operand2_sumsub[14]     ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][14]                                  ;
-; ReservationStation:reservation_station|operand2_sumsub[13]     ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][13]                                  ;
-; ReservationStation:reservation_station|operand2_sumsub[12]     ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][12]                                  ;
-; ReservationStation:reservation_station|operand2_sumsub[11]     ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][11]                                  ;
-; ReservationStation:reservation_station|operand2_sumsub[10]     ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][10]                                  ;
-; ReservationStation:reservation_station|operand2_sumsub[9]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][9]                                   ;
-; ReservationStation:reservation_station|operand2_sumsub[8]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][8]                                   ;
-; ReservationStation:reservation_station|operand2_sumsub[7]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][7]                                   ;
-; ReservationStation:reservation_station|operand2_sumsub[6]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][6]                                   ;
-; ReservationStation:reservation_station|operand2_sumsub[5]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][5]                                   ;
-; ReservationStation:reservation_station|operand2_sumsub[4]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][4]                                   ;
-; ReservationStation:reservation_station|operand2_sumsub[3]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][3]                                   ;
-; ReservationStation:reservation_station|operand2_sumsub[2]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][2]                                   ;
-; ReservationStation:reservation_station|operand2_sumsub[1]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][1]                                   ;
-; ReservationStation:reservation_station|operand2_sumsub[0]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][0]                                   ;
-; CDBArbiter:cdb_arbiter|PriorityQueue[3][5]                     ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[4][5]                                        ;
-; ReservationStation:reservation_station|ldsd_position[0]        ; Lost Fanouts              ; ReservationStation:reservation_station|Operation[2][1]                            ;
-; CDBArbiter:cdb_arbiter|PriorityQueue[3][4]                     ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[4][4]                                        ;
-; CDBArbiter:cdb_arbiter|PriorityQueue[3][3]                     ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[4][3]                                        ;
-; ReservationStation:reservation_station|stall                   ; Lost Fanouts              ; InstructionQueue:instruction_queue|RX[2]                                          ;
-; CDBArbiter:cdb_arbiter|PriorityQueue[3][2]                     ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[4][2]                                        ;
-; ReservationStation:reservation_station|operand1_ldsd[15]       ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][15]                                  ;
-; ReservationStation:reservation_station|operand1_ldsd[14]       ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][14]                                  ;
-; ReservationStation:reservation_station|operand1_ldsd[13]       ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][13]                                  ;
-; ReservationStation:reservation_station|operand1_ldsd[12]       ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][12]                                  ;
-; ReservationStation:reservation_station|operand1_ldsd[11]       ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][11]                                  ;
-; ReservationStation:reservation_station|operand1_ldsd[10]       ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][10]                                  ;
-; ReservationStation:reservation_station|operand1_ldsd[9]        ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][9]                                   ;
-; ReservationStation:reservation_station|operand1_ldsd[8]        ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][8]                                   ;
-; ReservationStation:reservation_station|operand1_ldsd[7]        ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][7]                                   ;
-; ReservationStation:reservation_station|full_instruction[0][0]  ; Lost Fanouts              ; InstructionQueue:instruction_queue|RZ[0]                                          ;
-; ReservationStation:reservation_station|full_instruction[0][1]  ; Lost Fanouts              ; InstructionQueue:instruction_queue|RZ[1]                                          ;
-; ReservationStation:reservation_station|full_instruction[0][2]  ; Lost Fanouts              ; InstructionQueue:instruction_queue|RZ[2]                                          ;
-; ReservationStation:reservation_station|full_instruction[0][3]  ; Lost Fanouts              ; InstructionQueue:instruction_queue|RY[0]                                          ;
-; ReservationStation:reservation_station|full_instruction[0][4]  ; Lost Fanouts              ; InstructionQueue:instruction_queue|RY[1]                                          ;
-; ReservationStation:reservation_station|full_instruction[0][5]  ; Lost Fanouts              ; InstructionQueue:instruction_queue|RY[2]                                          ;
-; ReservationStation:reservation_station|full_instruction[0][6]  ; Lost Fanouts              ; InstructionQueue:instruction_queue|RX[0]                                          ;
-; ReservationStation:reservation_station|full_instruction[0][7]  ; Lost Fanouts              ; InstructionQueue:instruction_queue|RX[1]                                          ;
-; ReservationStation:reservation_station|full_instruction[0][12] ; Lost Fanouts              ; InstructionQueue:instruction_queue|immediate[0]                                   ;
-; ReservationStation:reservation_station|full_instruction[0][13] ; Lost Fanouts              ; InstructionQueue:instruction_queue|immediate[1]                                   ;
-; ReservationStation:reservation_station|full_instruction[0][14] ; Lost Fanouts              ; InstructionQueue:instruction_queue|immediate[2]                                   ;
-; ReservationStation:reservation_station|full_instruction[0][15] ; Lost Fanouts              ; InstructionQueue:instruction_queue|immediate[3]                                   ;
-; InstructionQueue:instruction_queue|counter[2]                  ; Lost Fanouts              ; InstructionQueue:instruction_queue|counter[1]                                     ;
-+----------------------------------------------------------------+---------------------------+-----------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                      ;
++----------------------------------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
+; Register name                                                  ; Reason for Removal        ; Registers Removed due to This Register                                              ;
++----------------------------------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
+; CDBArbiter:cdb_arbiter|Done                                    ; Stuck at GND              ; CDBArbiter:cdb_arbiter|load_store_running, ULA_LD_SD:ula_ld_sd|ULA_output[3],       ;
+;                                                                ; due to stuck port data_in ; ULA_LD_SD:ula_ld_sd|ULA_output[0], ULA_LD_SD:ula_ld_sd|ULA_output[2],               ;
+;                                                                ;                           ; ULA_LD_SD:ula_ld_sd|ULA_output[1], ULA_LD_SD:ula_ld_sd|ULA_output[4],               ;
+;                                                                ;                           ; ULA_LD_SD:ula_ld_sd|ULA_output[5], ULA_LD_SD:ula_ld_sd|ULA_output[6],               ;
+;                                                                ;                           ; ULA_LD_SD:ula_ld_sd|ULA_output[7], ULA_LD_SD:ula_ld_sd|ULA_output[8],               ;
+;                                                                ;                           ; ULA_LD_SD:ula_ld_sd|ULA_output[9], ULA_LD_SD:ula_ld_sd|ULA_output[10],              ;
+;                                                                ;                           ; ULA_LD_SD:ula_ld_sd|ULA_output[11], ULA_LD_SD:ula_ld_sd|ULA_output[12],             ;
+;                                                                ;                           ; ULA_LD_SD:ula_ld_sd|ULA_output[13], ULA_LD_SD:ula_ld_sd|ULA_output[14],             ;
+;                                                                ;                           ; ULA_LD_SD:ula_ld_sd|ULA_output[15], ULA:ula|ULA_output[3], ULA:ula|ULA_output[2],   ;
+;                                                                ;                           ; ULA:ula|ULA_output[0], ULA:ula|ULA_output[1], ULA:ula|ULA_output[4],                ;
+;                                                                ;                           ; ULA:ula|ULA_output[5], ULA:ula|ULA_output[6], ULA:ula|ULA_output[7],                ;
+;                                                                ;                           ; ULA:ula|ULA_output[8], ULA:ula|ULA_output[9], ULA:ula|ULA_output[10],               ;
+;                                                                ;                           ; ULA:ula|ULA_output[11], ULA:ula|ULA_output[12], ULA:ula|ULA_output[13],             ;
+;                                                                ;                           ; ULA:ula|ULA_output[14], ULA:ula|ULA_output[15],                                     ;
+;                                                                ;                           ; ReservationStation:reservation_station|Opcode_sumsub[2],                            ;
+;                                                                ;                           ; ReservationStation:reservation_station|Opcode_sumsub[1],                            ;
+;                                                                ;                           ; ReservationStation:reservation_station|Opcode_ldsd[2],                              ;
+;                                                                ;                           ; ReservationStation:reservation_station|Opcode_ldsd[1],                              ;
+;                                                                ;                           ; ReservationStation:reservation_station|Opcode_ldsd[0],                              ;
+;                                                                ;                           ; ReservationStation:reservation_station|operands_ready_ldsd,                         ;
+;                                                                ;                           ; ReservationStation:reservation_station|operands_ready_sumsub,                       ;
+;                                                                ;                           ; ReservationStation:reservation_station|data_in_mem[0],                              ;
+;                                                                ;                           ; ReservationStation:reservation_station|data_in_mem[1],                              ;
+;                                                                ;                           ; ReservationStation:reservation_station|data_in_mem[2],                              ;
+;                                                                ;                           ; ReservationStation:reservation_station|data_in_mem[3],                              ;
+;                                                                ;                           ; ReservationStation:reservation_station|data_in_mem[4],                              ;
+;                                                                ;                           ; ReservationStation:reservation_station|data_in_mem[5],                              ;
+;                                                                ;                           ; ReservationStation:reservation_station|data_in_mem[6],                              ;
+;                                                                ;                           ; ReservationStation:reservation_station|data_in_mem[7],                              ;
+;                                                                ;                           ; ReservationStation:reservation_station|data_in_mem[8],                              ;
+;                                                                ;                           ; ReservationStation:reservation_station|data_in_mem[9],                              ;
+;                                                                ;                           ; ReservationStation:reservation_station|wren,                                        ;
+;                                                                ;                           ; ReservationStation:reservation_station|address[0]                                   ;
+; ReservationStation:reservation_station|Operation[2][0]         ; Lost Fanouts              ; ReservationStation:reservation_station|Busy[0],                                     ;
+;                                                                ;                           ; ReservationStation:reservation_station|Busy[2],                                     ;
+;                                                                ;                           ; InstructionQueue:instruction_queue|immediate[3],                                    ;
+;                                                                ;                           ; InstructionQueue:instruction_queue|RX[1], InstructionQueue:instruction_queue|RX[2], ;
+;                                                                ;                           ; InstructionQueue:instruction_queue|opcode[0]                                        ;
+; ReservationStation:reservation_station|operand1_sumsub[15]     ; Lost Fanouts              ; ReservationStation:reservation_station|Operation[2][2],                             ;
+;                                                                ;                           ; ReservationStation:reservation_station|Qk[2][2],                                    ;
+;                                                                ;                           ; ReservationStation:reservation_station|Vj[2][15]                                    ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[3][5]                     ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[4][5],                                         ;
+;                                                                ;                           ; ReservationStation:reservation_station|data_in_mem[15]                              ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[0][5]                     ; Lost Fanouts              ; ReservationStation:reservation_station|address[1],                                  ;
+;                                                                ;                           ; ReservationStation:reservation_station|address[2]                                   ;
+; ReservationStation:reservation_station|Operation[1][2]         ; Lost Fanouts              ; ReservationStation:reservation_station|Busy[1],                                     ;
+;                                                                ;                           ; InstructionQueue:instruction_queue|opcode[2]                                        ;
+; ReservationStation:reservation_station|Operation[0][2]         ; Lost Fanouts              ; InstructionQueue:instruction_queue|immediate[2],                                    ;
+;                                                                ;                           ; InstructionQueue:instruction_queue|RX[0]                                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[3][4]                     ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[4][4]                                          ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[3][3]                     ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[4][3]                                          ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[3][2]                     ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[4][2]                                          ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[3][1]                     ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[4][1]                                          ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[3][0]                     ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[4][0]                                          ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[2][15]                    ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[3][15]                                         ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[2][14]                    ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[3][14]                                         ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[2][13]                    ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[3][13]                                         ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[2][12]                    ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[3][12]                                         ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[2][11]                    ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[3][11]                                         ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[2][10]                    ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[3][10]                                         ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[2][9]                     ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[3][9]                                          ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[2][8]                     ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[3][8]                                          ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[2][7]                     ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[3][7]                                          ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[2][6]                     ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[3][6]                                          ;
+; ReservationStation:reservation_station|Operation[1][1]         ; Lost Fanouts              ; InstructionQueue:instruction_queue|opcode[1]                                        ;
+; ReservationStation:reservation_station|operand1_sumsub[14]     ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][14]                                    ;
+; ReservationStation:reservation_station|operand1_sumsub[13]     ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][13]                                    ;
+; ReservationStation:reservation_station|operand1_sumsub[12]     ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][12]                                    ;
+; ReservationStation:reservation_station|operand1_sumsub[11]     ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][11]                                    ;
+; ReservationStation:reservation_station|operand1_sumsub[10]     ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][10]                                    ;
+; ReservationStation:reservation_station|operand1_sumsub[9]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][9]                                     ;
+; ReservationStation:reservation_station|operand1_sumsub[8]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][8]                                     ;
+; ReservationStation:reservation_station|operand1_sumsub[7]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][7]                                     ;
+; ReservationStation:reservation_station|operand1_sumsub[6]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][6]                                     ;
+; ReservationStation:reservation_station|operand1_sumsub[5]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][5]                                     ;
+; ReservationStation:reservation_station|operand1_sumsub[4]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][4]                                     ;
+; ReservationStation:reservation_station|operand1_sumsub[3]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][3]                                     ;
+; ReservationStation:reservation_station|operand1_sumsub[2]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][2]                                     ;
+; ReservationStation:reservation_station|operand1_sumsub[1]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][1]                                     ;
+; ReservationStation:reservation_station|operand1_sumsub[0]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][0]                                     ;
+; ReservationStation:reservation_station|operand2_sumsub[15]     ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][15]                                    ;
+; ReservationStation:reservation_station|operand2_sumsub[14]     ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][14]                                    ;
+; ReservationStation:reservation_station|operand2_sumsub[13]     ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][13]                                    ;
+; ReservationStation:reservation_station|operand2_sumsub[12]     ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][12]                                    ;
+; ReservationStation:reservation_station|operand2_sumsub[11]     ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][11]                                    ;
+; ReservationStation:reservation_station|operand2_sumsub[10]     ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][10]                                    ;
+; ReservationStation:reservation_station|operand2_sumsub[9]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][9]                                     ;
+; ReservationStation:reservation_station|operand2_sumsub[8]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][8]                                     ;
+; ReservationStation:reservation_station|operand2_sumsub[7]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][7]                                     ;
+; ReservationStation:reservation_station|operand2_sumsub[6]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][6]                                     ;
+; ReservationStation:reservation_station|operand2_sumsub[5]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][5]                                     ;
+; ReservationStation:reservation_station|operand2_sumsub[4]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][4]                                     ;
+; ReservationStation:reservation_station|operand2_sumsub[3]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][3]                                     ;
+; ReservationStation:reservation_station|operand2_sumsub[2]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][2]                                     ;
+; ReservationStation:reservation_station|operand2_sumsub[1]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][1]                                     ;
+; ReservationStation:reservation_station|operand2_sumsub[0]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][0]                                     ;
+; ReservationStation:reservation_station|ldsd_position[0]        ; Lost Fanouts              ; ReservationStation:reservation_station|Operation[2][1]                              ;
+; ReservationStation:reservation_station|full_instruction[0][0]  ; Lost Fanouts              ; InstructionQueue:instruction_queue|RZ[0]                                            ;
+; ReservationStation:reservation_station|full_instruction[0][1]  ; Lost Fanouts              ; InstructionQueue:instruction_queue|RZ[1]                                            ;
+; ReservationStation:reservation_station|full_instruction[0][2]  ; Lost Fanouts              ; InstructionQueue:instruction_queue|RZ[2]                                            ;
+; ReservationStation:reservation_station|full_instruction[0][3]  ; Lost Fanouts              ; InstructionQueue:instruction_queue|RY[0]                                            ;
+; ReservationStation:reservation_station|full_instruction[0][4]  ; Lost Fanouts              ; InstructionQueue:instruction_queue|RY[1]                                            ;
+; ReservationStation:reservation_station|full_instruction[0][5]  ; Lost Fanouts              ; InstructionQueue:instruction_queue|RY[2]                                            ;
+; ReservationStation:reservation_station|full_instruction[0][12] ; Lost Fanouts              ; InstructionQueue:instruction_queue|immediate[0]                                     ;
+; ReservationStation:reservation_station|full_instruction[0][13] ; Lost Fanouts              ; InstructionQueue:instruction_queue|immediate[1]                                     ;
+; InstructionQueue:instruction_queue|counter[2]                  ; Lost Fanouts              ; InstructionQueue:instruction_queue|counter[1]                                       ;
++----------------------------------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -941,18 +941,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ram:mem_ram"                                                                                                                                                                              ;
-+-------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port        ; Type  ; Severity ; Details                                                                                                                                                                             ;
-+-------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; data        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (16 bits) it drives.  The 16 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; data[15..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
-; wren        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts.  ;
-; wren[-1]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
-+-------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
@@ -968,7 +956,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Nov 03 03:51:51 2023
+    Info: Processing started: Fri Nov 03 13:59:44 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off tomasulo -c tomasulo
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file ram.v
@@ -1021,10 +1009,10 @@ Info (12128): Elaborating entity "Reg1" for hierarchy "BankOfRegisters:bank_of_r
 Info (12128): Elaborating entity "Reg2" for hierarchy "BankOfRegisters:bank_of_registers|Reg2:R2"
 Info (12128): Elaborating entity "InstructionQueue" for hierarchy "InstructionQueue:instruction_queue"
 Info (12128): Elaborating entity "ReservationStation" for hierarchy "ReservationStation:reservation_station"
-Warning (10036): Verilog HDL or VHDL warning at ReservationStation.v(58): object "Address" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at ReservationStation.v(89): object "teste" assigned a value but never read
-Warning (10230): Verilog HDL assignment warning at ReservationStation.v(522): truncated value with size 32 to match size of target (2)
-Warning (10230): Verilog HDL assignment warning at ReservationStation.v(538): truncated value with size 32 to match size of target (2)
+Warning (10036): Verilog HDL or VHDL warning at ReservationStation.v(61): object "Address" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at ReservationStation.v(92): object "teste" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at ReservationStation.v(569): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at ReservationStation.v(585): truncated value with size 32 to match size of target (2)
 Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ula"
 Warning (10230): Verilog HDL assignment warning at ULA.v(48): truncated value with size 16 to match size of target (10)
 Warning (10230): Verilog HDL assignment warning at ULA.v(57): truncated value with size 16 to match size of target (10)
@@ -1052,8 +1040,8 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "ram:mem_ram|altsyncram:altsyncram_component|altsyncram_05e1:auto_generated|q_a[13]"
         Warning (14320): Synthesized away node "ram:mem_ram|altsyncram:altsyncram_component|altsyncram_05e1:auto_generated|q_a[14]"
         Warning (14320): Synthesized away node "ram:mem_ram|altsyncram:altsyncram_component|altsyncram_05e1:auto_generated|q_a[15]"
-Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (17049): 600 registers lost all their fanouts during netlist optimizations.
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (17049): 620 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/output_files/tomasulo.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -1065,9 +1053,9 @@ Info (21057): Implemented 2 device resources after synthesis - the final resourc
     Info (21059): Implemented 0 output pins
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 33 warnings
     Info: Peak virtual memory: 4617 megabytes
-    Info: Processing ended: Fri Nov 03 03:51:52 2023
+    Info: Processing ended: Fri Nov 03 13:59:45 2023
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
 
 
 +------------------------------------------+

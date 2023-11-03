@@ -40,6 +40,9 @@ module ReservationStation(
 	
 	output reg[4:0] address,
 	
+	output reg wren,
+	output reg[15:0] data_in_mem,
+	
 	output reg stall
 
 );
@@ -141,6 +144,8 @@ initial begin
 	still_waiting_value = 1'b0;
 	counter_ld_sd = 1'b0;
 	address = 5'b11111;
+	wren = 1'b0;
+	data_in_mem = 16'b1111111111111111;
 	
 end
 
@@ -155,12 +160,8 @@ always @(posedge clock) begin
 	// Se o cdb possui um dado válido esse dado será analisado
 	if (cdb != 16'b0000000000000000) begin
 	
-		// TODO
-		// Sempre que uma instrução chegar do CDB temos que testar se existe alguma instrução que foi despachada antes dela, e que ainda não foi executada, que altera
-		// o mesmo registrador destino que a instrução que acabou de ser retornada altera. Se caso exista uma instrução desse tipo, ela poderá ser descartada.
-	
 		// Checar se a entrada do CDB é proveniente de um Load
-		if (cdb[10:10] == 1'b0) begin
+		if (cdb[10:10] == 1'b0 && Operation[cdb[12:11]] == 3'b010) begin
 		
 			// Resetando variável auxiliar
 			reg_dest_aux = 3'b000;
@@ -261,8 +262,55 @@ always @(posedge clock) begin
 					
 					// Resetar o contador
 					counter_ld_sd = 1'b0;
+					
+					// Resetar o address
+					address = 5'b11111;
 			
 				end
+				
+			end
+			
+		end
+		
+		// Checar se a entrada do CDB é proveniente de um Store
+		if (cdb[10:10] == 1'b0 && Operation[cdb[12:11]] == 3'b011) begin
+		
+			// Enviando dado para a memória
+			if (counter_ld_sd == 1'b0) begin
+			
+				// Salvar endereco rebido na coluna address		
+				Address[cdb[12:11]] = cdb[9:0];
+			
+				// Quando o Address for alterado é preciso alterar o endereço de acesso à memória
+				address = cdb[4:0];
+				
+				// Habilitar escrita na memória
+				wren = 1'b1;
+				
+				// Atribuir dado que será escrito na memória
+				if (Reg_dest[cdb[12:11]] == 3'b000/*R0*/) begin
+					data_in_mem = R0_data;
+				end
+				else if (Reg_dest[cdb[12:11]] == 3'b001/*R1*/) begin
+					data_in_mem = R1_data;
+				end
+				else if (Reg_dest[cdb[12:11]] == 3'b010/*R2*/) begin
+					data_in_mem = R2_data;
+				end
+				
+				// Excluir Store da Estação de Reserva
+				Busy[cdb[12:11]] = 0;
+				
+				// Somar contador
+				counter_ld_sd = counter_ld_sd + 1'b1;
+				
+			end
+			
+			// Dado já foi salvo na memória - Resetar o Address
+			else if (counter_ld_sd == 1'b1) begin
+			
+				// Resetar o address
+				address = 5'b11111;
 				
 			end
 			
@@ -365,7 +413,6 @@ always @(posedge clock) begin
 	instruction_already_in = 1'b0;
 	
 	// TODO
-	// Aprimorar lógica abaixo
 	// Loop para checar se a instrução recebida já está na RS
 	for(i = 0; i <= 2; i = i + 1) begin
 		if ({immediate,ULA_op,RX,RY,RZ} == full_instruction[i]) begin
@@ -460,17 +507,6 @@ always @(posedge clock) begin
 				// Salvar o Registrador de Destino (RX)
 				Reg_dest[i] = RX;
 				
-				// Salvar que Reg_dest está esperando um valor novo
-				if (RX == 3'b000) begin
-					is_waiting_value[0:0] = 1'b1;
-				end
-				else if (RX == 3'b001) begin
-					is_waiting_value[1:1] = 1'b1;
-				end
-				else if (RX == 3'b010) begin
-					is_waiting_value[2:2] = 1'b1;
-				end
-				
 				// Salvar o primeiro operando (immediate)
 				Vj[i] = immediate;
 				
@@ -494,6 +530,17 @@ always @(posedge clock) begin
 				end
 				else if (RY == 3'b010 /*R2*/ && is_waiting_value[2:2] == 1) begin
 					Qk[i] = RY;
+				end
+				
+				// Salvar que Reg_dest está esperando um valor novo
+				if (RX == 3'b000) begin
+					is_waiting_value[0:0] = 1'b1;
+				end
+				else if (RX == 3'b001) begin
+					is_waiting_value[1:1] = 1'b1;
+				end
+				else if (RX == 3'b010) begin
+					is_waiting_value[2:2] = 1'b1;
 				end
 				
 			end

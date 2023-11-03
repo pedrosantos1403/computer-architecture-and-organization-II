@@ -49,15 +49,27 @@ always @(posedge clock) begin
 		// Calculando Endereço de Memória
 		data = RY_data + imediate;
 
-		// Montando Sinal de Saída
-		if (reg_dest == 3'b000 /*R0*/) begin
+		// Montando Sinal de Saída para Load
+		if (reg_dest == 3'b000 /*R0*/ && ULA_op == 3'b010) begin
 			ULA_output = {3'b100/*R0*/,RS_position,1'b0/*ULA*/,data};
 		end
-		else if (reg_dest == 3'b001 /*R1*/) begin
+		else if (reg_dest == 3'b001 /*R1*/ && ULA_op == 3'b010) begin
 			ULA_output = {3'b010/*R1*/,RS_position,1'b0/*ULA*/,data};
 		end
-		else if (reg_dest == 3'b010 /*R2*/) begin
+		else if (reg_dest == 3'b010 /*R2*/ && ULA_op == 3'b010) begin
 			ULA_output = {3'b001/*R2*/,RS_position,1'b0/*ULA*/,data};
+		end
+		
+		
+		// Montando Sinal de Saída para Store - Store não escreve no Banco de Registradores, logo, os bits de escrita no BR são todos zero
+		if (reg_dest == 3'b000 /*R0*/ && ULA_op == 3'b011) begin
+			ULA_output = {3'b000,RS_position,1'b0/*ULA*/,data};
+		end
+		else if (reg_dest == 3'b001 /*R1*/ && ULA_op == 3'b011) begin
+			ULA_output = {3'b000,RS_position,1'b0/*ULA*/,data};
+		end
+		else if (reg_dest == 3'b010 /*R2*/ && ULA_op == 3'b011) begin
+			ULA_output = {3'b000,RS_position,1'b0/*ULA*/,data};
 		end
 		
 	end

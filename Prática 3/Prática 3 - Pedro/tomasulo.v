@@ -44,11 +44,13 @@ wire [15:0] mem_output;
 // CDB
 wire[15:0] cdb;
 
-// Address (RS)
+// Acesso à memória
 wire[4:0] address;
+wire wren;
+wire[15:0] data_in_mem;
 
 // Instanciar Memória de Dados
-ram mem_ram (address/*Address*/, clock, 0/*Data In Mem*/, 0/*Wren*/, mem_output);
+ram mem_ram (address/*Address*/, clock, data_in_mem/*Data In Mem*/, wren/*Wren*/, mem_output);
 
 // Instanciar Banco de Registradores
 BankOfRegisters bank_of_registers (clock, reset, cdb, R0_output, R1_output, R2_output);
@@ -61,6 +63,7 @@ ReservationStation reservation_station (/*Entradas*/    			clock, reset, RX, RY,
 													 /*Saídas ULA*/ 			operand1_sumsub, operand2_sumsub, Opcode_sumsub, Reg_dest_sumsub, operands_ready_sumsub, sumsub_position,
 													 /*Saídas ULA_ld_sd*/ 	operand1_ldsd, operand2_ldsd, Opcode_ldsd, Reg_dest_ldsd, operands_ready_ldsd, ldsd_position,
 													 /*Endereço Memória*/   address,
+													 /*Escrita na memória*/	wren, data_in_mem,
 													 /*Sinal de Stall*/     stall);
 
 // Instanciar a ULA Soma/Subtração - OK

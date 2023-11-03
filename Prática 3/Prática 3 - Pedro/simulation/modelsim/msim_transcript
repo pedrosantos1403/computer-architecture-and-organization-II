@@ -78,13 +78,7 @@ vsim +altera -L altera_mf_ver -do tomasulo_run_msim_rtl_verilog.do -l msim_trans
 # Loading work.ULA
 # Loading work.ULA_LD_SD
 # Loading work.CDBArbiter
-# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/tomasulo.v(51): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'data'. The port definition is at: C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/ram.v(42).
-# 
-#         Region: /tomasulo/mem_ram
-# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/tomasulo.v(51): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'wren'. The port definition is at: C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/ram.v(43).
-# 
-#         Region: /tomasulo/mem_ram
-# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/tomasulo.v(70): [PCDPC] - Port size (4 or 4) does not match connection size (16) for port 'imediate'. The port definition is at: C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/ULA_LD_SD.v(8).
+# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/tomasulo.v(73): [PCDPC] - Port size (4 or 4) does not match connection size (16) for port 'imediate'. The port definition is at: C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/ULA_LD_SD.v(8).
 # 
 #         Region: /tomasulo/ula_ld_sd
 # do tomasulo_run_msim_rtl_verilog.do 
@@ -149,26 +143,17 @@ vsim +altera -L altera_mf_ver -do tomasulo_run_msim_rtl_verilog.do -l msim_trans
 # 
 wave create -driver freeze -pattern clock -initialvalue 0 -period 50ps -dutycycle 50 -starttime 0ps -endtime 1000ps sim:/tomasulo/clock
 add wave -position insertpoint  \
-sim:/tomasulo/immediate
+sim:/tomasulo/ULA_ld_sd_output
 add wave -position insertpoint  \
-sim:/tomasulo/ULA_op
+sim:/tomasulo/cdb
 add wave -position insertpoint  \
-sim:/tomasulo/RX
+sim:/tomasulo/address
 add wave -position insertpoint  \
-sim:/tomasulo/RY
+sim:/tomasulo/mem_output
 add wave -position insertpoint  \
-sim:/tomasulo/RZ
+sim:/tomasulo/data_in_mem
 add wave -position insertpoint  \
-sim:/tomasulo/stall
-add wave -position insertpoint  \
-sim:/tomasulo/reservation_station/Busy
-run
-run
-run
-run
-run
-run
-run
+sim:/tomasulo/wren
 run
 run
 run

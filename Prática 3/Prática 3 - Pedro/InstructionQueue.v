@@ -26,7 +26,34 @@ reg[2:0] counter;
 // ADD -> 000
 // SUB -> 001
 // LD  -> 010
-// SD  -> 011 
+// SD  -> 011
+
+// Apresentação
+
+// Teste A
+// ADD R0, R1, R2 -> 0000000000001010
+// SUB R1, R0, R1 -> 0000001001000001
+
+// Teste B e D
+// SUB R0, R1, R2 -> 0000001000001010
+// ADD R0, R1, R2 -> 0000000000001010
+
+// Teste C
+// SUB R0, R1, R2 -> 0000001000001010
+// LD R1, 1(R2)   -> 0001010001010111
+
+// Teste E
+// ADD R0, R1, R2 -> 0000000000001010
+// ADD R1, R0, R2 -> 0000000001000010  
+// LD R1, 1(R0)   -> 0001010001000111
+
+// Teste F
+// SUB R0, R1, R2 -> 0000001000001010
+// LD R1, 1(R2)   -> 0001010001010111
+// LD R1, 3(R2)   -> 0011010001010111
+// SUB R1, R0, R1 -> 0000001001000001
+// ADD R0, R1, R2 -> 0000000000001010
+
 
 initial begin
 
@@ -34,11 +61,11 @@ initial begin
 	counter <= 0;
 	
 	// Inicializando a Memória de Instruções
-	InstructionMemory[0] <= 16'b0000001000001010; // SUB R0, R1, R2
-	InstructionMemory[1] <= 16'b0001010001010111; // LD R1, 1(R2)
-	InstructionMemory[2] <= 16'b0011010001010111; // LD R1, 3(R2)
-	InstructionMemory[3] <= 16'b0000001001000001; // SUB R1, R0, R1
-	InstructionMemory[4] <= 16'b0000000000001010; // ADD R0, R1, R2
+	InstructionMemory[0] <= 16'b0001011001001111; // SD R1, 1(R1)
+	InstructionMemory[1] <= 16'b1111111111111111;
+	InstructionMemory[2] <= 16'b1111111111111111;
+	InstructionMemory[3] <= 16'b1111111111111111;
+	InstructionMemory[4] <= 16'b1111111111111111;
 	
 end
 

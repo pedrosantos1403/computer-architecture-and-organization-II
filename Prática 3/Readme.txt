@@ -21,3 +21,7 @@ Problemas:
 3) Registradores estão perdendo o valor no segundo posedge
 
 
+
+Para o store o registrador de destino possui o dado a ser mandado para a memória
+
+
