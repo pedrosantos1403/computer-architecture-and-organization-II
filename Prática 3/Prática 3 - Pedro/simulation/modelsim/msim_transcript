@@ -10,6 +10,12 @@
 # ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
+# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório\ AOC\ II/Práticas\ AOC2/Prática\ 3/Prática\ 3\ -\ Pedro {C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/ram.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ram
+# 
+# Top level modules:
+# 	ram
 # vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório\ AOC\ II/Práticas\ AOC2/Prática\ 3/Prática\ 3\ -\ Pedro {C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/tomasulo.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module tomasulo
@@ -56,9 +62,13 @@
 # Top level modules:
 # 	CDBArbiter
 # 
-vsim work.tomasulo
-# vsim work.tomasulo 
+vsim +altera -L altera_mf_ver -do tomasulo_run_msim_rtl_verilog.do -l msim_transcript -gui work.tomasulo
+# vsim +altera -L altera_mf_ver -do tomasulo_run_msim_rtl_verilog.do -l msim_transcript -gui work.tomasulo 
 # Loading work.tomasulo
+# Loading work.ram
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
 # Loading work.BankOfRegisters
 # Loading work.Reg0
 # Loading work.Reg1
@@ -68,38 +78,96 @@ vsim work.tomasulo
 # Loading work.ULA
 # Loading work.ULA_LD_SD
 # Loading work.CDBArbiter
-# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/tomasulo.v(66): [PCDPC] - Port size (4 or 4) does not match connection size (16) for port 'imediate'. The port definition is at: C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/ULA_LD_SD.v(8).
+# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/tomasulo.v(51): [PCDPC] - Port size (16 or 16) does not match connection size (32) for port 'data'. The port definition is at: C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/ram.v(42).
+# 
+#         Region: /tomasulo/mem_ram
+# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/tomasulo.v(51): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'wren'. The port definition is at: C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/ram.v(43).
+# 
+#         Region: /tomasulo/mem_ram
+# ** Warning: (vsim-3015) C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/tomasulo.v(70): [PCDPC] - Port size (4 or 4) does not match connection size (16) for port 'imediate'. The port definition is at: C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/ULA_LD_SD.v(8).
 # 
 #         Region: /tomasulo/ula_ld_sd
+# do tomasulo_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório\ AOC\ II/Práticas\ AOC2/Prática\ 3/Prática\ 3\ -\ Pedro {C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/ram.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ram
+# 
+# Top level modules:
+# 	ram
+# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório\ AOC\ II/Práticas\ AOC2/Prática\ 3/Prática\ 3\ -\ Pedro {C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/tomasulo.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tomasulo
+# 
+# Top level modules:
+# 	tomasulo
+# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório\ AOC\ II/Práticas\ AOC2/Prática\ 3/Prática\ 3\ -\ Pedro {C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/InstructionQueue.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module InstructionQueue
+# 
+# Top level modules:
+# 	InstructionQueue
+# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório\ AOC\ II/Práticas\ AOC2/Prática\ 3/Prática\ 3\ -\ Pedro {C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/ULA.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ULA
+# 
+# Top level modules:
+# 	ULA
+# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório\ AOC\ II/Práticas\ AOC2/Prática\ 3/Prática\ 3\ -\ Pedro {C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/ULA_LD_SD.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ULA_LD_SD
+# 
+# Top level modules:
+# 	ULA_LD_SD
+# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório\ AOC\ II/Práticas\ AOC2/Prática\ 3/Prática\ 3\ -\ Pedro {C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/ReservationStation.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ReservationStation
+# 
+# Top level modules:
+# 	ReservationStation
+# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório\ AOC\ II/Práticas\ AOC2/Prática\ 3/Prática\ 3\ -\ Pedro {C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/BankOfRegisters.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module BankOfRegisters
+# -- Compiling module Reg0
+# -- Compiling module Reg1
+# -- Compiling module Reg2
+# 
+# Top level modules:
+# 	BankOfRegisters
+# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório\ AOC\ II/Práticas\ AOC2/Prática\ 3/Prática\ 3\ -\ Pedro {C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/CDBArbiter.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module CDBArbiter
+# 
+# Top level modules:
+# 	CDBArbiter
+# 
 wave create -driver freeze -pattern clock -initialvalue 0 -period 50ps -dutycycle 50 -starttime 0ps -endtime 1000ps sim:/tomasulo/clock
 add wave -position insertpoint  \
-sim:/tomasulo/operand1_sumsub
+sim:/tomasulo/immediate
 add wave -position insertpoint  \
-sim:/tomasulo/operand2_sumsub
+sim:/tomasulo/ULA_op
 add wave -position insertpoint  \
-sim:/tomasulo/Opcode_sumsub
+sim:/tomasulo/RX
 add wave -position insertpoint  \
-sim:/tomasulo/Reg_dest_sumsub
+sim:/tomasulo/RY
 add wave -position insertpoint  \
-sim:/tomasulo/operands_ready_sumsub
+sim:/tomasulo/RZ
 add wave -position insertpoint  \
-sim:/tomasulo/sumsub_position
+sim:/tomasulo/stall
 add wave -position insertpoint  \
-sim:/tomasulo/ULA_output
-add wave -position insertpoint  \
-sim:/tomasulo/cdb_arbiter/ULA_output
-add wave -position insertpoint  \
-sim:/tomasulo/cdb_arbiter/cdb
-add wave -position insertpoint  \
-sim:/tomasulo/cdb
-add wave -position insertpoint  \
-sim:/tomasulo/cdb_arbiter/ULA_can_write
-add wave -position insertpoint  \
-sim:/tomasulo/bank_of_registers/R0_output
-add wave -position insertpoint  \
-sim:/tomasulo/bank_of_registers/R1_output
-add wave -position insertpoint  \
-sim:/tomasulo/bank_of_registers/R2_output
+sim:/tomasulo/reservation_station/Busy
+run
+run
+run
+run
+run
+run
 run
 run
 run

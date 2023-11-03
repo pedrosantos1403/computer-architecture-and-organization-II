@@ -34,11 +34,11 @@ initial begin
 	counter <= 0;
 	
 	// Inicializando a Memória de Instruções
-	InstructionMemory[0] <= 16'b0000000000001010; // ADD R0, R1, R2
-	InstructionMemory[1] <= 16'b0000001001000001; // SUB R1, R0, R1
-	//InstructionMemory[2] <= 16'b1111111111111111;
-	//InstructionMemory[3] <= 16'b1111111111111111;
-	//InstructionMemory[4] <= 16'b1111111111111111;
+	InstructionMemory[0] <= 16'b0000001000001010; // SUB R0, R1, R2
+	InstructionMemory[1] <= 16'b0001010001010111; // LD R1, 1(R2)
+	InstructionMemory[2] <= 16'b0011010001010111; // LD R1, 3(R2)
+	InstructionMemory[3] <= 16'b0000001001000001; // SUB R1, R0, R1
+	InstructionMemory[4] <= 16'b0000000000001010; // ADD R0, R1, R2
 	
 end
 
@@ -56,7 +56,10 @@ always @(posedge clock) begin
 		
 	end
 	
-	else if (stall == 1'b0) begin
+	else if (stall == 1'b0 && InstructionMemory[counter] != 16'b1111111111111111) begin
+	
+		// TODO
+		// Despachar apenas se a instrução for válida (!= 16'b1111111111111111)
 		
 		// Existe posição disponível na estação de reserva
 		opcode <= InstructionMemory[counter][11:9];

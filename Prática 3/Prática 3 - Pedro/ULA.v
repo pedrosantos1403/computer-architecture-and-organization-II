@@ -47,9 +47,6 @@ always @(posedge clock) begin
 	// Resetando Variáveis
 	data = 16'b0000000000000000;
 	
-	// ULA_output = 16'b1111111111111111;
-	// Resetar a saída da ULA a cada ciclo faz com que o Arbiter sempre recebeba a saída errada, pois o Arbiter só recebe a saída da ULA 1 ciclo depois que ela é setada aqui
-	
 	if (operands_ready) begin
 		case(ULA_op)
 		
@@ -61,13 +58,13 @@ always @(posedge clock) begin
 				
 				// Montando Sinal de Saída
 				if (reg_dest == 3'b000 /*R0*/) begin
-					ULA_output = {3'b100/*R0*/,2'b00/*RS[0]*/,1'b1/*ULA*/,data};
+					ULA_output = {3'b100/*R0*/,RS_position,1'b1/*ULA*/,data};
 				end
 				else if (reg_dest == 3'b001 /*R1*/) begin
-					ULA_output = {3'b010/*R1*/,2'b01/*RS[1]*/,1'b1/*ULA*/,data};
+					ULA_output = {3'b010/*R1*/,RS_position,1'b1/*ULA*/,data};
 				end
 				else if (reg_dest == 3'b010 /*R2*/) begin
-					ULA_output = {3'b001/*R2*/,2'b10/*RS[2]*/,1'b1/*ULA*/,data};
+					ULA_output = {3'b001/*R2*/,RS_position,1'b1/*ULA*/,data};
 				end
 				
 			end
@@ -80,13 +77,13 @@ always @(posedge clock) begin
 				
 				// Montando Sinal de Saída
 				if (reg_dest == 3'b000 /*R0*/) begin
-					ULA_output = {3'b100/*R0*/,2'b00/*RS[0]*/,1'b1/*ULA*/,data};
+					ULA_output = {3'b100/*R0*/,RS_position,1'b1/*ULA*/,data};
 				end
 				else if (reg_dest == 3'b001 /*R1*/) begin
-					ULA_output = {3'b010/*R1*/,2'b01/*RS[1]*/,1'b1/*ULA*/,data};
+					ULA_output = {3'b010/*R1*/,RS_position,1'b1/*ULA*/,data};
 				end
 				else if (reg_dest == 3'b010 /*R2*/) begin
-					ULA_output = {3'b001/*R2*/,2'b10/*RS[2]*/,1'b1/*ULA*/,data};
+					ULA_output = {3'b001/*R2*/,RS_position,1'b1/*ULA*/,data};
 				end
 				
 			end

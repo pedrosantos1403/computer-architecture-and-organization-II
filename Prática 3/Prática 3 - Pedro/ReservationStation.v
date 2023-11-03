@@ -38,6 +38,8 @@ module ReservationStation(
 	output reg operands_ready_ldsd,
 	output reg[1:0] ldsd_position,
 	
+	output reg[4:0] address,
+	
 	output reg stall
 
 );
@@ -73,6 +75,15 @@ reg[2:0] reg_dest_aux;
 
 // Variável para controlar o Loop
 reg break_loop;
+
+// Variável para controlar presença da instrução na RS
+reg instruction_already_in;
+
+// Variável para controlar quantas instrução da RS produzem valor para o mesmo registrador
+reg still_waiting_value;
+
+// Variável para controlar se o dado recebido do CDB proveniente de um Load é endereço de memória ou dado real
+reg counter_ld_sd;
 
 // Teste
 reg teste;
@@ -125,118 +136,248 @@ initial begin
 	// Inicializando sinal de stall
 	stall <= 1'b0;
 	
+	// Inicializando demais variáveis
+	instruction_already_in = 1'b0;
+	still_waiting_value = 1'b0;
+	counter_ld_sd = 1'b0;
+	address = 5'b11111;
+	
 end
 
 always @(posedge clock) begin
 
 	// Resetando variáveis
 	break_loop = 1'b0;
+	still_waiting_value = 1'b0;
 
 	// Lógica para analisar se existe alguma entrada no CDB e atualizar a RS
 	
 	// Se o cdb possui um dado válido esse dado será analisado
 	if (cdb != 16'b0000000000000000) begin
 	
-		// DEBUG
-		teste = 1'b1;
-		
-		// Resetando variável auxiliar
-		reg_dest_aux = 3'b000;
+		// TODO
+		// Sempre que uma instrução chegar do CDB temos que testar se existe alguma instrução que foi despachada antes dela, e que ainda não foi executada, que altera
+		// o mesmo registrador destino que a instrução que acabou de ser retornada altera. Se caso exista uma instrução desse tipo, ela poderá ser descartada.
 	
-		// Analisar se o Registrador Destino indicado pelo cdb está esperando algum valor (Resultado de Soma e Subtração)
-		if ((cdb[15:13] == 3'b100 && is_waiting_value[0:0] == 1'b1) ||
-			 (cdb[15:13] == 3'b010 && is_waiting_value[1:1] == 1'b1) ||
-			 (cdb[15:13] == 3'b001 && is_waiting_value[2:2] == 1'b1)) begin
+		// Checar se a entrada do CDB é proveniente de um Load
+		if (cdb[10:10] == 1'b0) begin
+		
+			// Resetando variável auxiliar
+			reg_dest_aux = 3'b000;
 			
-			// Atualizar Vetor que indica qual Registrador está esperando um valor
-			if (cdb[15:13] == 3'b100) begin
-				is_waiting_value[0:0] = 1'b0;
-			end
-			else if (cdb[15:13] == 3'b010) begin
-				is_waiting_value[1:1] = 1'b0;
-			end
-			else if (cdb[15:13] == 3'b001) begin
-				is_waiting_value[2:2] = 1'b0;
-			end
+			// CDB retornou o endereço de memória
+			if (counter_ld_sd == 1'b0) begin
 			
-			// Salvar o rótulo do registrador de destino apartir do sinal do cdb em uma variável auxiliar
-			if (cdb[15:13] == 3'b100) begin
-				reg_dest_aux = 3'b000;
-			end
-			else if (cdb[15:13] == 3'b010) begin
-				reg_dest_aux = 3'b001;
-			end
-			else if (cdb[15:13] == 3'b001) begin
-				reg_dest_aux = 3'b010;
-			end
-			
-			
-			// Atualizar todas as referências àquele registrador na RS
-			for(i = 0; i <= 2; i = i + 1) begin
+				// Salvar endereco rebido na coluna address		
+				Address[cdb[12:11]] = cdb[9:0];
 				
-				// Checar se o registrador de destino do cdb está na coluna Qj
-				if (Qj[i] == reg_dest_aux) begin
+				// Quando o Address for alterado é preciso alterar o endereço de acesso à memória
+				address = cdb[4:0];
+				
+				// Somar contador
+				counter_ld_sd = counter_ld_sd + 1'b1;
+				
+			end
+			
+			// CDB retornou o dado
+			else if (counter_ld_sd == 1'b1) begin
+			
+				// Analisar se o Registrador Destino indicado pelo cdb está esperando algum valor (Resultado de Soma e Subtração)
+				if ((cdb[15:13] == 3'b100 && is_waiting_value[0:0] == 1'b1) ||
+					 (cdb[15:13] == 3'b010 && is_waiting_value[1:1] == 1'b1) ||
+					 (cdb[15:13] == 3'b001 && is_waiting_value[2:2] == 1'b1)) begin
 					
-					// Invalidar coluna Qj
-					Qj[i] = 3'b111;
+					// Salvar o rótulo do registrador de destino apartir do sinal do cdb em uma variável auxiliar
+					if (cdb[15:13] == 3'b100) begin
+						reg_dest_aux = 3'b000;
+					end
+					else if (cdb[15:13] == 3'b010) begin
+						reg_dest_aux = 3'b001;
+					end
+					else if (cdb[15:13] == 3'b001) begin
+						reg_dest_aux = 3'b010;
+					end
+			
+			
+					// Atualizar todas as referências àquele registrador na RS
+					for(i = 0; i <= 2; i = i + 1) begin
+						
+						// Checar se o registrador de destino do cdb está na coluna Qj
+						if (Qj[i] == reg_dest_aux) begin
+							
+							// Invalidar coluna Qj
+							Qj[i] = 3'b111;
+							
+							// Escrever valor em Vj
+							Vj[i][15:10] = 6'b0;
+							Vj[i][9:0] = cdb[9:0];
+							
+						end
+						
+						// Checar se o registrador de destino do cdb está na coluna Qk
+						if (Qk[i] == reg_dest_aux) begin
+						
+							// Invalidar coluna Qk
+							Qk[i] = 3'b111;
+							
+							// Escrever valor em Vk
+							Vk[i][15:10] = 6'b0;
+							Vk[i][9:0] = cdb[9:0];
+							
+						end
 					
-					// Escrever valor em Vj
-					Vj[i][15:10] = 6'b0;
-					Vj[i][9:0] = cdb[9:0];
+					end
+			
+					// Checar se existe alguma instrução subsequente que vai produzir valor para o mesmo registrador
+					for(i = 0; i <= 2; i = i + 1) begin
+						if (Reg_dest[i] == reg_dest_aux && Busy[i] == 1'b1) begin
+							still_waiting_value = 1'b1;
+						end
+					end
 					
+					// Atualizar Vetor que indica qual Registrador está esperando um valor
+					if (still_waiting_value == 1'b0) begin
+						if (cdb[15:13] == 3'b100) begin
+							is_waiting_value[0:0] = 1'b0;
+						end
+						else if (cdb[15:13] == 3'b010) begin
+							is_waiting_value[1:1] = 1'b0;
+						end
+						else if (cdb[15:13] == 3'b001) begin
+							is_waiting_value[2:2] = 1'b0;
+						end
+					end
+				
+					// Excluir instrução executada da RS
+					Busy[cdb[12:11]] = 0;
+					
+					// Alterar a disponibilidade da ULA que escreveu no CDB
+					if (cdb[10:10] == 1) begin
+						ULA_free = 1'b1;
+					end
+					else if (cdb[10:10] == 0) begin
+						ULA_ld_sd_free = 1'b1;
+					end
+					
+					// Resetar o contador
+					counter_ld_sd = 1'b0;
+			
 				end
 				
-				// Checar se o registrador de destino do cdb está na coluna Qk
-				if (Qk[i] == reg_dest_aux) begin
-				
-					// Invalidar coluna Qk
-					Qk[i] = 3'b111;
-					
-					// Escrever valor em Vk
-					Vk[i][15:10] = 6'b0;
-					Vk[i][9:0] = cdb[9:0];
-					
-				end
-				
-			end
-			
-			// Excluir instrução executada da RS
-			Busy[cdb[12:11]] = 0;
-			
-			// Alterar a disponibilidade da ULA que escreveu no CDB
-			if (cdb[10:10] == 1) begin
-				ULA_free = 1'b1;
-			end
-			else if (cdb[10:10] == 0) begin
-				ULA_ld_sd_free = 1'b1;
 			end
 			
 		end
 		
-		// Se o cdb retornar um dado referente a uma instrução de Load, esse dado é um endereço
-		// de memória, logo, esse dado será acrescentado na RS na coluna Address referente a instrução Load específica
-		// if (dado no cbd veio de um load) ...
-		// 1) Acrescentar esse dado na coluna Address
-		// 2) Um load só estará pronto para acessar a memória caso a coluna Address esteja preenchida
-		// 3) A cada clock devemos checar se a coluna Address está preenchida e então acessar o endereço de memória
-		// 4) Quando um dado for retornado da memória ele será adicionado a uma coluna "Dado_load"
-		// 5) A cada clock checamos se a coluna "Dado_load" está preenchida, se estiver mandamos o dado do load para o cdb
-		//    e do cdb para o registrador de destino
+		// Checar se a entrada do CDB é proveniente de uma Soma/Subtração
+		else if (cdb[10:10] == 1'b1) begin
+		
+			// Resetando variável auxiliar
+			reg_dest_aux = 3'b000;
+		
+			// Analisar se o Registrador Destino indicado pelo cdb está esperando algum valor (Resultado de Soma e Subtração)
+			if ((cdb[15:13] == 3'b100 && is_waiting_value[0:0] == 1'b1) ||
+				 (cdb[15:13] == 3'b010 && is_waiting_value[1:1] == 1'b1) ||
+				 (cdb[15:13] == 3'b001 && is_waiting_value[2:2] == 1'b1)) begin
+				
+				// Salvar o rótulo do registrador de destino apartir do sinal do cdb em uma variável auxiliar
+				if (cdb[15:13] == 3'b100) begin
+					reg_dest_aux = 3'b000;
+				end
+				else if (cdb[15:13] == 3'b010) begin
+					reg_dest_aux = 3'b001;
+				end
+				else if (cdb[15:13] == 3'b001) begin
+					reg_dest_aux = 3'b010;
+				end
+			
+			
+				// Atualizar todas as referências àquele registrador na RS
+				for(i = 0; i <= 2; i = i + 1) begin
+					
+					// Checar se o registrador de destino do cdb está na coluna Qj
+					if (Qj[i] == reg_dest_aux) begin
+						
+						// Invalidar coluna Qj
+						Qj[i] = 3'b111;
+						
+						// Escrever valor em Vj
+						Vj[i][15:10] = 6'b0;
+						Vj[i][9:0] = cdb[9:0];
+						
+					end
+					
+					// Checar se o registrador de destino do cdb está na coluna Qk
+					if (Qk[i] == reg_dest_aux) begin
+					
+						// Invalidar coluna Qk
+						Qk[i] = 3'b111;
+						
+						// Escrever valor em Vk
+						Vk[i][15:10] = 6'b0;
+						Vk[i][9:0] = cdb[9:0];
+						
+					end
+				
+				end
+			
+				// Checar se existe alguma instrução subsequente que vai produzir valor para o mesmo registrador
+				for(i = 0; i <= 2; i = i + 1) begin
+					if (Reg_dest[i] == reg_dest_aux && Busy[i] == 1'b1) begin
+						still_waiting_value = 1'b1;
+					end
+				end
+				
+				// Atualizar Vetor que indica qual Registrador está esperando um valor
+				if (still_waiting_value == 1'b0) begin
+					if (cdb[15:13] == 3'b100) begin
+						is_waiting_value[0:0] = 1'b0;
+					end
+					else if (cdb[15:13] == 3'b010) begin
+						is_waiting_value[1:1] = 1'b0;
+					end
+					else if (cdb[15:13] == 3'b001) begin
+						is_waiting_value[2:2] = 1'b0;
+					end
+				end
+			
+				// Excluir instrução executada da RS
+				Busy[cdb[12:11]] = 0;
+				
+				// Alterar a disponibilidade da ULA que escreveu no CDB
+				if (cdb[10:10] == 1) begin
+					ULA_free = 1'b1;
+				end
+				else if (cdb[10:10] == 0) begin
+					ULA_ld_sd_free = 1'b1;
+				end
+			
+			end
+		
+		end
 		
 	end
-	
 	
 	// Lógica para adicionar instrução na RS
 	
 	// Resetando Variáveis
 	operands_ready_sumsub = 1'b0;
 	operands_ready_ldsd = 1'b0;
+	instruction_already_in = 1'b0;
+	
+	// TODO
+	// Aprimorar lógica abaixo
+	// Loop para checar se a instrução recebida já está na RS
+	for(i = 0; i <= 2; i = i + 1) begin
+		if ({immediate,ULA_op,RX,RY,RZ} == full_instruction[i]) begin
+			instruction_already_in = 1'b1;
+		end
+	end
 	
 	// Loop para adicionar instrução recebida na RS
 	for(i = 0; i <= 2 && break_loop != 1; i = i + 1) begin
 		
 		// Se uma instrução válida é encontrada na entrada e a RS possui espaço vazio essa instrução é adicionada
-		if (Busy[i] == 0 && {immediate,ULA_op,RX,RY,RZ} != 16'b1111111111111111) begin
+		if (Busy[i] == 0 && {immediate,ULA_op,RX,RY,RZ} != 16'b1111111111111111 && instruction_already_in == 1'b0) begin
 		
 			// Quebrar o Loop ao adicionar uma instrução
 			break_loop = 1'b1;
@@ -313,8 +454,8 @@ always @(posedge clock) begin
 				
 			end
 			
-			// Adicionando Load na RS
-			else if (ULA_op == 3'b010 /*Load*/) begin
+			// Adicionando Load/Store na RS
+			else if (ULA_op == 3'b010 /*Load*/ || ULA_op == 3'b011 /*Store*/) begin
 				
 				// Salvar o Registrador de Destino (RX)
 				Reg_dest[i] = RX;
@@ -344,7 +485,7 @@ always @(posedge clock) begin
 					Vk[i] = R2_data;
 				end
 				
-				// Checar se o primeiro operando está esperando algum valor (RY)
+				// Checar se o segundo operando está esperando algum valor (RY)
 				if (RY == 3'b000 /*R0*/ && is_waiting_value[0:0] == 1) begin
 					Qk[i] = RY;
 				end
@@ -383,8 +524,8 @@ always @(posedge clock) begin
 				
 			end
 			
-			// Load
-			if (Operation[i] == 3'b010) begin
+			// Load/Store
+			if (Operation[i] == 3'b010 || Operation[i] == 3'b011) begin
 			
 				// Despachar Load/Store se a ULA de Load/Store estiver disponível
 				if (ULA_ld_sd_free == 1'b1) begin

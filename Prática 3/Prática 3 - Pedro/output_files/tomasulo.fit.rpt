@@ -1,5 +1,5 @@
 Fitter report for tomasulo
-Tue Oct 31 17:22:44 2023
+Fri Nov 03 03:51:56 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -53,7 +53,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Tue Oct 31 17:22:44 2023           ;
+; Fitter Status                      ; Successful - Fri Nov 03 03:51:56 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; tomasulo                                        ;
 ; Top-level Entity Name              ; tomasulo                                        ;
@@ -1159,7 +1159,7 @@ Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.00 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.03 seconds.
 Info (306004): Started post-fitting delay annotation
 Info (306005): Delay annotation completed successfully
 Info (306004): Started post-fitting delay annotation
@@ -1168,9 +1168,9 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/output_files/tomasulo.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4874 megabytes
-    Info: Processing ended: Tue Oct 31 17:22:44 2023
-    Info: Elapsed time: 00:00:04
+    Info: Peak virtual memory: 4882 megabytes
+    Info: Processing ended: Fri Nov 03 03:51:56 2023
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 
 

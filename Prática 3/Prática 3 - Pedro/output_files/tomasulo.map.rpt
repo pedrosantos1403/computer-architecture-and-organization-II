@@ -1,5 +1,5 @@
 Analysis & Synthesis report for tomasulo
-Tue Oct 31 17:22:39 2023
+Fri Nov 03 03:51:52 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -13,12 +13,19 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Port Connectivity Checks: "ULA_LD_SD:ula_ld_sd"
- 10. Port Connectivity Checks: "ReservationStation:reservation_station"
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
- 13. Analysis & Synthesis Suppressed Messages
+  8. Analysis & Synthesis IP Cores Summary
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Source assignments for ram:mem_ram|altsyncram:altsyncram_component|altsyncram_05e1:auto_generated
+ 13. Parameter Settings for User Entity Instance: ram:mem_ram|altsyncram:altsyncram_component
+ 14. altsyncram Parameter Settings by Entity Instance
+ 15. Port Connectivity Checks: "ULA_LD_SD:ula_ld_sd"
+ 16. Port Connectivity Checks: "ReservationStation:reservation_station"
+ 17. Port Connectivity Checks: "ram:mem_ram"
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
+ 20. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -44,7 +51,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Oct 31 17:22:39 2023           ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 03 03:51:52 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; tomasulo                                        ;
 ; Top-level Entity Name              ; tomasulo                                        ;
@@ -157,19 +164,31 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                      ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                                        ; Library ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------------------------------------------+---------+
-; tomasulo.v                       ; yes             ; User Verilog HDL File  ; C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/tomasulo.v           ;         ;
-; InstructionQueue.v               ; yes             ; User Verilog HDL File  ; C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/InstructionQueue.v   ;         ;
-; ULA.v                            ; yes             ; User Verilog HDL File  ; C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/ULA.v                ;         ;
-; ULA_LD_SD.v                      ; yes             ; User Verilog HDL File  ; C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/ULA_LD_SD.v          ;         ;
-; ReservationStation.v             ; yes             ; User Verilog HDL File  ; C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/ReservationStation.v ;         ;
-; BankOfRegisters.v                ; yes             ; User Verilog HDL File  ; C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/BankOfRegisters.v    ;         ;
-; CDBArbiter.v                     ; yes             ; User Verilog HDL File  ; C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/CDBArbiter.v         ;         ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                  ;
++----------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                                                                                          ; Library ;
++----------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+---------+
+; ram.v                            ; yes             ; User Wizard-Generated File       ; C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/ram.v                  ;         ;
+; tomasulo.v                       ; yes             ; User Verilog HDL File            ; C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/tomasulo.v             ;         ;
+; InstructionQueue.v               ; yes             ; User Verilog HDL File            ; C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/InstructionQueue.v     ;         ;
+; ULA.v                            ; yes             ; User Verilog HDL File            ; C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/ULA.v                  ;         ;
+; ULA_LD_SD.v                      ; yes             ; User Verilog HDL File            ; C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/ULA_LD_SD.v            ;         ;
+; ReservationStation.v             ; yes             ; User Verilog HDL File            ; C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/ReservationStation.v   ;         ;
+; BankOfRegisters.v                ; yes             ; User Verilog HDL File            ; C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/BankOfRegisters.v      ;         ;
+; CDBArbiter.v                     ; yes             ; User Verilog HDL File            ; C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/CDBArbiter.v           ;         ;
+; ram_mif.mif                      ; yes             ; User Memory Initialization File  ; C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/ram_mif.mif            ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf                                                                      ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                               ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                                                                         ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc                                                                      ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                                                      ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc                                                                       ;         ;
+; altrom.inc                       ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc                                                                          ;         ;
+; altram.inc                       ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc                                                                          ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc                                                                        ;         ;
+; db/altsyncram_05e1.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/db/altsyncram_05e1.tdf ;         ;
++----------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -207,6 +226,598 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                                        ;
++--------+--------------+---------+--------------+--------------+-----------------------+----------------------------------------------------------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance       ; IP Include File                                                                                                      ;
++--------+--------------+---------+--------------+--------------+-----------------------+----------------------------------------------------------------------------------------------------------------------+
+; Altera ; RAM: 1-PORT  ; N/A     ; N/A          ; N/A          ; |tomasulo|ram:mem_ram ; C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/ram.v ;
++--------+--------------+---------+--------------+--------------+-----------------------+----------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                      ;
++----------------------------------------------------------------+----------------------------------------+
+; Register name                                                  ; Reason for Removal                     ;
++----------------------------------------------------------------+----------------------------------------+
+; CDBArbiter:cdb_arbiter|Done                                    ; Stuck at GND due to stuck port data_in ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[3][5]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[3][4]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[3][3]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[3][2]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[3][1]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[3][0]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[2][15]                    ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[2][14]                    ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[2][13]                    ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[2][12]                    ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[2][11]                    ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[2][10]                    ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[2][9]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[2][8]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[2][7]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[2][6]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[2][5]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[2][4]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[2][3]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[2][2]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[2][1]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[2][0]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[1][15]                    ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[1][14]                    ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[1][13]                    ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[1][12]                    ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[1][11]                    ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[1][10]                    ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[1][9]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[1][8]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[1][7]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[1][6]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[1][5]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[1][4]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[1][3]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[1][2]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[1][1]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[1][0]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[0][15]                    ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[0][14]                    ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[0][13]                    ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[0][12]                    ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[0][5]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[0][4]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[0][3]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[0][2]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[0][1]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[0][0]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|cdb[11..15]                             ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[0][11]                    ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[0][10]                    ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|cdb[0..10]                              ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|load_store_running                      ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[0][9]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[0][8]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[0][7]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[0][6]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[3][6]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[3][7]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[3][8]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[3][9]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[3][10]                    ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[3][11]                    ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[3][12]                    ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[3][13]                    ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[3][14]                    ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[3][15]                    ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[4][0]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[4][1]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[4][2]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[4][3]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[4][4]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[4][5]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[4][6]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[4][7]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[4][8]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[4][9]                     ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[4][10]                    ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[4][11]                    ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[4][12]                    ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[4][13]                    ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[4][14]                    ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[4][15]                    ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[0][0]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[0][1]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[0][2]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[0][3]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[0][4]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[0][5]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[0][6]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[0][7]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[0][8]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[0][9]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[0][10]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[0][11]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[0][12]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[0][13]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[0][14]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[0][15]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[1][0]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[1][1]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[1][2]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[1][3]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[1][4]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[1][5]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[1][6]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[1][7]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[1][8]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[1][9]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[1][10]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[1][11]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[1][12]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[1][13]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[1][14]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[1][15]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[2][0]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[2][1]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[2][2]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[2][3]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[2][4]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[2][5]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[2][6]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[2][7]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[2][8]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[2][9]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[2][10]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[2][11]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[2][12]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[2][13]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[2][14]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[2][15]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[3][0]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[3][1]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[3][2]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[3][3]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[3][4]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[3][5]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[3][6]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[3][7]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[3][8]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[3][9]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[3][10]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[3][11]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[3][12]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[3][13]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[3][14]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[3][15]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[4][0]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[4][1]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[4][2]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[4][3]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[4][4]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[4][5]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[4][6]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[4][7]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[4][8]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[4][9]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[4][10]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[4][11]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[4][12]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[4][13]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[4][14]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[4][15]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[5][0]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[5][1]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[5][2]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[5][3]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[5][4]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[5][5]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[5][6]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[5][7]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[5][8]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[5][9]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[5][10]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[5][11]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[5][12]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[5][13]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[5][14]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[5][15]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[6][0]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[6][1]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[6][2]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[6][3]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[6][4]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[6][5]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[6][6]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[6][7]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[6][8]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[6][9]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[6][10]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[6][11]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[6][12]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[6][13]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[6][14]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[6][15]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[7][0]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[7][1]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[7][2]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[7][3]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[7][4]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[7][5]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[7][6]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[7][7]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[7][8]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[7][9]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[7][10]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[7][11]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[7][12]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[7][13]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[7][14]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[7][15]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[8][0]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[8][1]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[8][2]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[8][3]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[8][4]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[8][5]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[8][6]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[8][7]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[8][8]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[8][9]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[8][10]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[8][11]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[8][12]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[8][13]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[8][14]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[8][15]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[9][0]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[9][1]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[9][2]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[9][3]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[9][4]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[9][5]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[9][6]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[9][7]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[9][8]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[9][9]                  ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[9][10]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[9][11]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[9][12]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[9][13]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[9][14]                 ; Lost fanout                            ;
+; CDBArbiter:cdb_arbiter|old_instructions[9][15]                 ; Lost fanout                            ;
+; ULA_LD_SD:ula_ld_sd|ULA_output[0..15]                          ; Lost fanout                            ;
+; ULA:ula|ULA_output[0..15]                                      ; Lost fanout                            ;
+; ReservationStation:reservation_station|operand1_sumsub[0..6]   ; Lost fanout                            ;
+; ReservationStation:reservation_station|operand2_sumsub[0..15]  ; Lost fanout                            ;
+; ReservationStation:reservation_station|Reg_dest_sumsub[2]      ; Lost fanout                            ;
+; ReservationStation:reservation_station|ldsd_position[0]        ; Lost fanout                            ;
+; ReservationStation:reservation_station|Reg_dest_sumsub[0,1]    ; Lost fanout                            ;
+; ReservationStation:reservation_station|Opcode_sumsub[1,2]      ; Lost fanout                            ;
+; ReservationStation:reservation_station|stall                   ; Lost fanout                            ;
+; ReservationStation:reservation_station|Opcode_sumsub[0]        ; Lost fanout                            ;
+; ReservationStation:reservation_station|sumsub_position[0,1]    ; Lost fanout                            ;
+; ReservationStation:reservation_station|operand1_ldsd[0..15]    ; Lost fanout                            ;
+; ReservationStation:reservation_station|Reg_dest_ldsd[0]        ; Lost fanout                            ;
+; ReservationStation:reservation_station|ldsd_position[1]        ; Lost fanout                            ;
+; ReservationStation:reservation_station|operand2_ldsd[0..3]     ; Lost fanout                            ;
+; ReservationStation:reservation_station|Reg_dest_ldsd[1,2]      ; Lost fanout                            ;
+; ReservationStation:reservation_station|operand1_sumsub[7..15]  ; Lost fanout                            ;
+; ReservationStation:reservation_station|Reg_dest[0][0]          ; Lost fanout                            ;
+; ReservationStation:reservation_station|Reg_dest[0][1]          ; Lost fanout                            ;
+; ReservationStation:reservation_station|Reg_dest[0][2]          ; Lost fanout                            ;
+; ReservationStation:reservation_station|Reg_dest[1][0]          ; Lost fanout                            ;
+; ReservationStation:reservation_station|Reg_dest[1][1]          ; Lost fanout                            ;
+; ReservationStation:reservation_station|Reg_dest[1][2]          ; Lost fanout                            ;
+; ReservationStation:reservation_station|Reg_dest[2][0]          ; Lost fanout                            ;
+; ReservationStation:reservation_station|Reg_dest[2][1]          ; Lost fanout                            ;
+; ReservationStation:reservation_station|Reg_dest[2][2]          ; Lost fanout                            ;
+; ReservationStation:reservation_station|Operation[0][0]         ; Lost fanout                            ;
+; ReservationStation:reservation_station|Operation[0][1]         ; Lost fanout                            ;
+; ReservationStation:reservation_station|Operation[0][2]         ; Lost fanout                            ;
+; ReservationStation:reservation_station|Operation[1][0]         ; Lost fanout                            ;
+; ReservationStation:reservation_station|Operation[1][1]         ; Lost fanout                            ;
+; ReservationStation:reservation_station|Operation[1][2]         ; Lost fanout                            ;
+; ReservationStation:reservation_station|Operation[2][0]         ; Lost fanout                            ;
+; ReservationStation:reservation_station|Operation[2][1]         ; Lost fanout                            ;
+; ReservationStation:reservation_station|Operation[2][2]         ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[0][0]  ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[0][1]  ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[0][2]  ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[0][3]  ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[0][4]  ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[0][5]  ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[0][6]  ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[0][7]  ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[0][8]  ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[0][9]  ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[0][10] ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[0][11] ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[0][12] ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[0][13] ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[0][14] ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[0][15] ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[1][0]  ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[1][1]  ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[1][2]  ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[1][3]  ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[1][4]  ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[1][5]  ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[1][6]  ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[1][7]  ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[1][8]  ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[1][9]  ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[1][10] ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[1][11] ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[1][12] ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[1][13] ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[1][14] ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[1][15] ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[2][0]  ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[2][1]  ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[2][2]  ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[2][3]  ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[2][4]  ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[2][5]  ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[2][6]  ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[2][7]  ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[2][8]  ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[2][9]  ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[2][10] ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[2][11] ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[2][12] ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[2][13] ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[2][14] ; Lost fanout                            ;
+; ReservationStation:reservation_station|full_instruction[2][15] ; Lost fanout                            ;
+; ReservationStation:reservation_station|operands_ready_ldsd     ; Lost fanout                            ;
+; ReservationStation:reservation_station|operands_ready_sumsub   ; Lost fanout                            ;
+; ReservationStation:reservation_station|ULA_ld_sd_free          ; Lost fanout                            ;
+; ReservationStation:reservation_station|ULA_free                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Busy[0..2]              ; Lost fanout                            ;
+; ReservationStation:reservation_station|is_waiting_value[0..2]  ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[0][0]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[0][1]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[0][2]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[0][3]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[0][4]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[0][5]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[0][6]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[0][7]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[0][8]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[0][9]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[0][10]               ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[0][11]               ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[0][12]               ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[0][13]               ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[0][14]               ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[0][15]               ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[1][0]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[1][1]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[1][2]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[1][3]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[1][4]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[1][5]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[1][6]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[1][7]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[1][8]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[1][9]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[1][10]               ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[1][11]               ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[1][12]               ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[1][13]               ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[1][14]               ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[1][15]               ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[2][0]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[2][1]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[2][2]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[2][3]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[2][4]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[2][5]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[2][6]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[2][7]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[2][8]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[2][9]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[2][10]               ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[2][11]               ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[2][12]               ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[2][13]               ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[2][14]               ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vk[2][15]               ; Lost fanout                            ;
+; ReservationStation:reservation_station|Qk[0][0]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Qk[0][1]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Qk[0][2]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Qk[1][0]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Qk[1][1]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Qk[1][2]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Qk[2][0]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Qk[2][1]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Qk[2][2]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[0][0]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[0][1]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[0][2]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[0][3]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[0][4]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[0][5]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[0][6]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[0][7]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[0][8]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[0][9]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[0][10]               ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[0][11]               ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[0][12]               ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[0][13]               ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[0][14]               ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[0][15]               ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[1][0]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[1][1]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[1][2]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[1][3]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[1][4]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[1][5]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[1][6]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[1][7]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[1][8]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[1][9]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[1][10]               ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[1][11]               ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[1][12]               ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[1][13]               ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[1][14]               ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[1][15]               ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[2][0]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[2][1]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[2][2]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[2][3]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[2][4]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[2][5]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[2][6]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[2][7]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[2][8]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[2][9]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[2][10]               ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[2][11]               ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[2][12]               ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[2][13]               ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[2][14]               ; Lost fanout                            ;
+; ReservationStation:reservation_station|Vj[2][15]               ; Lost fanout                            ;
+; ReservationStation:reservation_station|Qj[0][0]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Qj[0][1]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Qj[0][2]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Qj[1][0]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Qj[1][1]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Qj[1][2]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Qj[2][0]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Qj[2][1]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|Qj[2][2]                ; Lost fanout                            ;
+; ReservationStation:reservation_station|counter_ld_sd           ; Lost fanout                            ;
+; ReservationStation:reservation_station|address[0..4]           ; Lost fanout                            ;
+; InstructionQueue:instruction_queue|counter[0..2]               ; Lost fanout                            ;
+; InstructionQueue:instruction_queue|immediate[0..3]             ; Lost fanout                            ;
+; InstructionQueue:instruction_queue|RZ[0..2]                    ; Lost fanout                            ;
+; InstructionQueue:instruction_queue|RY[0..2]                    ; Lost fanout                            ;
+; InstructionQueue:instruction_queue|RX[0..2]                    ; Lost fanout                            ;
+; InstructionQueue:instruction_queue|opcode[0..2]                ; Lost fanout                            ;
+; BankOfRegisters:bank_of_registers|Reg2:R2|R_output[0..9]       ; Lost fanout                            ;
+; BankOfRegisters:bank_of_registers|Reg1:R1|R_output[0..9]       ; Lost fanout                            ;
+; BankOfRegisters:bank_of_registers|Reg0:R0|R_output[0..9]       ; Lost fanout                            ;
+; Total Number of Removed Registers = 601                        ;                                        ;
++----------------------------------------------------------------+----------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                    ;
++----------------------------------------------------------------+---------------------------+-----------------------------------------------------------------------------------+
+; Register name                                                  ; Reason for Removal        ; Registers Removed due to This Register                                            ;
++----------------------------------------------------------------+---------------------------+-----------------------------------------------------------------------------------+
+; CDBArbiter:cdb_arbiter|Done                                    ; Stuck at GND              ; CDBArbiter:cdb_arbiter|load_store_running, ULA_LD_SD:ula_ld_sd|ULA_output[4],     ;
+;                                                                ; due to stuck port data_in ; ULA_LD_SD:ula_ld_sd|ULA_output[1], ULA_LD_SD:ula_ld_sd|ULA_output[0],             ;
+;                                                                ;                           ; ULA_LD_SD:ula_ld_sd|ULA_output[3], ULA_LD_SD:ula_ld_sd|ULA_output[2],             ;
+;                                                                ;                           ; ULA_LD_SD:ula_ld_sd|ULA_output[5], ULA_LD_SD:ula_ld_sd|ULA_output[6],             ;
+;                                                                ;                           ; ULA_LD_SD:ula_ld_sd|ULA_output[7], ULA_LD_SD:ula_ld_sd|ULA_output[8],             ;
+;                                                                ;                           ; ULA_LD_SD:ula_ld_sd|ULA_output[9], ULA_LD_SD:ula_ld_sd|ULA_output[10],            ;
+;                                                                ;                           ; ULA_LD_SD:ula_ld_sd|ULA_output[11], ULA_LD_SD:ula_ld_sd|ULA_output[12],           ;
+;                                                                ;                           ; ULA_LD_SD:ula_ld_sd|ULA_output[13], ULA_LD_SD:ula_ld_sd|ULA_output[14],           ;
+;                                                                ;                           ; ULA_LD_SD:ula_ld_sd|ULA_output[15], ULA:ula|ULA_output[3], ULA:ula|ULA_output[2], ;
+;                                                                ;                           ; ULA:ula|ULA_output[0], ULA:ula|ULA_output[1], ULA:ula|ULA_output[4],              ;
+;                                                                ;                           ; ULA:ula|ULA_output[5], ULA:ula|ULA_output[6], ULA:ula|ULA_output[7],              ;
+;                                                                ;                           ; ULA:ula|ULA_output[8], ULA:ula|ULA_output[9], ULA:ula|ULA_output[10],             ;
+;                                                                ;                           ; ULA:ula|ULA_output[11], ULA:ula|ULA_output[12], ULA:ula|ULA_output[13],           ;
+;                                                                ;                           ; ULA:ula|ULA_output[14], ULA:ula|ULA_output[15],                                   ;
+;                                                                ;                           ; ReservationStation:reservation_station|Opcode_sumsub[2],                          ;
+;                                                                ;                           ; ReservationStation:reservation_station|Opcode_sumsub[1],                          ;
+;                                                                ;                           ; ReservationStation:reservation_station|Operation[0][1],                           ;
+;                                                                ;                           ; ReservationStation:reservation_station|Operation[0][2],                           ;
+;                                                                ;                           ; ReservationStation:reservation_station|Operation[1][1],                           ;
+;                                                                ;                           ; ReservationStation:reservation_station|Operation[1][2],                           ;
+;                                                                ;                           ; ReservationStation:reservation_station|operands_ready_ldsd,                       ;
+;                                                                ;                           ; ReservationStation:reservation_station|operands_ready_sumsub,                     ;
+;                                                                ;                           ; ReservationStation:reservation_station|address[0],                                ;
+;                                                                ;                           ; InstructionQueue:instruction_queue|opcode[1],                                     ;
+;                                                                ;                           ; InstructionQueue:instruction_queue|opcode[2]                                      ;
+; ReservationStation:reservation_station|operand1_sumsub[6]      ; Lost Fanouts              ; ReservationStation:reservation_station|Operation[2][2],                           ;
+;                                                                ;                           ; ReservationStation:reservation_station|Busy[0],                                   ;
+;                                                                ;                           ; ReservationStation:reservation_station|Busy[1],                                   ;
+;                                                                ;                           ; ReservationStation:reservation_station|Busy[2],                                   ;
+;                                                                ;                           ; ReservationStation:reservation_station|Qk[2][2],                                  ;
+;                                                                ;                           ; ReservationStation:reservation_station|Vj[2][6]                                   ;
+; ReservationStation:reservation_station|Opcode_sumsub[0]        ; Lost Fanouts              ; ReservationStation:reservation_station|Operation[0][0],                           ;
+;                                                                ;                           ; ReservationStation:reservation_station|Operation[1][0],                           ;
+;                                                                ;                           ; ReservationStation:reservation_station|Operation[2][0],                           ;
+;                                                                ;                           ; InstructionQueue:instruction_queue|opcode[0]                                      ;
+; ReservationStation:reservation_station|Reg_dest_sumsub[2]      ; Lost Fanouts              ; ReservationStation:reservation_station|Reg_dest[0][2],                            ;
+;                                                                ;                           ; ReservationStation:reservation_station|Reg_dest[1][2],                            ;
+;                                                                ;                           ; ReservationStation:reservation_station|Reg_dest[2][2]                             ;
+; ReservationStation:reservation_station|Reg_dest_sumsub[1]      ; Lost Fanouts              ; ReservationStation:reservation_station|Reg_dest[0][1],                            ;
+;                                                                ;                           ; ReservationStation:reservation_station|Reg_dest[1][1],                            ;
+;                                                                ;                           ; ReservationStation:reservation_station|Reg_dest[2][1]                             ;
+; ReservationStation:reservation_station|Reg_dest_sumsub[0]      ; Lost Fanouts              ; ReservationStation:reservation_station|Reg_dest[0][0],                            ;
+;                                                                ;                           ; ReservationStation:reservation_station|Reg_dest[1][0],                            ;
+;                                                                ;                           ; ReservationStation:reservation_station|Reg_dest[2][0]                             ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[0][5]                     ; Lost Fanouts              ; ReservationStation:reservation_station|address[1],                                ;
+;                                                                ;                           ; ReservationStation:reservation_station|address[2]                                 ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[3][1]                     ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[4][1]                                        ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[3][0]                     ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[4][0]                                        ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[2][15]                    ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[3][15]                                       ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[2][14]                    ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[3][14]                                       ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[2][13]                    ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[3][13]                                       ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[2][12]                    ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[3][12]                                       ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[2][11]                    ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[3][11]                                       ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[2][10]                    ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[3][10]                                       ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[2][9]                     ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[3][9]                                        ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[2][8]                     ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[3][8]                                        ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[2][7]                     ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[3][7]                                        ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[2][6]                     ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[3][6]                                        ;
+; ReservationStation:reservation_station|operand1_sumsub[5]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][5]                                   ;
+; ReservationStation:reservation_station|operand1_sumsub[4]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][4]                                   ;
+; ReservationStation:reservation_station|operand1_sumsub[3]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][3]                                   ;
+; ReservationStation:reservation_station|operand1_sumsub[2]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][2]                                   ;
+; ReservationStation:reservation_station|operand1_sumsub[1]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][1]                                   ;
+; ReservationStation:reservation_station|operand1_sumsub[0]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][0]                                   ;
+; ReservationStation:reservation_station|operand2_sumsub[15]     ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][15]                                  ;
+; ReservationStation:reservation_station|operand2_sumsub[14]     ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][14]                                  ;
+; ReservationStation:reservation_station|operand2_sumsub[13]     ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][13]                                  ;
+; ReservationStation:reservation_station|operand2_sumsub[12]     ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][12]                                  ;
+; ReservationStation:reservation_station|operand2_sumsub[11]     ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][11]                                  ;
+; ReservationStation:reservation_station|operand2_sumsub[10]     ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][10]                                  ;
+; ReservationStation:reservation_station|operand2_sumsub[9]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][9]                                   ;
+; ReservationStation:reservation_station|operand2_sumsub[8]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][8]                                   ;
+; ReservationStation:reservation_station|operand2_sumsub[7]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][7]                                   ;
+; ReservationStation:reservation_station|operand2_sumsub[6]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][6]                                   ;
+; ReservationStation:reservation_station|operand2_sumsub[5]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][5]                                   ;
+; ReservationStation:reservation_station|operand2_sumsub[4]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][4]                                   ;
+; ReservationStation:reservation_station|operand2_sumsub[3]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][3]                                   ;
+; ReservationStation:reservation_station|operand2_sumsub[2]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][2]                                   ;
+; ReservationStation:reservation_station|operand2_sumsub[1]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][1]                                   ;
+; ReservationStation:reservation_station|operand2_sumsub[0]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][0]                                   ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[3][5]                     ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[4][5]                                        ;
+; ReservationStation:reservation_station|ldsd_position[0]        ; Lost Fanouts              ; ReservationStation:reservation_station|Operation[2][1]                            ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[3][4]                     ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[4][4]                                        ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[3][3]                     ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[4][3]                                        ;
+; ReservationStation:reservation_station|stall                   ; Lost Fanouts              ; InstructionQueue:instruction_queue|RX[2]                                          ;
+; CDBArbiter:cdb_arbiter|PriorityQueue[3][2]                     ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[4][2]                                        ;
+; ReservationStation:reservation_station|operand1_ldsd[15]       ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][15]                                  ;
+; ReservationStation:reservation_station|operand1_ldsd[14]       ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][14]                                  ;
+; ReservationStation:reservation_station|operand1_ldsd[13]       ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][13]                                  ;
+; ReservationStation:reservation_station|operand1_ldsd[12]       ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][12]                                  ;
+; ReservationStation:reservation_station|operand1_ldsd[11]       ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][11]                                  ;
+; ReservationStation:reservation_station|operand1_ldsd[10]       ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][10]                                  ;
+; ReservationStation:reservation_station|operand1_ldsd[9]        ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][9]                                   ;
+; ReservationStation:reservation_station|operand1_ldsd[8]        ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][8]                                   ;
+; ReservationStation:reservation_station|operand1_ldsd[7]        ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][7]                                   ;
+; ReservationStation:reservation_station|full_instruction[0][0]  ; Lost Fanouts              ; InstructionQueue:instruction_queue|RZ[0]                                          ;
+; ReservationStation:reservation_station|full_instruction[0][1]  ; Lost Fanouts              ; InstructionQueue:instruction_queue|RZ[1]                                          ;
+; ReservationStation:reservation_station|full_instruction[0][2]  ; Lost Fanouts              ; InstructionQueue:instruction_queue|RZ[2]                                          ;
+; ReservationStation:reservation_station|full_instruction[0][3]  ; Lost Fanouts              ; InstructionQueue:instruction_queue|RY[0]                                          ;
+; ReservationStation:reservation_station|full_instruction[0][4]  ; Lost Fanouts              ; InstructionQueue:instruction_queue|RY[1]                                          ;
+; ReservationStation:reservation_station|full_instruction[0][5]  ; Lost Fanouts              ; InstructionQueue:instruction_queue|RY[2]                                          ;
+; ReservationStation:reservation_station|full_instruction[0][6]  ; Lost Fanouts              ; InstructionQueue:instruction_queue|RX[0]                                          ;
+; ReservationStation:reservation_station|full_instruction[0][7]  ; Lost Fanouts              ; InstructionQueue:instruction_queue|RX[1]                                          ;
+; ReservationStation:reservation_station|full_instruction[0][12] ; Lost Fanouts              ; InstructionQueue:instruction_queue|immediate[0]                                   ;
+; ReservationStation:reservation_station|full_instruction[0][13] ; Lost Fanouts              ; InstructionQueue:instruction_queue|immediate[1]                                   ;
+; ReservationStation:reservation_station|full_instruction[0][14] ; Lost Fanouts              ; InstructionQueue:instruction_queue|immediate[2]                                   ;
+; ReservationStation:reservation_station|full_instruction[0][15] ; Lost Fanouts              ; InstructionQueue:instruction_queue|immediate[3]                                   ;
+; InstructionQueue:instruction_queue|counter[2]                  ; Lost Fanouts              ; InstructionQueue:instruction_queue|counter[1]                                     ;
++----------------------------------------------------------------+---------------------------+-----------------------------------------------------------------------------------+
+
+
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
@@ -220,6 +831,96 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Source assignments for ram:mem_ram|altsyncram:altsyncram_component|altsyncram_05e1:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------------+
+; Assignment                      ; Value              ; From ; To                                  ;
++---------------------------------+--------------------+------+-------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                   ;
++---------------------------------+--------------------+------+-------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ram:mem_ram|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+------------------------------+
+; Parameter Name                     ; Value                ; Type                         ;
++------------------------------------+----------------------+------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                      ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                   ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                 ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                 ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE               ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                      ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                      ;
+; WIDTH_A                            ; 16                   ; Signed Integer               ;
+; WIDTHAD_A                          ; 5                    ; Signed Integer               ;
+; NUMWORDS_A                         ; 32                   ; Signed Integer               ;
+; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                      ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                      ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                      ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                      ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                      ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                      ;
+; WIDTH_B                            ; 1                    ; Untyped                      ;
+; WIDTHAD_B                          ; 1                    ; Untyped                      ;
+; NUMWORDS_B                         ; 1                    ; Untyped                      ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                      ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                      ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                      ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                      ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                      ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                      ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                      ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                      ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                      ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                      ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                      ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                      ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer               ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                      ;
+; RAM_BLOCK_TYPE                     ; M4K                  ; Untyped                      ;
+; BYTE_SIZE                          ; 8                    ; Untyped                      ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                      ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                      ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                      ;
+; INIT_FILE                          ; ram_mif.mif          ; Untyped                      ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                      ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                      ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                      ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                      ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                      ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                      ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                      ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                      ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                      ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                      ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                      ;
+; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                      ;
+; CBXI_PARAMETER                     ; altsyncram_05e1      ; Untyped                      ;
++------------------------------------+----------------------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                        ;
++-------------------------------------------+---------------------------------------------+
+; Name                                      ; Value                                       ;
++-------------------------------------------+---------------------------------------------+
+; Number of entity instances                ; 1                                           ;
+; Entity Instance                           ; ram:mem_ram|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                 ;
+;     -- WIDTH_A                            ; 16                                          ;
+;     -- NUMWORDS_A                         ; 32                                          ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                      ;
+;     -- WIDTH_B                            ; 1                                           ;
+;     -- NUMWORDS_B                         ; 1                                           ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                      ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                ;
+;     -- RAM_BLOCK_TYPE                     ; M4K                                         ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                   ;
++-------------------------------------------+---------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -240,6 +941,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ram:mem_ram"                                                                                                                                                                              ;
++-------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                                                             ;
++-------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; data        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (16 bits) it drives.  The 16 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; data[15..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; wren        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts.  ;
+; wren[-1]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
++-------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
@@ -255,7 +968,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Oct 31 17:22:37 2023
+    Info: Processing started: Fri Nov 03 03:51:51 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off tomasulo -c tomasulo
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file ram.v
@@ -280,28 +993,67 @@ Info (12021): Found 4 design units, including 4 entities, in source file bankofr
 Info (12021): Found 1 design units, including 1 entities, in source file cdbarbiter.v
     Info (12023): Found entity 1: CDBArbiter
 Info (12127): Elaborating entity "tomasulo" for the top level hierarchy
+Info (12128): Elaborating entity "ram" for hierarchy "ram:mem_ram"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "ram:mem_ram|altsyncram:altsyncram_component"
+Info (12130): Elaborated megafunction instantiation "ram:mem_ram|altsyncram:altsyncram_component"
+Info (12133): Instantiated megafunction "ram:mem_ram|altsyncram:altsyncram_component" with the following parameter:
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "ram_mif.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone II"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "32"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "ram_block_type" = "M4K"
+    Info (12134): Parameter "widthad_a" = "5"
+    Info (12134): Parameter "width_a" = "16"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_05e1.tdf
+    Info (12023): Found entity 1: altsyncram_05e1
+Info (12128): Elaborating entity "altsyncram_05e1" for hierarchy "ram:mem_ram|altsyncram:altsyncram_component|altsyncram_05e1:auto_generated"
 Info (12128): Elaborating entity "BankOfRegisters" for hierarchy "BankOfRegisters:bank_of_registers"
 Info (12128): Elaborating entity "Reg0" for hierarchy "BankOfRegisters:bank_of_registers|Reg0:R0"
 Info (12128): Elaborating entity "Reg1" for hierarchy "BankOfRegisters:bank_of_registers|Reg1:R1"
 Info (12128): Elaborating entity "Reg2" for hierarchy "BankOfRegisters:bank_of_registers|Reg2:R2"
 Info (12128): Elaborating entity "InstructionQueue" for hierarchy "InstructionQueue:instruction_queue"
-Warning (10855): Verilog HDL warning at InstructionQueue.v(31): initial value for variable InstructionMemory should be constant
-Warning (10030): Net "InstructionMemory" at InstructionQueue.v(13) has no driver or initial value, using a default initial value '0'
 Info (12128): Elaborating entity "ReservationStation" for hierarchy "ReservationStation:reservation_station"
-Warning (10036): Verilog HDL or VHDL warning at ReservationStation.v(56): object "Address" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at ReservationStation.v(57): object "full_instruction" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at ReservationStation.v(78): object "teste" assigned a value but never read
-Warning (10230): Verilog HDL assignment warning at ReservationStation.v(381): truncated value with size 32 to match size of target (2)
-Warning (10230): Verilog HDL assignment warning at ReservationStation.v(397): truncated value with size 32 to match size of target (2)
+Warning (10036): Verilog HDL or VHDL warning at ReservationStation.v(58): object "Address" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at ReservationStation.v(89): object "teste" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at ReservationStation.v(522): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at ReservationStation.v(538): truncated value with size 32 to match size of target (2)
 Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ula"
 Warning (10230): Verilog HDL assignment warning at ULA.v(48): truncated value with size 16 to match size of target (10)
-Warning (10230): Verilog HDL assignment warning at ULA.v(60): truncated value with size 16 to match size of target (10)
-Warning (10230): Verilog HDL assignment warning at ULA.v(79): truncated value with size 16 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at ULA.v(57): truncated value with size 16 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at ULA.v(76): truncated value with size 16 to match size of target (10)
 Info (12128): Elaborating entity "ULA_LD_SD" for hierarchy "ULA_LD_SD:ula_ld_sd"
 Warning (10230): Verilog HDL assignment warning at ULA_LD_SD.v(45): truncated value with size 16 to match size of target (10)
-Warning (10230): Verilog HDL assignment warning at ULA_LD_SD.v(51): truncated value with size 16 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at ULA_LD_SD.v(50): truncated value with size 16 to match size of target (10)
 Info (12128): Elaborating entity "CDBArbiter" for hierarchy "CDBArbiter:cdb_arbiter"
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (10230): Verilog HDL assignment warning at CDBArbiter.v(279): truncated value with size 16 to match size of target (10)
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "ram:mem_ram|altsyncram:altsyncram_component|altsyncram_05e1:auto_generated|q_a[0]"
+        Warning (14320): Synthesized away node "ram:mem_ram|altsyncram:altsyncram_component|altsyncram_05e1:auto_generated|q_a[1]"
+        Warning (14320): Synthesized away node "ram:mem_ram|altsyncram:altsyncram_component|altsyncram_05e1:auto_generated|q_a[2]"
+        Warning (14320): Synthesized away node "ram:mem_ram|altsyncram:altsyncram_component|altsyncram_05e1:auto_generated|q_a[3]"
+        Warning (14320): Synthesized away node "ram:mem_ram|altsyncram:altsyncram_component|altsyncram_05e1:auto_generated|q_a[4]"
+        Warning (14320): Synthesized away node "ram:mem_ram|altsyncram:altsyncram_component|altsyncram_05e1:auto_generated|q_a[5]"
+        Warning (14320): Synthesized away node "ram:mem_ram|altsyncram:altsyncram_component|altsyncram_05e1:auto_generated|q_a[6]"
+        Warning (14320): Synthesized away node "ram:mem_ram|altsyncram:altsyncram_component|altsyncram_05e1:auto_generated|q_a[7]"
+        Warning (14320): Synthesized away node "ram:mem_ram|altsyncram:altsyncram_component|altsyncram_05e1:auto_generated|q_a[8]"
+        Warning (14320): Synthesized away node "ram:mem_ram|altsyncram:altsyncram_component|altsyncram_05e1:auto_generated|q_a[9]"
+        Warning (14320): Synthesized away node "ram:mem_ram|altsyncram:altsyncram_component|altsyncram_05e1:auto_generated|q_a[10]"
+        Warning (14320): Synthesized away node "ram:mem_ram|altsyncram:altsyncram_component|altsyncram_05e1:auto_generated|q_a[11]"
+        Warning (14320): Synthesized away node "ram:mem_ram|altsyncram:altsyncram_component|altsyncram_05e1:auto_generated|q_a[12]"
+        Warning (14320): Synthesized away node "ram:mem_ram|altsyncram:altsyncram_component|altsyncram_05e1:auto_generated|q_a[13]"
+        Warning (14320): Synthesized away node "ram:mem_ram|altsyncram:altsyncram_component|altsyncram_05e1:auto_generated|q_a[14]"
+        Warning (14320): Synthesized away node "ram:mem_ram|altsyncram:altsyncram_component|altsyncram_05e1:auto_generated|q_a[15]"
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (17049): 600 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 3/Prática 3 - Pedro/output_files/tomasulo.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -311,10 +1063,10 @@ Warning (21074): Design contains 2 input pin(s) that do not drive logic
 Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 17 warnings
-    Info: Peak virtual memory: 4597 megabytes
-    Info: Processing ended: Tue Oct 31 17:22:39 2023
-    Info: Elapsed time: 00:00:02
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 33 warnings
+    Info: Peak virtual memory: 4617 megabytes
+    Info: Processing ended: Fri Nov 03 03:51:52 2023
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 
 

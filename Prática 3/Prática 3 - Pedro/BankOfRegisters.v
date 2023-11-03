@@ -29,8 +29,8 @@ module BankOfRegisters(
 
 // Instanciar os Registradores para teste
 Reg0 R0 (clock, cdb[15:15], cdb[9:0], R0_output); // 0
-Reg1 R1 (clock, cdb[14:14], cdb[9:0], R1_output); // 7
-Reg2 R2 (clock, cdb[13:13], cdb[9:0], R2_output); // 4
+Reg1 R1 (clock, cdb[14:14], cdb[9:0], R1_output); // 10
+Reg2 R2 (clock, cdb[13:13], cdb[9:0], R2_output); // 5
 
 endmodule
 
@@ -63,7 +63,7 @@ module Reg1(
 );  
 
 initial begin
-	R_output = 10'b0000000111;
+	R_output = 10'b0000001010;
 end
 	
 always @(posedge clock) begin
@@ -83,7 +83,7 @@ module Reg2(
 );  
 
 initial begin
-	R_output = 10'b0000000100;
+	R_output = 10'b0000000101;
 end
 	
 always @(posedge clock) begin

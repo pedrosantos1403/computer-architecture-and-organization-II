@@ -43,7 +43,6 @@ always @(posedge clock) begin
 
 	// Resetando Variáveis
 	data = 16'b0000000000000000;
-	ULA_output = 16'b1111111111111111;
 
 	if (operands_ready) begin
 		
@@ -52,13 +51,13 @@ always @(posedge clock) begin
 
 		// Montando Sinal de Saída
 		if (reg_dest == 3'b000 /*R0*/) begin
-			ULA_output = {3'b100/*R0*/,2'b00/*RS[0]*/,1'b0/*ULA_ldsd*/,data};
+			ULA_output = {3'b100/*R0*/,RS_position,1'b0/*ULA*/,data};
 		end
 		else if (reg_dest == 3'b001 /*R1*/) begin
-			ULA_output = {3'b010/*R1*/,2'b01/*RS[1]*/,1'b0/*ULA_ldsd*/,data};
+			ULA_output = {3'b010/*R1*/,RS_position,1'b0/*ULA*/,data};
 		end
 		else if (reg_dest == 3'b010 /*R2*/) begin
-			ULA_output = {3'b001/*R2*/,2'b10/*RS[2]*/,1'b0/*ULA_ldsd*/,data};
+			ULA_output = {3'b001/*R2*/,RS_position,1'b0/*ULA*/,data};
 		end
 		
 	end

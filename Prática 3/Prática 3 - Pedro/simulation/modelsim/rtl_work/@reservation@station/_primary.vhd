@@ -25,6 +25,7 @@ entity ReservationStation is
         Reg_dest_ldsd   : out    vl_logic_vector(2 downto 0);
         operands_ready_ldsd: out    vl_logic;
         ldsd_position   : out    vl_logic_vector(1 downto 0);
+        address         : out    vl_logic_vector(4 downto 0);
         stall           : out    vl_logic
     );
 end ReservationStation;

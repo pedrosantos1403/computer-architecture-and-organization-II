@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at CDBArbiter.v(50): always construct contains both blocking and non-blocking assignments
+Info (10281): Verilog HDL Declaration information at ReservationStation.v(41): object "address" differs only in case from object "Address" in the same scope
