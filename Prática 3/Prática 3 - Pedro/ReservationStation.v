@@ -312,6 +312,17 @@ always @(posedge clock) begin
 				// Resetar o address
 				address = 5'b11111;
 				
+				// Desabilitar a escrita na memória
+				wren = 1'b0;
+				
+				// Alterar a disponibilidade da ULA que escreveu no CDB
+				if (cdb[10:10] == 1) begin
+					ULA_free = 1'b1;
+				end
+				else if (cdb[10:10] == 0) begin
+					ULA_ld_sd_free = 1'b1;
+				end
+				
 			end
 			
 		end
@@ -533,13 +544,13 @@ always @(posedge clock) begin
 				end
 				
 				// Salvar que Reg_dest está esperando um valor novo
-				if (RX == 3'b000) begin
+				if (RX == 3'b000 && Operation[i] == 3'b010) begin
 					is_waiting_value[0:0] = 1'b1;
 				end
-				else if (RX == 3'b001) begin
+				else if (RX == 3'b001 && Operation[i] == 3'b010) begin
 					is_waiting_value[1:1] = 1'b1;
 				end
-				else if (RX == 3'b010) begin
+				else if (RX == 3'b010 && Operation[i] == 3'b010) begin
 					is_waiting_value[2:2] = 1'b1;
 				end
 				

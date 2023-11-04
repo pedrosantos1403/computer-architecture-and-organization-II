@@ -1,5 +1,5 @@
 Analysis & Synthesis report for tomasulo
-Fri Nov 03 13:59:45 2023
+Fri Nov 03 14:47:04 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -50,7 +50,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 03 13:59:45 2023           ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 03 14:47:04 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; tomasulo                                        ;
 ; Top-level Entity Name              ; tomasulo                                        ;
@@ -485,6 +485,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; CDBArbiter:cdb_arbiter|old_instructions[9][15]                 ; Lost fanout                            ;
 ; ULA_LD_SD:ula_ld_sd|ULA_output[0..15]                          ; Lost fanout                            ;
 ; ULA:ula|ULA_output[0..15]                                      ; Lost fanout                            ;
+; ReservationStation:reservation_station|Operation[2][1]         ; Lost fanout                            ;
 ; ReservationStation:reservation_station|Operation[2][0]         ; Lost fanout                            ;
 ; ReservationStation:reservation_station|Operation[1][2]         ; Lost fanout                            ;
 ; ReservationStation:reservation_station|Operation[1][1]         ; Lost fanout                            ;
@@ -495,6 +496,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ReservationStation:reservation_station|Reg_dest[2][2]          ; Lost fanout                            ;
 ; ReservationStation:reservation_station|Reg_dest[2][1]          ; Lost fanout                            ;
 ; ReservationStation:reservation_station|Reg_dest[2][0]          ; Lost fanout                            ;
+; ReservationStation:reservation_station|ldsd_position[1]        ; Lost fanout                            ;
 ; ReservationStation:reservation_station|Reg_dest[1][2]          ; Lost fanout                            ;
 ; ReservationStation:reservation_station|Reg_dest[1][1]          ; Lost fanout                            ;
 ; ReservationStation:reservation_station|Reg_dest[1][0]          ; Lost fanout                            ;
@@ -509,15 +511,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ReservationStation:reservation_station|stall                   ; Lost fanout                            ;
 ; ReservationStation:reservation_station|Opcode_sumsub[0,1]      ; Lost fanout                            ;
 ; ReservationStation:reservation_station|sumsub_position[0,1]    ; Lost fanout                            ;
-; ReservationStation:reservation_station|operand1_ldsd[6..15]    ; Lost fanout                            ;
+; ReservationStation:reservation_station|operand1_ldsd[4..15]    ; Lost fanout                            ;
 ; ReservationStation:reservation_station|Reg_dest_ldsd[1]        ; Lost fanout                            ;
-; ReservationStation:reservation_station|operand1_ldsd[0..5]     ; Lost fanout                            ;
+; ReservationStation:reservation_station|operand1_ldsd[0..3]     ; Lost fanout                            ;
 ; ReservationStation:reservation_station|Reg_dest_ldsd[0]        ; Lost fanout                            ;
 ; ReservationStation:reservation_station|Opcode_ldsd[0..2]       ; Lost fanout                            ;
-; ReservationStation:reservation_station|ldsd_position[1]        ; Lost fanout                            ;
 ; ReservationStation:reservation_station|operand2_ldsd[0..3]     ; Lost fanout                            ;
 ; ReservationStation:reservation_station|Reg_dest_ldsd[2]        ; Lost fanout                            ;
-; ReservationStation:reservation_station|Operation[2][1]         ; Lost fanout                            ;
 ; ReservationStation:reservation_station|Operation[2][2]         ; Lost fanout                            ;
 ; ReservationStation:reservation_station|full_instruction[0][0]  ; Lost fanout                            ;
 ; ReservationStation:reservation_station|full_instruction[0][1]  ; Lost fanout                            ;
@@ -742,18 +742,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;                                                                ;                           ; ReservationStation:reservation_station|data_in_mem[9],                              ;
 ;                                                                ;                           ; ReservationStation:reservation_station|wren,                                        ;
 ;                                                                ;                           ; ReservationStation:reservation_station|address[0]                                   ;
-; ReservationStation:reservation_station|Operation[2][0]         ; Lost Fanouts              ; ReservationStation:reservation_station|Busy[0],                                     ;
+; ReservationStation:reservation_station|Operation[2][1]         ; Lost Fanouts              ; ReservationStation:reservation_station|Busy[0],                                     ;
 ;                                                                ;                           ; ReservationStation:reservation_station|Busy[2],                                     ;
 ;                                                                ;                           ; InstructionQueue:instruction_queue|immediate[3],                                    ;
 ;                                                                ;                           ; InstructionQueue:instruction_queue|RX[1], InstructionQueue:instruction_queue|RX[2], ;
-;                                                                ;                           ; InstructionQueue:instruction_queue|opcode[0]                                        ;
-; ReservationStation:reservation_station|operand1_sumsub[15]     ; Lost Fanouts              ; ReservationStation:reservation_station|Operation[2][2],                             ;
-;                                                                ;                           ; ReservationStation:reservation_station|Qk[2][2],                                    ;
-;                                                                ;                           ; ReservationStation:reservation_station|Vj[2][15]                                    ;
+;                                                                ;                           ; InstructionQueue:instruction_queue|opcode[1]                                        ;
 ; CDBArbiter:cdb_arbiter|PriorityQueue[3][5]                     ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[4][5],                                         ;
 ;                                                                ;                           ; ReservationStation:reservation_station|data_in_mem[15]                              ;
 ; CDBArbiter:cdb_arbiter|PriorityQueue[0][5]                     ; Lost Fanouts              ; ReservationStation:reservation_station|address[1],                                  ;
 ;                                                                ;                           ; ReservationStation:reservation_station|address[2]                                   ;
+; ReservationStation:reservation_station|operand1_sumsub[15]     ; Lost Fanouts              ; ReservationStation:reservation_station|Operation[2][2],                             ;
+;                                                                ;                           ; ReservationStation:reservation_station|Vj[2][15]                                    ;
 ; ReservationStation:reservation_station|Operation[1][2]         ; Lost Fanouts              ; ReservationStation:reservation_station|Busy[1],                                     ;
 ;                                                                ;                           ; InstructionQueue:instruction_queue|opcode[2]                                        ;
 ; ReservationStation:reservation_station|Operation[0][2]         ; Lost Fanouts              ; InstructionQueue:instruction_queue|immediate[2],                                    ;
@@ -773,7 +772,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; CDBArbiter:cdb_arbiter|PriorityQueue[2][8]                     ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[3][8]                                          ;
 ; CDBArbiter:cdb_arbiter|PriorityQueue[2][7]                     ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[3][7]                                          ;
 ; CDBArbiter:cdb_arbiter|PriorityQueue[2][6]                     ; Lost Fanouts              ; CDBArbiter:cdb_arbiter|PriorityQueue[3][6]                                          ;
-; ReservationStation:reservation_station|Operation[1][1]         ; Lost Fanouts              ; InstructionQueue:instruction_queue|opcode[1]                                        ;
+; ReservationStation:reservation_station|Operation[2][0]         ; Lost Fanouts              ; InstructionQueue:instruction_queue|opcode[0]                                        ;
+; ReservationStation:reservation_station|ldsd_position[1]        ; Lost Fanouts              ; ReservationStation:reservation_station|Qk[2][2]                                     ;
 ; ReservationStation:reservation_station|operand1_sumsub[14]     ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][14]                                    ;
 ; ReservationStation:reservation_station|operand1_sumsub[13]     ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][13]                                    ;
 ; ReservationStation:reservation_station|operand1_sumsub[12]     ; Lost Fanouts              ; ReservationStation:reservation_station|Vj[2][12]                                    ;
@@ -805,7 +805,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ReservationStation:reservation_station|operand2_sumsub[2]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][2]                                     ;
 ; ReservationStation:reservation_station|operand2_sumsub[1]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][1]                                     ;
 ; ReservationStation:reservation_station|operand2_sumsub[0]      ; Lost Fanouts              ; ReservationStation:reservation_station|Vk[2][0]                                     ;
-; ReservationStation:reservation_station|ldsd_position[0]        ; Lost Fanouts              ; ReservationStation:reservation_station|Operation[2][1]                              ;
 ; ReservationStation:reservation_station|full_instruction[0][0]  ; Lost Fanouts              ; InstructionQueue:instruction_queue|RZ[0]                                            ;
 ; ReservationStation:reservation_station|full_instruction[0][1]  ; Lost Fanouts              ; InstructionQueue:instruction_queue|RZ[1]                                            ;
 ; ReservationStation:reservation_station|full_instruction[0][2]  ; Lost Fanouts              ; InstructionQueue:instruction_queue|RZ[2]                                            ;
@@ -956,7 +955,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Nov 03 13:59:44 2023
+    Info: Processing started: Fri Nov 03 14:47:03 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off tomasulo -c tomasulo
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file ram.v
@@ -1011,8 +1010,8 @@ Info (12128): Elaborating entity "InstructionQueue" for hierarchy "InstructionQu
 Info (12128): Elaborating entity "ReservationStation" for hierarchy "ReservationStation:reservation_station"
 Warning (10036): Verilog HDL or VHDL warning at ReservationStation.v(61): object "Address" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at ReservationStation.v(92): object "teste" assigned a value but never read
-Warning (10230): Verilog HDL assignment warning at ReservationStation.v(569): truncated value with size 32 to match size of target (2)
-Warning (10230): Verilog HDL assignment warning at ReservationStation.v(585): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at ReservationStation.v(580): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at ReservationStation.v(596): truncated value with size 32 to match size of target (2)
 Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ula"
 Warning (10230): Verilog HDL assignment warning at ULA.v(48): truncated value with size 16 to match size of target (10)
 Warning (10230): Verilog HDL assignment warning at ULA.v(57): truncated value with size 16 to match size of target (10)
@@ -1052,10 +1051,10 @@ Info (21057): Implemented 2 device resources after synthesis - the final resourc
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 0 output pins
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 33 warnings
-    Info: Peak virtual memory: 4617 megabytes
-    Info: Processing ended: Fri Nov 03 13:59:45 2023
+    Info: Peak virtual memory: 4613 megabytes
+    Info: Processing ended: Fri Nov 03 14:47:04 2023
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
 
 
 +------------------------------------------+

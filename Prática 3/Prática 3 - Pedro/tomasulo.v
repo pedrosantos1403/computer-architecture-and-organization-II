@@ -2,14 +2,6 @@ module tomasulo(
 	
 	input clock,
 	input reset
-	
-	// cdb[15:15] -> R0_in (Registrador Destino R0)
-	// cdb[14:14] -> R1_in (Registrador Destino R1)
-	// cdb[13:13] -> R2_in (Registrador Destino R2)
-	// cdb[12:11] -> Posição da Instrução na RS
-	// cdb[10:10] -> Indica qual ULA escreveu no cdb (1 -> ULA , 0 -> ULA_ld_sd)
-	// cdb[9:0]   -> Dado
-	//output reg[15:0] cdb
 
 );
 
@@ -55,10 +47,10 @@ ram mem_ram (address/*Address*/, clock, data_in_mem/*Data In Mem*/, wren/*Wren*/
 // Instanciar Banco de Registradores
 BankOfRegisters bank_of_registers (clock, reset, cdb, R0_output, R1_output, R2_output);
 
-// Instanciar uma Instruction Queue - OK
+// Instanciar uma Instruction Queue
 InstructionQueue instruction_queue (clock, reset, stall, ULA_op, RX, RY, RZ, immediate);
 
-// Instanciar a Reservation Station - OK
+// Instanciar a Reservation Station
 ReservationStation reservation_station (/*Entradas*/    			clock, reset, RX, RY, RZ, ULA_op, immediate, cdb, R0_output, R1_output, R2_output, 
 													 /*Saídas ULA*/ 			operand1_sumsub, operand2_sumsub, Opcode_sumsub, Reg_dest_sumsub, operands_ready_sumsub, sumsub_position,
 													 /*Saídas ULA_ld_sd*/ 	operand1_ldsd, operand2_ldsd, Opcode_ldsd, Reg_dest_ldsd, operands_ready_ldsd, ldsd_position,
@@ -66,7 +58,7 @@ ReservationStation reservation_station (/*Entradas*/    			clock, reset, RX, RY,
 													 /*Escrita na memória*/	wren, data_in_mem,
 													 /*Sinal de Stall*/     stall);
 
-// Instanciar a ULA Soma/Subtração - OK
+// Instanciar a ULA Soma/Subtração
 ULA ula (clock, operand1_sumsub, operand2_sumsub, Reg_dest_sumsub, Opcode_sumsub, sumsub_position, operands_ready_sumsub, ULA_output);
 
 // Instanciar a ULA de Load e Store

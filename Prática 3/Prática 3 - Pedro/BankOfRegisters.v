@@ -29,8 +29,30 @@ module BankOfRegisters(
 
 // Instanciar os Registradores para teste
 Reg0 R0 (clock, cdb[15:15], cdb[9:0], R0_output); // 0
-Reg1 R1 (clock, cdb[14:14], cdb[9:0], R1_output); // 10
-Reg2 R2 (clock, cdb[13:13], cdb[9:0], R2_output); // 5
+Reg1 R1 (clock, cdb[14:14], cdb[9:0], R1_output); // 7
+Reg2 R2 (clock, cdb[13:13], cdb[9:0], R2_output); // 4
+
+// Apresentação
+
+// Teste A
+// Início -> R0 = 0, R1 = 7, R2 = 4
+// Fim    -> R0 = 11, R1 = 4, R2 = 4
+
+// Teste B e D
+// Início -> R0 = 0, R1 = 10, R2 = 5
+// Fim    -> R0 = 15, R1 = 10, R2 = 5
+
+// Teste C
+// Início -> R0 = 0, R1 = 10, R2 = 5, MEM[6] = 2
+// Fim    -> R0 = 5, R1 = 2, R2 = 5, MEM[6] = 2
+
+// Teste E
+// Início -> R0 = 0, R1 = 10, R2 = 5, MEM[16] = 7
+// Fim    -> R0 = 15, R1 = 7, R2 = 5, MEM[16] = 7
+
+// Teste G
+// Início -> R0 = 0, R1 = 10, R2 = 5, MEM[11] = 8
+// Fim    -> R0 = 5, R1 = 10, R2 = 5, MEM[11] = 5
 
 endmodule
 
@@ -63,7 +85,7 @@ module Reg1(
 );  
 
 initial begin
-	R_output = 10'b0000001010;
+	R_output = 10'b0000000111;
 end
 	
 always @(posedge clock) begin
@@ -83,7 +105,7 @@ module Reg2(
 );  
 
 initial begin
-	R_output = 10'b0000000101;
+	R_output = 10'b0000000100;
 end
 	
 always @(posedge clock) begin

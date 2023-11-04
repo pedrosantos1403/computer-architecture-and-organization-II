@@ -143,18 +143,56 @@ vsim +altera -L altera_mf_ver -do tomasulo_run_msim_rtl_verilog.do -l msim_trans
 # 
 wave create -driver freeze -pattern clock -initialvalue 0 -period 50ps -dutycycle 50 -starttime 0ps -endtime 1000ps sim:/tomasulo/clock
 add wave -position insertpoint  \
-sim:/tomasulo/ULA_ld_sd_output
+sim:/tomasulo/immediate
+add wave -position insertpoint  \
+sim:/tomasulo/ULA_op
+add wave -position insertpoint  \
+sim:/tomasulo/RX
+add wave -position insertpoint  \
+sim:/tomasulo/RY
+add wave -position insertpoint  \
+sim:/tomasulo/RZ
+add wave -position insertpoint  \
+sim:/tomasulo/reservation_station/Busy
+add wave -position insertpoint  \
+sim:/tomasulo/reservation_station/Operation
+add wave -position insertpoint  \
+sim:/tomasulo/reservation_station/Reg_dest
+add wave -position insertpoint  \
+sim:/tomasulo/reservation_station/Vj
+add wave -position insertpoint  \
+sim:/tomasulo/reservation_station/Vk
+add wave -position insertpoint  \
+sim:/tomasulo/reservation_station/Qj
+add wave -position insertpoint  \
+sim:/tomasulo/reservation_station/Qk
+add wave -position insertpoint  \
+sim:/tomasulo/reservation_station/Address
+add wave -position insertpoint  \
+sim:/tomasulo/reservation_station/is_waiting_value
+add wave -position insertpoint  \
+sim:/tomasulo/operand1_sumsub
+add wave -position insertpoint  \
+sim:/tomasulo/operand2_sumsub
+add wave -position insertpoint  \
+sim:/tomasulo/Opcode_sumsub
+add wave -position insertpoint  \
+sim:/tomasulo/Reg_dest_sumsub
+add wave -position insertpoint  \
+sim:/tomasulo/sumsub_position
+add wave -position insertpoint  \
+sim:/tomasulo/ULA_output
 add wave -position insertpoint  \
 sim:/tomasulo/cdb
 add wave -position insertpoint  \
-sim:/tomasulo/address
+sim:/tomasulo/R0_output
 add wave -position insertpoint  \
-sim:/tomasulo/mem_output
+sim:/tomasulo/R1_output
 add wave -position insertpoint  \
-sim:/tomasulo/data_in_mem
-add wave -position insertpoint  \
-sim:/tomasulo/wren
+sim:/tomasulo/R2_output
 run
 run
 run
 run
+run
+# Saving layout as "Pedro-Layout" 
