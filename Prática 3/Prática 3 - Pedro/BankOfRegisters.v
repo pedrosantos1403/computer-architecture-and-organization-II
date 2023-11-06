@@ -32,8 +32,6 @@ Reg0 R0 (clock, cdb[15:15], cdb[9:0], R0_output); // 0
 Reg1 R1 (clock, cdb[14:14], cdb[9:0], R1_output); // 7
 Reg2 R2 (clock, cdb[13:13], cdb[9:0], R2_output); // 4
 
-// Apresentação
-
 // Teste A
 // Início -> R0 = 0, R1 = 7, R2 = 4
 // Fim    -> R0 = 11, R1 = 4, R2 = 4
