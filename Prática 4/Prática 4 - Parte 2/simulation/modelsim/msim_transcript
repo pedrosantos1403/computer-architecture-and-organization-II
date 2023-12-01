@@ -1,0 +1,78 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do pratica4_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório\ AOC\ II/Práticas\ AOC2/Prática\ 4/Prática\ 4\ -\ Parte\ 2 {C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/pratica4.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module pratica4
+# 
+# Top level modules:
+# 	pratica4
+# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório\ AOC\ II/Práticas\ AOC2/Prática\ 4/Prática\ 4\ -\ Parte\ 2 {C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/mem_inst.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mem_inst
+# 
+# Top level modules:
+# 	mem_inst
+# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório\ AOC\ II/Práticas\ AOC2/Prática\ 4/Prática\ 4\ -\ Parte\ 2 {C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/processador1.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module processador1
+# 
+# Top level modules:
+# 	processador1
+# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório\ AOC\ II/Práticas\ AOC2/Prática\ 4/Prática\ 4\ -\ Parte\ 2 {C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/mem_data.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mem_data
+# 
+# Top level modules:
+# 	mem_data
+# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório\ AOC\ II/Práticas\ AOC2/Prática\ 4/Prática\ 4\ -\ Parte\ 2 {C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/processador0.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module processador0
+# 
+# Top level modules:
+# 	processador0
+# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório\ AOC\ II/Práticas\ AOC2/Prática\ 4/Prática\ 4\ -\ Parte\ 2 {C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/processador2.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module processador2
+# 
+# Top level modules:
+# 	processador2
+# vlog -vlog01compat -work work +incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório\ AOC\ II/Práticas\ AOC2/Prática\ 4/Prática\ 4\ -\ Parte\ 2 {C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/bus_arbiter.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module bus_arbiter
+# 
+# Top level modules:
+# 	bus_arbiter
+# 
+vsim work.pratica4
+# vsim work.pratica4 
+# Loading work.pratica4
+# Loading work.mem_inst
+# Loading work.mem_data
+# Loading work.bus_arbiter
+# Loading work.processador0
+# Loading work.processador1
+# Loading work.processador2
+wave create -driver freeze -pattern clock -initialvalue 0 -period 100ps -dutycycle 50 -starttime 0ps -endtime 1000ps sim:/pratica4/clock
+add wave -position end  sim:/pratica4/send
+add wave -position end  sim:/pratica4/proc
+add wave -position end  sim:/pratica4/opcode
+add wave -position end  sim:/pratica4/tag
+add wave -position end  sim:/pratica4/data
+add wave -position end  sim:/pratica4/bus
+add wave -position end  sim:/pratica4/proc0_out
+add wave -position end  sim:/pratica4/p0/CacheL1
+add wave -position end  sim:/pratica4/done_p0
+run
+run
+run
+run

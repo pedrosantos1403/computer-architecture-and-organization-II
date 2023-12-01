@@ -1,0 +1,19 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do mesi_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# ** Error: (vdel-19) Failed to access library 'rtl_work' at "rtl_work".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vdel-57) Library 'rtl_work' is missing or is not a valid ModelSim library.
+# 
+# ** Error: C:/altera/13.0sp1/modelsim_ase/win32aloem/vdel failed.
+# Error in macro ./mesi_run_msim_rtl_verilog.do line 4
+# C:/altera/13.0sp1/modelsim_ase/win32aloem/vdel failed.
+#     while executing
+# "vdel -lib rtl_work -all"
+#     invoked from within
+# "if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }"

@@ -1,4 +1,4 @@
-module mesi(SW, KEY, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7, LEDG, LEDR);
+/*module mesi(SW, KEY, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7, LEDG, LEDR);
 
 // SW[17:16] -> Estado
 // SW[14:12] -> Transição
@@ -36,9 +36,11 @@ assign HEX3 = 7'b1111111;
 assign HEX5 = 7'b1111111;
 assign HEX7 = 7'b1111111;
 
-endmodule
+endmodule*/
 
-module mesi_state_machine (
+//module mesi_state_machine
+
+module mesi (
 
 	input clock,
 	input reset,

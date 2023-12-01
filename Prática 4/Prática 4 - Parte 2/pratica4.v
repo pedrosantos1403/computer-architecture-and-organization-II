@@ -1,28 +1,122 @@
-// PROJETO
-// 1) Implementar uma Cache (Diretamente Mapeada ou Totalmente Associativa) usando matriz;
-// 2) A Cache contem informações de 16 bits, dentre esses bits estarão contidos o número do bloco, estado do bloco, a tag do endereço, e o dado salvo no endereço;
-// 3) O módulo principal recebe uma instrução (Read ou Write), essa instrução é executada na Cache, ou seja, a Cache será percorrida para checar se a instrução pode
-//    ser executada. Após isso os estados dos blocos das caches serão atualizados baseado na Máquina de Estados MESI;
-// 4) A instrução a ser executada tem 16 bits, e terá as informações de qual processador vai executar a instrução, opcode, tag, dado;
-// 5) Instruções de Read não utilizaram os bits de dado;
-// 6) Instrução de Read retorna o valor presente na tag em questão para o processador. Uma variável de saída deve receber esse sinal caso o read seja executado;
-// 7) Criar um módulo de cache para cada processador, para que cada um seja inicializado de forma diferente;
-// 8) Instanciar um bus que conversa com todos os processadores. O bus tem que indicar a mensagem e a tag;
-// 9) Quem controla o sinal send de mem_inst é o mesi, quando um estado final for atingido o sinal send receberá 1;
-// 10) Criar um módulo para simular a memória de dados com todas as tags necessárias;
-// 11) Criar uma cache (matriz) dentro de cada módulo de processador;
-// 12) Todos os processadores terão uma saída "send", que será setado pra 1 sempre que aquele processador finalizar a execução da instrução em questão.
-//     No módulo principal será checado quando os 3 sinais de send forem 1, sendo assim, quando os 3 forem 1 significa que a instrução foi finalizada e uma próxima
-//     pode ser enviada.
-// 13) done será usado para resetar o bus, assim q todos os processadores finalizarem a execução o bus deve ser resetado;
+module pratica4 (
+	
+	input clock,
+	input reset
+	
+	// Dado retornado pelo processador
+	// output [15:0] proc0_out, proc1_out, proc2_out
+	
+);
 
+// Cache
+// [15:12] -> Tag
+// [11:10] -> Estado
+// [9:0]   -> Dado
 
+// Posições de Memória
+// 10 -> 1010
+// 11 -> 1011
+// 12 -> 1100
+// 13 -> 1101
+// 14 -> 1110
 
-module pratica4 ();
+// Estados
+// I -> 00 (0)
+// S -> 01 (1)
+// E -> 10 (2)
+// M -> 11 (3)
+
+// Sinais do BUS
+// 00 -> Read Miss  - Pode acontecer sozinho ou junto de um Write Back
+// 01 -> Write Miss - Pode acontecer sozinho ou junto de um Write Back
+// 10 -> Invalidate
+
+// Instrução
+// [15:14] -> Processador
+// [13:12] -> Opcode
+// [11:8]  -> Tag
+// [7:0]   -> Dado
+
+// Instruções
+// Read  -> 00 
+// Write -> 01
+
+// Posições de Memória
+// 10 -> 1010
+// 11 -> 1011
+// 12 -> 1100
+// 13 -> 1101
+// 14 -> 1110
+
+// Processadores
+// P0 -> 00
+// P1 -> 01
+// P2 -> 10
+
+// Sinal do Bus
+wire [15:0] bus, bus_out_p0, bus_out_p1, bus_out_p2;
+
+// Sinais Memória de Instruções
+reg send;
+wire [1:0] proc, opcode;
+wire [3:0] tag;
+wire [7:0] data;
+
+// Sinais Processadores
+wire wb_p0, wb_p1, wb_p2;
+wire [15:0] wb_block_p0, wb_block_p1, wb_block_p2;
+wire done_p0, done_p1, done_p2;
+wire p0_has_block, p1_has_block, p2_has_block;
+wire [15:0] p0_block, p1_block, p2_block;
+wire [15:0] proc0_out, proc1_out, proc2_out;
+
+// Sinais Memória de Dados
+wire [15:0] data_mem;
+
+reg [15:0] inst_aux;
+
+// Lógica para controlar o envio de instruções
+initial begin
+
+	send = 1'b1;
+
+end
+
+always @ (posedge clock) begin
+
+	if (done_p0 == 1'b0 || done_p1 == 1'b0 || done_p2 == 1'b0) begin
+	
+		send = 1'b0;
+		
+	end
+	
+	else begin
+	
+		send = 1'b1;
+	
+	end
+	
+end
 
 // Instanciar Memória de Instruções
-// Instanciar Processadores
+mem_inst instruction_memory (clock, reset, send, done_p0, done_p1, done_p2, proc, opcode, tag, data);
 
+// Instanciar Memória de Dados
+mem_data data_memory (clock, reset, wb_p0, wb_p1, wb_p2, wb_block_p0, wb_block_p1, wb_block_p2, bus, data_mem);
 
-// Checar done de cada processador a cada clock, quando os 3 done forem 1 resetar o bus
+// Instanciar Bus Arbiter
+bus_arbiter Bus_Arbiter (clock, reset, proc, bus_out_p0, bus_out_p1, bus_out_p2, bus);
+
+// Instanciar Processador 0
+processador0 p0 (clock, reset, proc, opcode, tag, data, p1_block, p2_block, data_mem, p1_has_block, p2_has_block, bus, // INPUTS
+					  bus_out_p0, proc0_out, wb_p0, wb_block_p0, done_p0, p0_block, p0_has_block); // OUTPUTS
+
+// Instanciar Processador 1
+processador1 p1 (clock, reset, proc, opcode, tag, data, p0_block, p2_block, data_mem, p0_has_block, p2_has_block, bus, // INPUTS
+					  bus_out_p1, proc1_out, wb_p1, wb_block_p1, done_p1, p1_block, p1_has_block); // OUTPUTS
+
+// Instanciar Processador 2
+processador2 p2 (clock, reset, proc, opcode, tag, data, p0_block, p1_block, data_mem, p0_has_block, p1_has_block, bus, // INPUTS
+					  bus_out_p2, proc2_out, wb_p2, wb_block_p2, done_p2, p2_block, p2_has_block); // OUTPUTS
+ 
 endmodule

@@ -1,0 +1,17 @@
+module bus_arbiter(
+
+	input clock,
+	input reset,
+	input [15:0] bus_p0, bus_p1, bus_p2,
+	
+	output reg [15:0] bus
+	
+);
+
+initial begin
+	
+	bus = 16'b1111111111111111;
+
+end
+
+endmodule

@@ -1,0 +1,145 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\pedro\OneDrive\Documentos\CEFETMG\2023.2\Laboratório AOC II\Práticas AOC2\Prática 4\Prática 4 - Parte 2\simulation\modelsim
+vbus_arbiter
+!i10b 1
+!s100 `f=<WUH_jQcAg:9Tcb<[c2
+I4E0kcJdd`<i4N1I7mnMSI2
+V^jCjF^>UF_7[XdO@KenZ70
+Z1 dC:\Users\pedro\OneDrive\Documentos\CEFETMG\2023.2\Laboratório AOC II\Práticas AOC2\Prática 4\Prática 4 - Parte 2\simulation\modelsim
+w1700836856
+8C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/bus_arbiter.v
+FC:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/bus_arbiter.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1700847741.589000
+!s107 C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/bus_arbiter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2|C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/bus_arbiter.v|
+!s101 -O0
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work {+incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2} -O0
+vmem_data
+Io8=nnz8a7Y`E?_B>[VO1M1
+V5;0B8c_MbdC7I2mQZ6QX20
+R1
+w1700837027
+8C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/mem_data.v
+FC:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/mem_data.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 :WH2>W6z2TM6a:_Bm8G0C3
+!s85 0
+!s108 1700847741.432000
+!s107 C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/mem_data.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2|C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/mem_data.v|
+!s101 -O0
+vmem_inst
+I=cgb5Gk1in>D@;N]e4QED1
+V0mn5M_RCEJOQ22Boje_J:0
+R1
+w1700847672
+8C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/mem_inst.v
+FC:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/mem_inst.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 S7hTGZcko7?M]>7Pkm_;Q0
+!s85 0
+!s108 1700847741.242000
+!s107 C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/mem_inst.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2|C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/mem_inst.v|
+!s101 -O0
+vpratica4
+IQKgF@Z5oO?8Y6:]mFK2N<3
+VLY:3_0EPKQPX=kV2YmMQE3
+R1
+w1700846801
+8C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/pratica4.v
+FC:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/pratica4.v
+L0 21
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 M:UMc]jHI5edBdTk3ffG[0
+!s85 0
+!s108 1700847741.195000
+!s107 C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/pratica4.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2|C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/pratica4.v|
+!s101 -O0
+vprocessador0
+Io4eHFOCFo:WkKn4KgPAPi3
+VU]Nlc[CmcGA6_XL72z]oR1
+R1
+w1700846780
+8C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/processador0.v
+FC:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/processador0.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 5ND4]3nWfH5B5LhI`LIPY1
+!s85 0
+!s108 1700847741.492000
+!s107 C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/processador0.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2|C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/processador0.v|
+!s101 -O0
+vprocessador1
+I=T[4F1<T^]Qf<Ngf5A^6G0
+VC2PXMR6W8d_>Y?JjInG1G3
+R1
+w1700846901
+8C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/processador1.v
+FC:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/processador1.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 m<>^47EO=f^e@AWnPFl2K0
+!s85 0
+!s108 1700847741.368000
+!s107 C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/processador1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2|C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/processador1.v|
+!s101 -O0
+vprocessador2
+ImSkm16TITmIcRZ<oUXZ_J0
+VUOe[YRGB=cYD:H2k@0?7`0
+R1
+w1700846941
+8C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/processador2.v
+FC:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/processador2.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 JY:IG:GC<d9k8i>4[iQ>C2
+!s85 0
+!s108 1700847741.542000
+!s107 C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/processador2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2|C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/processador2.v|
+!s101 -O0

@@ -1,0 +1,13 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/pratica4.v
+source_file = 1, C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/mesi.v
+source_file = 1, C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/mem_inst.v
+source_file = 1, C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/processador1.v
+source_file = 1, C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/mem_data.v
+source_file = 1, C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/processador0.v
+source_file = 1, C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/processador2.v
+source_file = 1, C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/bus_arbiter.v
+source_file = 1, C:/Users/pedro/OneDrive/Documentos/CEFETMG/2023.2/Laboratório AOC II/Práticas AOC2/Prática 4/Prática 4 - Parte 2/db/pratica4.cbx.xml
+design_name = pratica4
+instance = comp, \clock~I , clock, pratica4, 1
+instance = comp, \reset~I , reset, pratica4, 1

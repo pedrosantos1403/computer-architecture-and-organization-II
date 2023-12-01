@@ -6,6 +6,8 @@ module mem_inst (
 	// Sinal de entrada que controla quando uma nova instrução poderá ser despachada
 	input send,
 	
+	input done_p0, done_p1, done_p2,
+	
 	output reg[1:0] proc,
 	output reg[1:0] opcode,
 	output reg[3:0] tag,
@@ -48,11 +50,14 @@ initial begin
 	counter <= 0;
 	
 	// Inicializando a Memória de Instruções
-	mem_inst[0] <= 16'b0000101011111111; // P0: read 10
-	mem_inst[1] <= 16'b0000000000000000;
-	mem_inst[2] <= 16'b0000000000000000;
-	mem_inst[3] <= 16'b0000000000000000;
-	mem_inst[4] <= 16'b0000000000000000;
+	//mem_inst[0] <= 16'b0000101011111111; // P0: read 10
+	//mem_inst[0] <= 16'b0101101000000010; // P1: write 10 <- 00 02
+	mem_inst[0] <= 16'b0000101111111111; // P0: read 11
+	mem_inst[0] <= 16'b0100110011111111; // P1: read 12
+	mem_inst[1] <= 16'b0100101011111111; // P1: read 10
+	mem_inst[2] <= 16'b0101101000000010; // P1: write 10 <- 00 02
+	mem_inst[3] <= 16'b0001101000000111; // P0: write 10 <- 00 07
+	mem_inst[4] <= 16'b1000110011111111; // P2: read 12
 	
 end
 
@@ -69,7 +74,7 @@ always @(posedge clock) begin
 		
 	end
 	
-	else if (send == 1'b1 && InstructionMemory[counter] != 16'b1111111111111111) begin
+	else if ((send == 1'b1) && (mem_inst[counter] != 16'b1111111111111111)) begin
 		
 		proc   <= mem_inst[counter][15:14];
 		opcode <= mem_inst[counter][13:12];
